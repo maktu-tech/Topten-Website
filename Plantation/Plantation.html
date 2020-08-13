@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <title>Coffee and Tea Plantation</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Coffee and Tea Plantation";
+          document.getElementById("head1").innerHTML = "Welcome to Coffee and Tea Plantation:";
+          document.getElementById("info1").innerHTML = "Coffee production in India is dominated in the hill tracts of South Indian states, with Karnataka accounting for 71%, followed by Kerala with 21% and Tamil Nadu (5% of overall production with 8,200 tonnes). Indian coffee is said to be the finest coffee grown in the shade rather than direct sunlight anywhere in the world. There are about 250,000 coffee growers in the country; 98% of them are small growers. As of 2009, Indian coffee made up just 4.5% of the global production. Almost 80% of Indian coffee is exported, 70% is bound for Germany, Russia, Spain, Belgium, Slovenia, United States, Japan, Greece, Netherlands and France. Italy accounts for 29% of the exports. Most of the export is shipped through the Suez Canal.India is one of the largest tea producers in the world, although over 70 percent of its tea is consumed within India itself. In this, India is also among the top 5 per-capita tea consumers. A number of renowned teas, such as Assam and Darjeeling, also grow exclusively in India, and are sold by Rungta Tea Pvt Ltd, under the brand name Real Gold Tea and Real Gold Select Tea respectively. The Indian tea industry has grown to own many global tea brands and has evolved into one of the most technologically equipped tea industries in the world. Tea production, certification, exportation, and all other facets of the tea trade in India is controlled by the Tea Board of India.";
+          document.getElementById("head2").innerHTML = "Popular Coffee-Plantation:";
+          document.getElementById("info2").innerHTML = "Chikmagalur,Karnataka. Wayanad,Kerala. Yercaud,Tamilnadu. Araku,Andhra-pardesh. Daringbadi,Orissa. Darjeeling,Westbengal.";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";           
+          }
+            
+        function myfunction() {
+        var mainhead1=["Chikmagalur Coffee Plantation, Karnataka","Wayanad Coffee Plantation, Kerala","Yercaud Coffee Plantation, TamilNadu"," Araku Coffee Plantation, Andhra-Pradesh","Daringbadi Coffee Plantation, Odisha","Assam Tea Plantation, Assam","Darjeeling Tea Plantation, West Bengal","Nilgiri Tea Plantation,Tamil Nadu","Munnar Tea Plantation, Kerala","Coorg Tea Plantation, Karnataka"];
+        var head_about_1=["Welcome to Chikmagalur Coffee Plantation:","Welcome to Wayanad Coffee Plantation:","Welcome to Yercaud Coffee Plantation:","Welcome to Araku Coffee Plantation :","Welcome to Daringbadi Coffee Plantation:","Welcome to Assam Tea Plantation:","Welcome to Darjeeling Tea Plantation:","Welcome to Nilgiri Tea Plantation:","Welcome to Munnar Tea Plantation:","Welcome to Coorg Tea Plantation:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:"]
+        var body_about_1=["Chikmagalur is first place in India where coffee was introduced, It is also known as coffee land of Karnataka. Chikmagalur is one of the famous hill stations in Karnataka state, located in the foothills of Mullayanagiri range. Its geography and climate makes it one of the largest coffee estates in Karnataka followed by Kodagu, coorg and Hassan. Mullayanagiri is the highest peak of Karnataka situated in the Baba Budan Giri Range of the Western Ghats and tallest peak between the Himalayas and the Nilgiris,known as best place for trekking in Karnataka.","The green paradise of Malabar region,Wyanad is located between the mountains of the majestic Western Ghats. Wayanad is the one of the best hill station of Kerala followed by Munnar,nalliyampathy and Rajamala. The beautiful hill region is surrounded by ever green forest, Pookkode Lake and Karapuzha Dam near by,Its pleasant climate is best for coffee and tea cultivation so also known as Coffee County of Kerala. Major variety of coffee cultivated in this region are Rubusta and Arabica. Malabar region is known for its beautiful hill, green valleys and cool climate which makes its one of the best place for flora and fauna.Coffee-Plantation-in-Kerala","The small and young hill station of Tamil Nadu is located in the Salem District.Yercaud is situated in the Shevaroys range of hills in the Eastern Ghats and got its name due to forest near the lake mean to Lake Forest. Cool climate and silent valley of Yercaud known as the best coffee forests in India. Nilgiris District, Coonoor and Kodaikanal are other place in Tamil Nadu which are known for coffee plantation in India, Nilgiris District is also known for tea cultivation.","Araku is a hill station in Visakhapatnam district of Andhra Pradesh, in the Eastern Ghats of India inhabited by different types of tribes. Coffee Plantation in Araku is known for its first tribal growers’ organic coffee brand. Coffee cultivation industry is secondary here, as pepper and rubber are cultivated by the tribal all around the state. The amazing Araku valley is surrounded by Galikonda, Raktakonda, Sunkarimetta and Chitamogondi mountains and Anantagiri and Sunkarimetta Reserved Forest. Other coffee producer regions of Andhra Pradesh are Chintapalli, Paderu and Maredumilli in the Eastern Ghats of India. The area from Visakhapatnam to East Godavari districts are also known for coffee plantation in the state.","Daringbadi is known as Kashmir of Orissa,located in the hill region of Orissa and the only hill station of state. Daringbadi is one of the youngest coffee plantation region in India followed by Chintapalli, Himachal Pradesh and Assam. This beautiful region is gifted with dense pine jungles, long coffee gardens,majestic Mountain and amazing valleys. Daringbadi offers cool climate, landscape beauty, deep dense forest, Tribal people and pleasant environment, still unexplored and untouched. Koraput district in Orissa is another place known for most traded commodities, the rich coffee plantation.Chikhaldara hill station is the only coffee growing area in Maharashtra and the sole hill resort in the Vidarbha region at an altitude of 1118 m.","Assam Tea is a black tea produce from large-leaved of tea plants. The world’s largest tea-growing region is situated in the side of great Brahmaputra River and receive high downfall during the monsoon. Tropical climate of Assam gives a unique feature to its tea,a malty taste for which this tea is well known in the world. Region of Cachar,lowlands of Assam and Barak Valley are also produce small quantities of green and white teas. Assam is the only region with native tea plants in India and second in the world after southern region of China.","Darjeeling, the beautiful hill station of of West Bengal, located in the Mahabharat range is known for major tourist destination along with its tea industry. The Himalayan city produce tea from small-leaved, which is known for its taste and aroma. Darjeeling tea is also known as black teas but now oolong and green teas are also becoming popular in the state to produce, some area is also producing white teas. Each tea garden of Darjeeling produce teas of different characteristics in taste and aroma such as Arya,Badamtam,Ging,Happy Valley Pussimbing and Kaley Valley.","Nilgiris is a District in the Tamil Nadu, and a mountain range spread across the Tamilnadu Karnataka as well as Kerala. Nilgiri tea is famous for its dark color, fragrant and flavored, Generally grown in the hills of the Nilgiris or blue mountains. The blue mountains of India is home to many beautiful hill stations like Ooty, Queen of hill stations and Coonoor. Coonoor tea garden and Ooty tea gardens are famous as one of the popular tourist attraction.","Tea County of Kerala, Munnar is a famous hill station located on the majestic Western Ghats of India. The hill city is a range of mountains situated at the confluence of three mountain streams Madhurapuzha, Nallathanni and Kundaly rivers in the Idukki district. Scenic Tea gardens of Munnar are one of the major attraction along with beautiful flora and fauna around. Munnar is also known as one of the best monsoon destination in India. Tea plantation is spread from Munnar to Central Travancore and further south in state of Kerala. Apart from lush green hills and tea plantations Idukki is famous for its 168.91 m tall arch dam, stands between the two mountains on the Periyar River known as Idukki Dam.","The most popular hill station of Indian state Karnataka is located in the Western Ghats. Kodagu or Coorg, the popular monsoon destination of south India is well known for its coffee cultivation in the world, but Tea is another crops cultivated in the hill regions of Western Ghats along with including para rubber, teak, and cocoa. Thippanahalli and kudremukh are also famous for tea plantations,Eco-tourism and trekking. Tea culture of India makes us one of the highly tea consumption country in the world. South Indian states are traditional coffee growing regions rest of the states including Orissa in the eastern coast, Assam, Manipur, Meghalaya, Mizoram, Tripura, Nagaland and Arunachal Pradesh of Northeastern India are the non-traditional areas for coffee plantation but good for tea. The seven sister states are best place for tea plantation and offers a wide range of tea includes herbal tea,green tea etc."];
+        var body_about_2=["The area contains the Baba Budan Hills (Chandra Drona Parvatha). The life-supporting rivers of Karnataka and other states - Tunga, Bhadra, Hemavati, Vedavati, Yagachi originate in the Western Ghat hills of the district. 'Gangamoola' - the source of rivers Tunga and Bhadra - is located near Kudremukh.","The region is located on the top of the majestic Western Ghats and its altitude range from approximately 700 meters to as high as 2100 meters. A large part of the region’s population comprises of the indigenous tribal communities. The region is full with densely populated high-standing hilly terrains, mountains (Chembra Peak), lakes (the beautiful Pookot Lake), waterfalls and dams (Banasura Sagar Dam) as an attractive location for tourists.There are mainly two varieties of coffee i.e. Coffee Arabica and Coffee Robusta. During the mid nineteenth century (1825-1869), the mainly cultivated coffee variety was Arabica as it had more beverage value and hence fetched higher coffee prices in the domestic as well as international markets.","Yercaud is a hill station in Salem District, in Tamil Nadu, India. It located in the Shevaroys range of hills in the Eastern Ghats; the Yercaud hill area is called the Shevaroy Hills. It is situated at an altitude of 1515 metres (4970 ft) above sea level. Coffee and citrus fruits, most notably oranges, are grown in abundance apart from bananas, pears and jackfruit. Scenically, Yercaud is as enchanting and picturesque as the hill stations on the Western ghats and trekking here can be one of the most pleasurable ways to pass time.","It is located in the Eastern Ghats about 114 kilometres (71 mi) from Visakhapatnam, close to the Odisha state border. The Anantagiri and Sunkarimetta Reserved Forest which are part of Araku Valley, are rich in biodiversity and is mined for bauxite.Galikonda hill rising to a height of 5,000 feet (1,500 m) is amongst the highest peaks in Andhra Pradesh. The average rainfall is 1,700 millimetres (67 in), bulk of which is received during June–October.The altitude is about 1300 m above the sea level. The valley spreads around 36 km.","Often called 'The Kashmir of Odisha', Daringbadi is the only hill-station in the eastern state. Situated at a height of 915 m (3000 ft), the place is largely gifted with natural bounties that include pine groves, coffee gardens and beautiful verdant valleys. The added attraction comes from the fact that it is still a virgin tourist attraction with not many accommodation options.","Often called 'The Kashmir of Odisha', Daringbadi is the only hill-station in the eastern state. Situated at a height of 915 m (3000 ft), the place is largely gifted with natural bounties that include pine groves, coffee gardens and beautiful verdant valleys. The added attraction comes from the fact that it is still a virgin tourist attraction with not many accommodation options.","Assam has been a world leader in the production of tea for more than one hundred years and currently produces around 25 percent of the world's tea. Traditionally it is a producer of high quality silk, locally called paat bred on mulberry leaves, and the only place in the world where all four major silk types are cultivated, the others being the golden silk Muga unique to Assam , the Ahimsa silk Eri bred on castor leaves, and tassar. It has the highest reserves of oil and natural gas after Bombay High and Gujarat. Along with neighbouring Arunachal, it has the richest biodiversity in India.","Nilgiri tea is generally described as being a dark, intensely aromatic, fragrant and flavoured tea grown in the southern portion of the Western Ghats mountains of Southern India. It is grown in the hills of the Nilgiris district of Tamil Nadu, though there are numerous other tea-growing districts in South India as well, including Munnar and Central Travancore, further south in Kerala state. Nilgiri tea plantations are represented by the Nilgiri Planters' Association, which is an organizational member of the United Planters Association of South India (UPASI), headquartered in Coonoor. UPASI is the peak body representing plantation owners in South India. However, plantations only account for around 30% of tea production in Nilgiri District. The vast majority of production is undertaken by small growers, who typically own less than one hectare each. The majority of Nilgiri tea small growers are the Badagas, a local community of agriculturists.","Munnar is famous for its tea plantations, many of them started by the British. The 'Kannan Devan' brand of Tea from the Tata is cultivated and processed here.The region in and around Munnar varies in height from 1,500 m (4,921 ft) to 2,695 m (8,842 ft) above mean sea level. It is pronounced 'Moon-aar' short for 'moonu aar' meaning 3 rivers. Three rivers - Mattupetti, Nallathanni and Periavaru which flow through this town, but join some distance away from Munnar.","Coorg is known for its hospitability of people and beautiful scenery. This is one of the best destinations for nature lover in India. Tourists get fascinated by colourful scenery, wooded slopes, undulating landscape and quaint villages of Coorg. There are endless mountain ranges which attract thousands of tourists every year."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["The nearest airport to Chikmagalur is Mangalore airport, 170km from Chikmagalur. Bangalore airport is 250km away.","Calicut International Airport 90 kms to Vythiri.","The nearest Airports Kamalapuram, Omalur(30 km) Trichy (163 km), Banglore(230 km) and Coimbatore (190 km). All are connected to Chennai (Madras).","Near to Visakhapatnam Airport","Bhubaneswar Airport and Daringbadi. It takes 6 hours, 7 minutes to travel from Bhubaneswar Airport to Daringbadi. Approximate driving distance between Bhubaneswar Airport and Daringbadi is 306 kms or 190.1 miles or 165.2 nautical miles .","There are good air-connectivity to Assam from the major cities in India. Guwahati's Lokapriya Gopinath Bordoloi International Airport is the businest in Assam and other major airports are in Dibrugarh, and Silchar. Air India and Indian Airlines along with several other private airlines operate daily services from all the major cities such as Delhi, Kolkata, Mumbai, Bangalore, etc. Moreover, there are other airports in Tezpur, Jorhat, etc with less frequent flights connecting cities such as Kolkata and other cities of North East Region. Arriving by plane, however, gives a wonderful welcome aerial view of the green valley surrounded by blue hills in Assam.","The nearest airport is Bagdogra, near Siliguri, 96 km from Darjeeling. Bagdogra Airport is 2.5 hours by road from Darjeeling and 2 hours by air from Delhi, and 50 minutes by air from Kolkata.","The Coimbatore airport is the closest to the hills at 3-1/2 hours by road. There are flights into Coimbatore from Singapore, Sharjah, Colombo and most parts of India including Mumbai (Indian Airlines,Jet and Go Air), Chennai (Spicejet, Air India, Indigo and Jet) and Bangalore. The Calicut airport is about 4 hours away from Ooty by road and is well connected to destinations in the Middle East like Dubai, Abu Dhabi, Doha, Muscat, Riyadh, Jeddah, Bahrain etc and also to domestic destinations Mumbai, Bangalore and Chennai. The road trip is quite scenic from either airport.","Cochin International airport (IATA: COK, ICAO: VOCI), also known as Nedumbassery Airport and CIAL is the nearest airport. It is 110 km away from Munnar by road. Madurai International Airport which is 140Km from Munnar by (National Highway 49).","The town lies on the National Highway 75 (NH 75) which connects the port city of Mangalore (128 km), with the capital city Bangalore (224 km) of Karnataka state. The nearest airport is Mangalore International Airport, situated at a distance of 128 km (80 mi)."];
+        var body_how_2=["Chikmagalur Railway has got a new railway line opened on November 19th 2013. There is a daily passenger train service from Shimoga via Kadur. For train timings and on-line reservations (within India) visit the Indian Railways Catering and Tourism Corporation's website","Calicut railway station 66 kms to Vythiri.","The nearest Railway station is Salem Junction (35 km).","The Railways operate a daily train at 6:45 am in the morning daily from Vishakapatnam Railway Station.","The nearest railway station is at Berhampur (120 km). The easiest way is to book a taxi from Brahmapur.","Assam is also well connected through Rail Services to Indian cities. Three major routes of North East Frontier Railways (NF Railways) covers entire Assam and provides linkages to principal zones and cities in north, east and south India. Guwahati railway station is the largest in Assam and is served by direct trains from most of the major cities in India. The Rajdhani Express (fully airconditioned) from New Delhi (takes 27 hours) and Saraighat Express from Howrah in Kolkata (takes 17 hours) are the fastest ones. There are many direct trains from Delhi (including the Rajdhani Express) and Kolkata for Dibrugarh in Upper Assam. Usually, Dibrugarh is an additional nights journey (12hrs) from Guwahati. The trains offer beautiful vista of the countryside, although, one must take note that because of agitations in the state, it is advisable to avoid train travels as incidents of stone pelting on trains is well known and it happens in the area after Dimapur. If you must travel by rail, make sure that your reservation is in the air conditioned compartment as the windows are sealed. ","The nearest railway station to Darjeeling is New Jalpaiguri which connects the city with all the major parts of the country. There are a number of trains from cities like Kolkata, Delhi, Guwahati, Chennai, Mumbai, Bengaluru, Bhubaneshwar and Kochi. New Jalpaiguri (NJP),Siliguri is the nearest station on the main inter-city line. Direct trains to NJP run from Delhi (approx 27 hours) several times a day. If you are traveling from Kolkata (Sealdah Station) the best train for you will be Darjeeling Mail (circa 12 hours) running nightly at 10:05PM.","The hills are connected to by a nightly train. The Nilgiri Express (Train No. 12671) leaves from Chennai at night, and reaches Mettupalayam (which Indian Railway spells as Metupalaiyam), a small town at the foothills of the Nilgiris early the next morning. The train The Nilgiri Mountain Railway leaves Mettupalayam at 7.10 pushed by a small steam powered historic locomotive that is a remnant of Swiss engineered trains imported in the late 1800s. ","The nearest railway station is Aluva, 110 km. Ernakulam is 130 km and Madurai is 135km You can get the direct regular buses to Munnar First Bus starts at 6AM.","The nearest railway station is Mysore, some 100 kms away. But buses are frequent and connect Kodagu to nearby Karnataka cities such as Mysore and Mangalore, among others."];
+        var body_how_3=["There are buses running from Bangalore every 30-60 minutes. During the weekends these buses are often full and getting a ticket can be a bit of a hassle unless booked in advance. KSRTC (Karnataka State Road Transport Corporation) buses are comfortable, especially the Airavata Volvo buses.","Accessible through Calicut, Mananthavady or Kalpetta.","Foot Hills to Yercaud Lake will be 22 k.m. in 40 min. There are 20 Hair-Pin Bends. There are good roads connecting Yercaud to various places in south via Salem. The road from Salem to Yercaud has plenty of lush greens on both sides of the road once the uphill climbing begins.It is 358 km from Chennai (via. Tindivanam) 222 km from Bangalore (via. Hosur - Krishnagiri - Dharmapuri - Salem - Yercaud) . It will take approx 5hrs to drive. One day trip is sufficient from Bangalore. Start early morning reach yercaud around 9 am , spend the whole day and start from yercuad around 4pm. It is enough. Only thing is you will not be able to see the falls as it will take time trek.","There are buses that operate from APSRTC that have a daily tour as well as normal operations","Daringbadi can be reached from Bhubaneswar (251 km) and other important places of the state by regular bus servicesThere are three routes by which you can reach Daringbadi from Berhampur by road. 1st is via Sorada which is near about 120 km, 2nd via Bhanjanagar-G.Udayagiri which is around 180 km(NH-59) and the 3rd is via Mohana-Bramhanigan which is around 105 km.","There are highways from Indian states in the west and buses run between Siliguri (to Siliguri buses are available from Kolkata, Darjeeling and Gangtok) and Guwahati; However, travelling by bus may not be comfortable in this patch and travel time is usually longer than that of trains. Road connectivity to surrounding Seven Sister States is good, however may take different durations depending on the location of the state. Tamu in western Myanmar is connected to a reasonably good highway to Assam via Manipur; Tamu in Myanmar border is closer to Mandalay. The historic Stilwell Road between Assam-Myanmar-China from Ledo in Upper Assam to Myitkina in Myanmar and further to Kunming in China is right now not fully operationalised.","There is a regular bus service from Silguri to Darjeeling. However, they are quite slow due to the steep, twisty climb up to Darjeeling. Shared jeeps are faster, but cost double: 200rs vs. 100rs for the bus (2015).","There are buses and shared taxi vans that can be boarded from Coimbatore to Ooty. If you don't want wake up early to take the train from Coimbatore, plenty of buses are also going to Ooty.Also there are plenty of buses leaving from Bangalore and Mysore for Ooty. The Coimbatore 'new bus station' has frequent bus service to Ooty via Mettupalayam, and it takes around 3-1/2 hours to get there. On the way back in morning, some busses make a 10-15 minute stop over at Mettupalayam for breakfast. From the 'new bus station' it takes about 25minutes by (another) bus to reach the Coimbatore railway station. From Kozhikode (Calicut) there are two government buses daily, leaving 05.00 and 07.00, travel time is about 6 hours. Mysore is served few times a day, too. From Kannur there is a KSRTC Bus starting at 7.30 am everyday and a Tamil Nadu Bus at 10PM everyday reaching ooty at 4PM and 7am next day respectively.","Munnar is 130 km (3.5 hr) from Kochi. The road is blind in some places and there are a lot of trucks and buses that seem to drive as if they own the road. Although the road is smooth (NH 49), it is narrow, twisty and curvy. Kothamangalam is on the way and is 80 km away from Munnar. Aluva is nearly 110 km from Munnar. Just outside Aluva railway station you can hire a taxi for Munnar for Rs 2000. There is a bus stand nearby as well which operates frequent buses to Munnar; ticket prices start from Rs 70 per person. Due to bad road condition A/c bus service has been terminated otherwise bus journey is not comfortable.","The bus journey is about 4-5 hours away. Be prepared for a rough, winding and inexpensive ride. If you are coming from Bangalore/Mysore, it is better to rent a cab from either city. This is recommended as public transport is not very effective in coorg district and the tourist attractions are spread across the district. Taking a cab from the city will help you get better rates as it is always difficult to bargain in tourist spots. If travelling from Bangalore/Mysore, you should plan to cover Bylanakuppe (Tibet monastery), as it is en route."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "By Plane:";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_3[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Coffee-Plantation</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Coffee and Tea Plantation:</p>
+        <p id='info1'>Coffee production in India is dominated in the hill tracts of South Indian states, with Karnataka accounting for 71%, followed by Kerala with 21% and Tamil Nadu (5% of overall production with 8,200 tonnes). Indian coffee is said to be the finest coffee grown in the shade rather than direct sunlight anywhere in the world. There are about 250,000 coffee growers in the country; 98% of them are small growers. As of 2009, Indian coffee made up just 4.5% of the global production. Almost 80% of Indian coffee is exported, 70% is bound for Germany, Russia, Spain, Belgium, Slovenia, United States, Japan, Greece, Netherlands and France. Italy accounts for 29% of the exports. Most of the export is shipped through the Suez Canal.</p>
+        <p id="head2">Popular Coffee and Tea Plantation:</p>
+        <p id="info2">Chikmagalur,Karnataka. Wayanad,Kerala. Yercaud,Tamilnadu. Araku,Andhra-pardesh. Daringbadi,Orissa. Darjeeling,Westbengal. </p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Chikmagalur Coffee Plantation, Karnataka</h2><p>Chikmagalur is first place in India where coffee was introduced, It is also known as coffee land of Karnataka. Chikmagalur is one of the famous hill stations in Karnataka state, located in the foothills of Mullayanagiri range.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [75.770167,13.320375]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Wayanad Coffee Plantation, Kerala</h2><p>The green paradise of Malabar region,Wyanad is located between the mountains of the majestic Western Ghats. Wayanad is the one of the best hill station of Kerala followed by Munnar,nalliyampathy and Rajamala.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.097901,11.827597]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Yercaud Coffee Plantation, TamilNadu</h2><p>The small and young hill station of Tamil Nadu is located in the Salem District.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.209255,11.775263]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Araku Coffee Plantation, Andhra-Pradesh</h2><p>Araku is a hill station in Visakhapatnam district of Andhra Pradesh, in the Eastern Ghats of India inhabited by different types of tribes. Coffee Plantation in Araku is known for its first tribal growers’ organic coffee brand.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [82.882683,18.322434]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Daringbadi Coffee Plantation, Odisha</h2><p>Daringbadi is known as Kashmir of Orissa,located in the hill region of Orissa and the only hill station of state. Daringbadi is one of the youngest coffee plantation region in India followed by Chintapalli, Himachal Pradesh and Assam.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [84.115777,19.894888]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Assam Tea Plantation, Assam</h2><p>Assam Tea is a black tea produce from large-leaved of tea plants. The world’s largest tea-growing region is situated in the side of great Brahmaputra River and receive high downfall during the monsoon.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [94.890924,27.273648]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Darjeeling Tea Plantation, West Bengal</h2><p>Darjeeling, the beautiful hill station of of West Bengal, located in the Mahabharat range is known for major tourist destination along with its tea industry.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [88.267307,27.054347]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Nilgiri Tea Plantation, Tamil Nadu</h2><p>Nilgiris is a District in the Tamil Nadu, and a mountain range spread across the Tamilnadu Karnataka as well as Kerala.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.734718,11.257671]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Munnar Tea Plantation, Kerala</h2><p>Tea County of Kerala, Munnar is a famous hill station located on the majestic Western Ghats of India. The hill city is a range of mountains situated at the confluence of three mountain streams Madhurapuzha, Nallathanni and Kundaly rivers in the Idukki district.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.062044,10.079753]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Coorg Tea Plantation, Karnataka</h2><p>The most popular hill station of Indian state Karnataka is located in the Western Ghats. Kodagu or Coorg, the popular monsoon destination of south India is well known for its coffee cultivation in the world, but Tea is another crops cultivated in the hill regions of Western Ghats along with including para rubber, teak, and cocoa.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [75.943972,12.046745]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>
