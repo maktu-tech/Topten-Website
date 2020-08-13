@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta charset='utf-8' />
+    <title>Rivers</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+
+        function myfunction1() {
+       
+       document.getElementById("mhead").innerHTML = "Rivers";
+       document.getElementById("head1").innerHTML = "Welcome to Rivers:";
+       document.getElementById("info1").innerHTML = "A river is a natural flowing watercourse, usually freshwater, flowing towards an ocean, sea, lake or another river. In some cases a river flows into the ground and becomes dry at the end of its course without reaching another body of water. Small rivers can be referred to using names such as stream, creek, brook, rivulet, and rill. ";
+       document.getElementById("head2").innerHTML = "Top Longest rivers:";
+       document.getElementById("info2").innerHTML = "Indus River,Brahmaputra River,Ganga River,Godavari River,Narmada River,Krishna River, Yamuna River, Mahanadi River,Kaveri River,Tapi River";
+        document.getElementById("head3").innerHTML = "";
+       document.getElementById("info3").innerHTML = "";
+       
+       }
+         
+     function myfunction() {
+     var mainhead1=["Indus River","Brahmaputra River","Ganga River","Godavari River","Narmada River","Krishna River","Yamuna River", "Mahanadi River","Kaveri River","Tapi River"];
+     var head_about_1=[" Welcome to Indus River","Welcome to Brahmaputra River","Welcome to Ganga River","Welcome to Godavari River","Welcome to Narmada River","Welcome to Krishna River","Welcome to Yamuna River", "Welcome to Mahanadi River","Welcome to Kaveri River","Welcome to Tapi River"];
+     var head_about_2=["Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights"];
+     var body_about_1=["Indus River flows through Pakistan, Jammu and Kashmir, and Western Tibet. It is the longest river in India and one of the longest rivers in Asia. The length of the Indus River is 2900 km, passes from various cities such as Leh, Dera Ismail Khan, Sukkur, and Hyderabad.Moenjodaro, Harappa, Thatta, and Taxila are popular tourist attractions along the Indus River. A lot of popular travel destinations are also located along the river.",
+                       "The Brahmaputra is one of the major rivers of Asia, a trans-boundary river which flows through China, India and Bangladesh. As such, it is known by various names in the region: Assamese:Brohmoputro noi,Brohmoputro ; Sanskrit:Brahmaputra. It is also called Tsangpo-Brahmaputra .The Manas River, which runs through Bhutan, joins it at Jogighopa, in India. It is the ninth largest river in the world by discharge, and the 15th longest.With its origin in the Manasarovar Lake region, located on the northern side of the Himalayas in Burang County of Tibet as the Yarlung Tsangpo River.",
+                        "The Ganges  is a trans-boundary river of the Indian subcontinent which flows through the nations of India and Bangladesh. The 2,525 km (1,569 mi) river rises in the western Himalayas in the Indian state of Uttarakhand, and flows south and east through the Gangetic Plain of North India. After entering West Bengal, it divides into two rivers: the Hooghly and the Padma River. The Hooghly, or Adi Ganga, flows through several districts of West Bengal and into the Bay of Bengal near Sagar Island. The other, the Padma, also flows into and through Bangladesh, and joins the Meghna river which ultimately empties into the Bay of Bengal.",
+                        "Its source is in Triambakeshwar, Maharashtra.It flows east for 1,465 kilometres (910 mi) draining the states of Maharashtra (48.6%), Telangana (18.8%), Andhra Pradesh (4.5%), Chhattisgarh (10.9%), Madhya Pradesh (10.0%), Odisha (5.7%), and Karnataka (1.4%) emptying into Bay of Bengal through its extensive network of tributaries. Measuring up to 312,812 km2 (120,777 sq mi), it forms one of the largest river basins in the Indian subcontinent, with only the Ganges and Indus rivers having a larger drainage basin. In terms of length, catchment area and discharge, the Godavari river is the largest in peninsular India, and had been dubbed as the Vridha Ganga.",
+                        "The Narmada, also called the Rewa and previously also known as Nerbudda, is a river in central India after the Godavari, and the Krishna. It is also known as Life Line of Gujarat and Madhya Pradesh for its huge contribution to the state of Gujarat and Madhya Pradesh in many ways. Narmada rises from Amarkantak Plateau near Anuppur district. It forms the traditional boundary between North India and South India and flows westwards over a length of 1,312 km (815.2 mi) before draining through the Gulf of Khambhat into the Arabian Sea, 30 km (18.6 mi) west of Bharuch city of Gujarat.",
+                        "The Krishna River is the fourth-biggest river in terms of water inflows and river basin area in India, after the Ganga, Godavari and Brahmaputra. The river is almost 1,400 kilometres (870 mi) long. The river is also called Krishnaveni. It is one of the major sources of irrigation for Maharashtra, Karnataka, Telangana and Andhra Pradesh.",
+                        "The Yamuna  also known as the Jumna or Jamuna  is the second largest tributary river of the Ganges  and the longest tributary in India. Originating from the Yamunotri Glacier at a height of 6,387 metres (20,955 ft) on the southwestern slopes of Banderpooch peaks of the Lower Himalaya in Uttarakhand, it travels a total length of 1,376 kilometres (855 mi) and has a drainage system of 366,223 square kilometres (141,399 sq mi), 40.2% of the entire Ganges Basin.",
+                        "The Mahanadi is a major river in East Central India. It drains an area of around 141,600 square kilometres (54,700 sq mi) and has a total course of 858 kilometres (533 mi) Mahanadi is also known for the Hirakud Dam. The river flows through the states of Chhattisgarh and Odisha.",
+                        "Kaveri  also referred as Ponni, is an Indian river flowing through the states of Karnataka and Tamil Nadu. It is the third largest after Godavari and Krishna in south India and the largest in Tamil Nadu which on its course, bisects the state into North and South. Originating in the foothills of Western Ghats at Talakaveri, Kodagu in Karnataka it flows generally south and east through Karnataka and Tamil Nadu and across the southern Deccan plateau through the southeastern lowlands, emptying into the Bay of Bengal through two principal mouths in Poompuhar, Tamil Nadu. Amongst the river valleys, the Kaveri delta forms one of the most fertile regions in the country.",
+                        "The Tapti River is a river in central India between the Godavari and Narmada rivers. It flows westwards over a length of 724 km (449.9 mi) before draining through the Gulf of Khambhat into the Arabian Sea. It flows through Surat, and is crossed by the Magdalla ONGC Bridge."];
+                      
+                    
+     
+     var body_about_2=["The river has a total drainage area exceeding 1,165,000 km2 (450,000 sq mi). Its estimated annual flow stands at around 243 km3 (58 cu mi), twice that of the Nile River and three times that of the Tigris and Euphrates rivers combined, making it one of the largest rivers in the world in terms of annual flow.[4] The Zanskar is its left bank tributary in Ladakh. In the plains, its left bank tributary is the Panjnad which itself has five major tributaries, namely, the Chenab, Jhelum, the Ravi, the Beas, and the Sutlej. Its principal right bank tributaries are the Shyok, the Gilgit, the Kabul, the Gomal, and the Kurram.",
+                       "The length of the Brahmaputra River is 2900 km. It originates from Lake Manasarovar and ends in the Bay of Bengal. The Brahmaputra River passes from the North Eastern state.Brahmaputra River cruise is a popular activity among the adventure lovers. It is one of the most popular river cruises in India. ",
+                       "The Ganges is highly polluted. Pollution threatens not only humans, but also more than 140 fish species, 90 amphibian species and the endangered Ganges river dolphin. The Ganges is a major source of global ocean plastic pollution.",
+                       "The river is sacred to Hindus and has several places on its banks, that have been places of pilgrimage for thousands of years. Amongst the huge numbers of people who have bathed in her waters as a rite of cleansing are said to have been the deity Baladeva 5000 years ago and the saint Chaitanya Mahaprabhu 500 years ago. Every twelve years, Pushkaram fair is held on the banks of the river.",
+                       "The source of the Narmada is a small reservoir, known as the Narmada Kund, located at Amarkantak on the Amarkantak Plateau in the Anuppur District, Shahdol zone of eastern Madhya Pradesh. The river descends from Sonmud, then falls over a cliff as Kapildhara waterfall and meanders in the hills, flowing through a tortuous course crossing the rocks and islands up to the ruined palace of Ramnagar.",
+                       "The Krishna river originates in the Western Ghats near Mahabaleshwar at an elevation of about 1,300 metres, in the state of Maharashtra in central India. It is one of the longest rivers in India. The Krishna river is around 1,400 km in length (282 KM in Maharashtra). The Krishna river's source is at Mahabaleswar near the Jor village in the extreme north of Wai Taluka, Satara District, Maharashtra in the west and empties into the Bay of Bengal at Hamasaladeevi (near Koduru) in Andhra Pradesh, on the east coast. It flows through the state of Karnataka before entering Telangana State.",
+                       "The goddess of the river, also known as Yami, is the sister of Yama, the god of death, and the daughter of Surya, the Sun god, and his wife Saranyu.Yamuna, referred to respectfully as Yamunaji, holds a very important position in Pushti Marga, a large sect of Hinduism based on the ShuddhAdvaita, in which Shri Krishna is the main deity, propagated by VallabhAcharya / MahaPrabhuji.",
+                       "Like many other seasonal Indian rivers, the Mahanadi too is a combination of many mountain streams and thus its precise source is impossible to pinpoint. However its farthest headwaters lie 6 kilometres (3.7 mi) from Pharsiya village 442 metres (1,450 ft) above sea level south of Sihawa town in Dhamtari district of Chhattisgarh. The hills here are an extension of the Eastern Ghats and are a source of many other streams which then go on to join the Mahanadi.",
+                       "After the river leaves the Kodagu hills and flows onto the Deccan plateau, it forms two islands in Mandya district's Srirangapatna and Shivanasamudra. First, comes the Srirangapatna which forms the sangam and then comes Shivanasamudra. At Shivanasamudra the river drops 98 metres (320 ft), forming the famous Shivanasamudra Falls known separately as Gagana Chukki and Bhara Chukki.Asia's first hydroelectric plant (built in 1902) was on the left falls and supplied power to the city of Bangalore.",
+                       "The river Tapti rises in saptura range At khandwa-burhandpur Gap the river tapti and narmada comes close to each other. On 7 August 1968, before the construction of the Ukai Dam to bring its waters under control and provide hydroelectric power, the Tapti River overflowed its banks during heavy rains during the monsoon season. More than 1,000 people drowned in the flood and the city of Surat was submerged beneath 10 feet of water for several days."];
+      document.getElementById("mhead").innerHTML = mainhead1[x-1];
+       document.getElementById("head1").innerHTML = head_about_1[x-1];
+       document.getElementById("info1").innerHTML = body_about_1[x-1];
+       document.getElementById("head2").innerHTML = head_about_2[x-1];
+       document.getElementById("info2").innerHTML = body_about_2[x-1];
+       document.getElementById("head3").innerHTML = "";
+       document.getElementById("info3").innerHTML = "";
+       }
+
+       function myfunction2() {
+     var body_how_1=["Sindhu Ghat is a river bank near Shey Monastery in Leh. Located 10 Km upstream the Indus river, it originates from the Mansarovar Lake and Mount Kailash in Tibet. The scenic landscape of this attraction near Leh seems surreal. The barren mountains, rocky terrain, and river traversing the region is a sight to behold. Visit this ghat during the Sindhu Darshan Festival in June to experience the cultural extravaganza that Leh has to offer. The festival comprises sightseeing trip, campfire and many more exciting activities.",
+                    "The Sundarbans is a mangrove area in the delta formed by the confluence of Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal. It spans from the Hooghly River in India's state of West Bengal to the Baleswar River in Bangladesh. It comprises closed and open mangrove forests, agriculturally used land, mudflats and barren land, and is intersected by multiple tidal streams and channels. Four protected areas in the Sundarbans are enlisted as UNESCO World Heritage Sites, viz Sundarbans National Park, Sundarbans West, Sundarbans South and Sundarbans East Wildlife Sanctuaries.",
+                    "Kashi Vishvanath Temple is one of the most famous Hindu temples dedicated to Lord Shiva. It is located in Varanasi, Uttar Pradesh, India. The temple stands on the western bank of the holy river Ganga, and is one of the twelve Jyotirlingas, the holiest of Shiva temples. The main deity is known by the name Vishvanatha or Vishveshvara meaning Ruler of The Universe.",
+                    "Tryambakeshwar is an ancient Hindu temple in the town of Trimbak, in the Trimbakeshwar tehsil in the Nashik District of Maharashtra, India, 28 km from the city of Nashik and 40 km from nashik road. It is dedicated to the god Shiv and is one of the twelve Jyotirlingas, where the Hindu genealogy registers at Trimbakeshwar, Maharashtra are kept. The origin of the sacred Godavari river is near Trimbak.",
+                    "Triveni Sangam:The merger of three holy Rivers Narmada, Orsang and Gupt Saraswati at Poicha near Rajpipla is very popular as the sacred Triveni Sangam. People sail across the river by boat to Chanod-Karnali, which is the most important place of pilgrimage on the bank of the River Narmada and all the rituals after the death are performed here by most of the Hindus",
+                    "Located on the Krishna River, Wai was a town of some prominence in the days of the Peshwas. Two important Maratha Brahmin from ruling families had their origins here: Rani Lakshmibai of Jhansi (Tambe family) and Gopikabai, wife of Nanasaheb Peshwa (Raste family). Peshwas, a word derived from the Persian word for foremost leader were similar to a modern prime minister, and served Maharashatra state from 1713 to 1857.",
+                    "The temple of Yamuna, on the left bank of the Yamuna, was constructed by Maharaja Pratap Shah of Tehri Garhwal. The deity is made of black marble. The Yamuna, like the Ganges, has been elevated to the status of a divine mother for the Hindus and has been held responsible for nurturing and developing the Indian civilization.Close to the temple are hot water springs gushing out from the mountain cavities. Surya Kund is the most important kund.",
+                    "Laxman Temple nestled at Sirpur along the bank of Mahanadi River contributes to the religious significance of the river. Sirpur is an interesting site, at a one-hour distance from east of Raipur. Sited on the banks of the holy Mahanadi River, and known as 'Shripur' in primitive times, it was the capital of South Kosala. The Laxman Temple here is believed to have been built in the 7th century and is one of the finest brick temples in India. The temple is still in good condition. It is characterized by beautiful carvings and precise construction.",
+                    "The Shivanasamudra Falls is on the Kaveri River .Shivanasamudra is a small city in the Mandya District of the state of Karnataka, India. It is situated on the banks of the river Kaveri, which forms here the boundary to the Chamarajanagar District, and is the location of one of the first hydro-electric power stations in Asia, which was set up in 1902.The project was designed by Diwan Sheshadri Iyer.",
+                    "According to the legends Tapi river also known as Tapti is the daughter of Surya (the Sun God). Some says that Surya created the Tapi river in order to save himself from his own intense heat. The river finds mention in the great Indian epic Mahabharata, according to which Tapti had married Sanvaran, a legendary hero of the moon dynasty. Tapti and Sanvaran also had the son called Kuru. It was on his name only the Kuru dynasty started. Tapi is considered as the Goddess among the Hindus and is worshiped among them."];
+   
+
+       document.getElementById("info1").innerHTML = body_how_1[x-1];
+       document.getElementById("head1").innerHTML = "Popular spots on river:";
+        
+       document.getElementById("info2").innerHTML = "";
+       document.getElementById("head2").innerHTML = "";
+       
+       }       
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Rivers</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">Popular spot</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Rivers:</p>
+        <p id='info1'>"A river is a natural flowing watercourse, usually freshwater, flowing towards an ocean, sea, lake or another river. In some cases a river flows into the ground and becomes dry at the end of its course without reaching another body of water. Small rivers can be referred to using names such as stream, creek, brook, rivulet, and rill.</p>
+        <p id="head2">Top longest Rivers</p>
+        <p id="info2">Indus River,Brahmaputra River,Ganga River,Godavari River,Narmada River,Krishna River, Yamuna River, Mahanadi River,Kaveri River,Tapi River</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+
+    </div>
+      </div>
+      
+      <script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Indus River</h2><p>It is the longest river in india.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.190721,32.566017]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Brahmaputra River</h2><p>The Brahmaputra River is one of the longest rivers in India. <hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        
+                        "type": "Point",
+                        "coordinates": [83.831421,28.921615]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Ganga River</h2><p>Ganges River is one of the sacred rivers in India.<hr><button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.911008,30.986630]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Godavari River</h2><p> The flow of this river starts from Nasik Hills and end into the Bay of Bengal.<hr><button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.525743,19.932564]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Narmada River</h2><p>Narmada River is one of the sacred rivers in India for the Hinduism followers across the world.<hr><button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [81.753817,22.683844]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'> Krishna River</h2><p>The Krishna River is the sixth biggest river in India by length.<hr><button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.638827,17.938067]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Yamuna River</h2><p>The Yamuna River is the seventh longest river in India.<hr><button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [ 78.458248,31.017512]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Mahanadi River</h2>It originates from Amarkantak Plateau and ends in the Bay of Bengal.<hr><button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                            "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [ 81.916861,20.309768]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kaveri River</h2>The river originates from the hills of Coorg, Karnataka and ends in the Bay of Bengal.<hr><button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [ 75.493455,12.385087]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Tapi River</h2>The Tapi River originates from Bettul and ends in the Arabian Sea. <hr><button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [ 76.166409,21.417863]
+                    } 
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

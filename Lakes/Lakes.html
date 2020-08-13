@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta charset='utf-8' />
+    <title>Lakes</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Lakes";
+          document.getElementById("head1").innerHTML = "Welcome to Lakes:";
+          document.getElementById("info1").innerHTML = "India has a large number of beautiful lakes and great rivers spread all over the country from Kashmir to Kerala and from Rajasthan to Assam. Lakes in India can be divide as man made as well as natural, further natural lake again divided as freshwater lake and brackish water lakes. Indira Sagar reservoir the big lake is the biggest reservoir in India and The Sambhar Salt Lake is India’s largest inland salt lake. Most of the lakes in India are fresh water lakes, Dal Lake in Kashmir and Sasthamkotta Lake in Kerala are the example of freshwater lakes. These water bodies on the land surface are one of the most beautiful tourist attraction in India. The Cholamu Lake is counted as one of most beautiful lake in the world. The Lonar Crater the world’s oldest and largest crater in India is located in state of Maharashtra’s District Buldhana. There are so may beautiful lakes which are famous for bird watching such as Kolleru Lake, Pulicat Lake and Nal Sarovar Lake. The Kanwar Taal or Kabar Taal Lake at Bihar is Asia largest Fresh Water lake, Oxbow lake an oxbow lake is a U-shaped body of water.Wular Lake is one of the largest fresh water lakes in Asia and the largest in India, is located in Jammu and Kashmir. It is measures 24 kms across and surrounded by towering mountains, The green water of the Wular Lake is an important natural habitat for fish, a rich population of birds and wildlife.Loktak Lake is the largest freshwater lake in northeastern India, located in Manipur. It is also called the only floating lake in the world due to the floating phumdis. This ancient lake plays an important role in the economy of Manipur. It serves as a source of water for hydro power generation, irrigation drinking water supply and wildlife. The Keibul Lamjao National Park, which is the last natural refuge of the endangered sangai now found only in Manipur.Chilika Lake, popularly known as Chilka, is the queen of natural scenery in the tribal state Orissa, also known as the Swiss-lake in the continent. Attraction of chilika lake are fishing boats, migratory birds and an entertaining baba. The beautiful chilka lake is paradise for the migratory birds.These lake are an important destination for canoeing and other water activities. The Takia island in Upper Lake and marine drive are the major attraction of lakes. Bhopal is also considered as one of the green city in India.";
+          document.getElementById("head2").innerHTML = "Few Popular Lakes:";
+          document.getElementById("info2").innerHTML = "Pangong Tso, Ladakh.Prashar Lake, Mandi.Lake Pichola, Udaipur.Loktak Lake, Manipur.Chandrataal Lake, Spiti.Tsomgo Lake, Gangtok.Vembanad Lake, Kumarakom.Dal Lake, Srinagar.Chilika lake, Ganjam.Vembanad lake";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          
+          }
+            
+        function myfunction() {
+        var mainhead1=["Pangong Tso, Ladakh","Prashar Lake, Mandi","Lake Pichola, Udaipur","Loktak Lake, Manipur","Chandrataal Lake, Spiti","Tsomgo Lake, Gangtok","Vembanad Lake, Kumarakom","Dal Lake, Srinagar","Chilika lake, Ganjam","Vembanad lake"];
+        var head_about_1=["Welcome to Pangong Tso, Ladakh:","Welcome to Prashar Lake, Mandi:","Welcome to Lake Pichola, Udaipur:","Welcome to Loktak Lake, Manipur:","Welcome to Chandrataal Lake, Spiti:","Welcome to Tsomgo Lake, Gangtok:","Welcome to Vembanad Lake, Kumarakom:","Welcome to Dal Lake, Srinagar:","Welcome to Chilika lake, Ganjam:","Welcome to Vembanad lake:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:"]
+        var body_about_1=["The eastern part of the lake is fresh, with the content of total dissolved solids at 0.68 g/L, while the western part of the lake is saline, with the salinity at 11.02 g/L. The brackish water of the lake has very low micro-vegetation. Guides report that there are no fish or other aquatic life on the Indian side of the lake, except for some small crustaceans. On the other hand, visitors see numerous ducks and gulls over and on the lake surface. There are some species of scrub and perennial herbs that grow in the marshes around the lake. The lake acts as an important breeding ground for a variety of birds including a number of migratory birds. During summer, the Bar-headed goose and Brahmini ducks are commonly seen here. The region around the lake supports a number of species of wildlife including the kiang and the Marmot. The lake hosts large quantities of fish, especially Schizopygopsis stoliczkai and Racoma labiata.Formerly, Pangong Tso had an outlet to Shyok River, a tributary of Indus River, but it was closed off due to natural damming. Two streams feed the lake from the Indian side, forming marshes and wetlands at the edges. Strand lines above current lake level reveal a 5 m (16 ft) thick layer of mud and laminated sand, suggesting the lake has shrunken recently in geological scale.","The lake is located at a height of 2730 m above sea level. With deep blue waters, the lake is held sacred to the sage Prashar and he is regarded to have meditated there. Surrounded by snow-capped peaks and looking down on the fast flowing river Beas, the lake can be approached via Drang. There is a round, floating island inside the lake, which is a common natural phenomenon found all around the world. It is composed of plant matter in various stages of decomposition, and is held aloft by the oxygen in its plants' roots.The floating land moves in all directions in the lake. The floating land covers 7% of area of lake whereas water is with 93%.The temple was built in the thirteenth century and legend has it was built by a baby from a single tree. The lake has a floating island in it and it is said to be unclear how deep it is, with a diver not being able to determine its depth.","Lake Pichola, situated in Udaipur city in the Indian state of Rajasthan, is an artificial fresh water lake, created in the year 1362 AD, named after the nearby Picholi village. It is one of the several contiguous lakes, and developed over the last few centuries in and around the famous Udaipur city. The lakes around Udaipur were primarily created by building dams to meet the drinking water and irrigation needs of the city and its neighborhood. Two islands, Jag Niwas and Jag Mandir are located within Pichola Lake, and have been developed with several palaces to provide views of the lake.Three of the numerous lakes found in the vicinity of Udaipur which connect with the Pichola lake and the Saroop Sagar Lake connected by an arched bridge built by Maharana Swaroop Singh (1842-1861) which in turn connects to the Fateh Sagar Lake, the crystal watered lake in the midst of tree lined hills and the smaller Arsi vilas.","Loktak Lake is the largest freshwater lake in Northeast India and is famous for the phumdis floating over it. The lake is located near Moirang in Manipur state, India. The etymology of Loktak is Lok - 'stream' and tak - 'the end'. The largest of all the phumdis covers an area of 40 km2 and is situated on the southeastern shore of the lake. Located on this phumdi, Keibul Lamjao National Park is the only floating national park in the world. The park is the last natural refuge of the endangered Sangai, Rucervus eldii eldii or Manipur brown-antlered deer, one of three subspecies of Eld's deer.This ancient lake plays an important role in the economy of Manipur. It serves as a source of water for hydropower generation, irrigation and drinking water supply. The lake is also a source of livelihood for the rural fishermen who live in the surrounding areas and on phumdis, also known as 'phumshongs'. Human activity has led to severe pressure on the lake ecosystem. 55 rural and urban hamlets around the lake have a population of about 100,000 people. Considering the ecological status and its biodiversity values, the lake was initially designated as a wetland of international importance under the Ramsar Convention on 23 March 1990. It was also listed under the Montreux Record on 16 June 1993, 'a record of Ramsar sites where changes in ecological character have occurred, are occurring or are likely to occur'.","Chandra Taal lake is situated on the Samudra Tapu plateau, which overlooks the Chandra River. The name of the lake originates from its crescent shape. It is situated at an altitude of about 4,300 metres in the Himalayas. Mountains of scree overlook the lake on one side, and a cirque encloses it on the other.To enjoy the unspoiled beauty of Spiti, entry from Manali via Rohtang and Kunzum La is ideal, the high altitude desert landscape with virtually no civilisation till Kaza is a sight to behold. There is bus service from Manali to Kaza, subject to weather conditions, please check with Himachal Roadways at Manali. After passing Rohtang pass one away from civilization till next stop at Kaza, eight to ten hours away, On the way one may encounter construction crew working on road or power project and two small road side eating places, First, Chhatru Village with a Government Guest House and four shops where you can get Indian meal of Roti, Rice vegetables and Dal, and sometimes sandwiches and non-vegetarian dishes.","Tsomgo Lake, also known as Tsongmo Lake or Changu Lake, is a glacial lake in the East Sikkim district of the Indian state of Sikkim, some 40 kilometres from the capital Gangtok. Located at an elevation of 3,753 m, the lake remains frozen during the winter season. The lake surface reflects different colours with change of seasons and is held in great reverence by the local Sikkimese people. Buddhist monks prognosticated after studying the changing colours of the lake.The lake is formed in an oval shape and has a surface area of 24.47 hectares. The maximum length of the lake is 836 metres and has a maximum width of 427 metres . The maximum depth reported is 15 metres while the average depth is 4.58 metres. The lake water quality is of moderate turbidity.The lake is the venue for the Guru Purnima festival which is also the Raksha Bandhan festival when the faith healers known as Jhakris of Sikkim assemble at the lake area to derive benefits from the healing qualities of the lake waters. Alpine forests cover the catchment of the lake. After the winter season ends in middle of May, the periphery of lake has scenic blooms of flower species of rhododendrons, primulas, blue and yellow poppies, irises and so forth. Also seen in the precincts of the lake are several species of birds including Brahminy ducks. Wildlife seen includes the red panda.","Vembanad Lake is at the heart of Kerala Backwaters tourism with hundreds of kettuvallams plied on it and numerous resorts on its banks. The Kumarakom Bird Sanctuary is located on the east coast of the lake. The lake has become a major tourist attraction. A generally safe destination, this place had just one incident of tourist harassment in 2004 as reported in The Times of India.Vembanad is the longest lake in India, and the largest lake in the state of Kerala. Spanning several districts in the state of Kerala, it is known as Vembanadu Lake in Kottayam, Punnamada Lake in Kuttanad and Kochi Lake in Kochi. Several groups of small islands including Vypin, Mulavukad, Vallarpadam, Willingdon Island are located in the Kochi Lake portion. Kochi Port is built around the Willingdon Island and the Vallarpadam island. The Nehru Trophy Boat Race is conducted in a portion of the lake. High levels of pollution have been noticed at certain hotspots of the Vembanad backwaters. Government of India has identified the Vembanad wetland under National Wetlands Conservation Programme.The shore line of the lake, is about 15.5 kilometres, is encompassed by a boulevard lined with Mughal era gardens, parks, houseboats and hotels. Scenic views of the lake can be witnessed from the shore line Mughal gardens, such as Shalimar Bagh and Nishat Bagh built during the reign of Mughal Emperor Jahangir and from houseboats cruising along the lake in the colourful shikaras. During the winter season, the temperature sometimes reaches −11 °C, freezing the lake. The lake covers an area of 18 square kilometres and is part of a natural wetland which covers 21.1 square kilometres, including its floating gardens. The floating gardens, known as 'Rad' in Kashmiri, blossom with lotus flowers during July and August.","Chilika Lake is a brackish water lagoon, spread over the Puri, Khurda and Ganjam districts of Odisha state on the east coast of India, at the mouth of the Daya River, flowing into the Bay of Bengal, covering an area of over 1,100 km2. It is the largest coastal lagoon in India and the second largest coastal lagoon in the world after The New Caledonian barrier reef in New Caledonia. It has been listed in UNESCO World Heritage tentative list. It is the largest wintering ground for migratory birds on the Indian sub-continent. The lake is home to a number of threatened species of plants and animals. The lake is an ecosystem with large fishery resources. It sustains more than 150,000 fisher–folk living in 132 villages on the shore and islands. The lagoon hosts over 160 species of birds in the peak migratory season. Birds from as far as the Caspian Sea, Lake Baikal, Aral Sea and other remote parts of Russia, Kirghiz steppes of Mongolia, Central and southeast Asia, Ladakh and Himalayas come here. These birds travel great distances, migratory birds probably follow much longer routes than the straight lines, possibly up to 12,000 km, to reach Chilika Lake.","Vembanad Lake is at the heart of Kerala Backwaters tourism with hundreds of kettuvallams plied on it and numerous resorts on its banks. The Kumarakom Bird Sanctuary is located on the east coast of the lake. The lake has become a major tourist attraction. A generally safe destination, this place had just one incident of tourist harassment in 2004 as reported in The Times of India.Vembanad is the longest lake in India,and the largest lake in the state of Kerala. Spanning several districts in the state of Kerala, it is known as Vembanadu Lake in Kottayam, Punnamada Lake in Kuttanad and Kochi Lake in Kochi. Several groups of small islands including Vypin, Mulavukad, Vallarpadam, Willingdon Island are located in the Kochi Lake portion. Kochi Port is built around the Willingdon Island and the Vallarpadam island.The Nehru Trophy Boat Race is conducted in a portion of the lake. High levels of pollution have been noticed at certain hotspots of the Vembanad backwaters. Government of India has identified the Vembanad wetland under National Wetlands Conservation Programme."];
+        var body_about_2=["A five-hour, mountainous drive away from Leh, the Pangong Tso, a brackish water lake, is one of the most picturesque spots in India. I’m sure you remember Kareena Kapoor riding a scooter in a red lehenga along the banks of the Pangong Tso.","The Prashar Lake, is a glacial lake next to a Himachal-style temple dedicated to Sage Prashar, and is located 49 kilometers away from Mandi. It is an easy trek, even if you’re travelling with kids. The lake, with its dark, blue water stands starkly apart from the landscape both during summers and winters. The summers turn the Prashar landscape into a myriad of blue and green, whereas winters turn it into vistas of alpine white and blue.","An artificial lake built over the City Palace, Udaipur, Lake Pichola stretches as far as the eye can see. This beautiful lake measures 4 kilometres in length and about 3 in width. The City Palace overlooks the lake, and you can take long boat rides from Rameshwar Ghat. You can even take a sunset boat ride, which makes for a wonderful romantic experience.","A hotspot for flora and fauna and the largest freshwater lake in North East India, Loktak Lake is famous for the floating phumdis over it. Phumdis mean an accumulated mass of soil, vegetation and other organic matter which is at various stages of decomposition. The masses make little islands on the lake, where people actually live. The sight of the little phumdis make the Loktak Lake an amazing sight to behold.","A natural replica of the Pangong Tso in Spiti, situated at an altitude of 4300 metres, the Chandratal Lake gets its name from its crescent-like shape. Chandaratal literally means ‘Moon Lake’, and is situated at 7 kilometres from Kunzum La Pass in the Lahaul and Spiti district. The lake is a shade of blue close to sapphires, and is surrounded by broad grassy plains. The bonus, you ask? Spiti is the perfect place to spot the Milky Way and enjoy a peaceful vacation with no mobile interruption.","Located at a distance of 35 kilometres from Gangtok, on the road to Nathu La Pass. The sheer altitude at Tsomgo, or Changu Lake, as it is known in the local language, means that you can see the high peaks that surround the alpine, glacial lake. The water in the lake is fed by the melting ice nearby. Colourful prayer flags and bells surround the lake, making this one of the most amazing spots to visit in the eastern Himalayas.","Kumarakom is home to the Vembanad Lake, which lays claim to being one of the longest lakes in India and one of the largest lakes in Kerala! Plus, since the lake is lesser known it is less crowded, ensuring you have a peaceful experience. What’s even more fascinating, is that the lake is a combination of fresh and brackish water, divided by a saltwater barrier. Stay in a houseboat and soak in the beauty and serenity of Vembanad in the best possible way.","To experience the pristine beauty of Kashmir in its full glory, Dal Lake needs to be on your travel itinerary. Although thronged by tourists ever since the days of Kashmir Ki Kali, Dal Lake is breathtakingly beautiful both during summer and winter, with two very different landscapes to flaunt. The 15 kilometre-round lake is dotted with houseboats from the Raj era, along with shikaras that ply across the lake, ferrying visitors from the boulevard to their houseboats, or on boat rides. The shikaras also act as vendors for all kinds of Kashmiri handicrafts and trinkets, fruits, flowers and vegetables.","Chilika Lake is a brackish water lagoon, spread over the Puri, Khurda and Ganjam districts of Odisha state on the east coast of India, at the mouth of the Daya River, flowing into the Bay of Bengal, covering an area of over 1,100 km2. It is the largest coastal lagoon in India and the second largest coastal lagoon in the world after The New Caledonian barrier reef in New Caledonia.It is the largest wintering ground for migratory birds on the Indian sub-continent. The lake is home to a number of threatened species of plants and animals.","Vembanad is the longest lake in India, and the largest lake in the state of Kerala. Spanning several districts in the state of Kerala, it is known as Vembanadu Lake in Kottayam, Punnamada Lake in Kuttanad and Kochi Lake in Kochi. Several groups of small islands including Vypin, Mulavukad, Vallarpadam, Willingdon Island are located in the Kochi Lake portion. Kochi Port is built around the Willingdon Island and the Vallarpadam island.The Nehru Trophy Boat Race is conducted in a portion of the lake. High levels of pollution have been noticed at certain hotspots of the Vembanad backwaters. Government of India has identified the Vembanad wetland under National Wetlands Conservation Programme."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["Distance between Leh Airport and Pangong Lake. It takes 2 hours, 25 minutes to travel from Leh Airport to Pangong Lake. Approximate driving distance between Leh Airport and Pangong Lake is 121 kms or 75.2 miles or 65.3 nautical miles . Travel time refers to the time taken if the distance is covered by a car.","The nearest airport is in Bhuntar and the nearest railway station is in Pathankot. A taxi can be boarded from outside the airport and railway station to reach Mandi. However, the most convenient way of travelling to Mandi is by hiring a cab or riding on the HRTC bus which operates regularly from Delhi.","It takes 27 minutes to travel from Lake Pichola Hotel to Udaipur Airport. Approximate driving distance between Lake Pichola Hotel and Udaipur Airport is 23 kms or 14.3 miles or 12.4 nautical miles ."," Nearest airport is at Imphal which is just 48 km from Loktak Lake and can be reached through hailing a cab.","Kullu's Bhuntar airport is 54 kms away from Spiti.","Nearest airport is Bagdogra in West Bengal( 124 kms.), from where scheduled flights operates to and fro from Kolkata, Delhi, Guwahati.","Cochin International Airport, About 63 km.","Tourists can easily reach Dal Lake from Srinagar as the distance between the Srinagar Airport and Dal Lake is 23.3 km.","Bhubaneswar is the closest airport to Chilika, which is just 105 kilometres from Barkul, 110 kilometres from Satpada and 130 kilometres from Rambha. As there are no direct flights to Chilika, one must arrive at Bhubaneswar before boarding a taxi or bus to Chilika.","The nearest airport is the Cochin International Airport, situated 16 km away. "];
+        var body_how_2=["Kalka is the nearest railway station to Leh. Buses or taxis can be hired to reach Manali via Shimla. There are regular taxis and bus services from Manali to Leh.","Located in Mandi, Prashar Lake is easily accessible. Prashar Lake is located in a very good area and is just about 49 km from the centre of Mandi.","It takes 2 hours, 14 minutes to travel from Udaipur Railway Station to Lake Pichola Hotel. Approximate driving distance between Udaipur Railway Station and Lake Pichola Hotel is 112 kms."," Nearest rail head is at Dimapur which is 215 km from Imphal and can be reached through a taxi or a public bus.","Train travelers have to make the entry from a different location. Closest railway station to Spiti valley is at Shimla.","Tsomgo lake in Sikkim is easily approachable from Gangtok, the capital city of Sikkim, India. Gantok is well connected to rest of India via air, road.","Kottayam, About 13 km.","It takes 28 minutes to travel from Srinagar Railway Station to Dal Lake. Approximate driving distance between Srinagar Railway Station and Dal Lake is 24 kms.","Calcutta-Chennai railway route of South Eastern Railways touches Chilka Lake at Balugaon, Chilika, Khallikote and Rambha. The nearest railway station for Barkul is located at Balugaon at a distance of 5 km from Chilka.","The closest railhead is the Ernakulam Railway Junction in Kochi. By road: You can avail of a bus, cab or auto-rickshaw to reach Vembanad Lake by road from Kochi."];
+        var body_how_3=["Pangong Tso can be reached after a a five-hour drive from Leh. From Leh, one passes through the Changla Pass and then through Tangste. There are regular bus services run by state road transport corportation .","Located in Mandi, Prashar Lake is easily accessible. Prashar Lake is located in a very good area and is just about 49 km from the centre of Mandi.","It takes 2 hours, 14 minutes to travel from Udaipur Railway Station to Lake Pichola Hotel. Approximate driving distance between Udaipur Railway Station and Lake Pichola Hotel is 112 kms or 69.6 miles. ","Nearest rail head is at Dimapur which is 215 km from Imphal and can be reached through a taxi or a public bus.","Kullu's Bhuntar airport is 54 kms away from Spiti. Once there, you can make use of the bus service or hire a cab for your onward journey to the valley.","Tsomgo lake in Sikkim is easily approachable from Gangtok, the capital city of Sikkim, India. Gantok is well connected to rest of India via air, road.","KSRTC Bus station.","It takes 28 minutes to travel from Srinagar Bus Station to Dal Lake. Approximate driving distance between Srinagar Bus Station and Dal Lake is 24 kms.","Calcutta-Chennai railway route of South Eastern Railways touches Chilka Lake at Balugaon, Chilika, Khallikote and Rambha. The nearest railway station for Barkul is located at Balugaon at a distance of 5 km from Chilka.","The closest railhead is the Ernakulam Railway Junction in Kochi. By road: You can avail of a bus, cab or auto-rickshaw to reach Vembanad Lake by road from Kochi."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "By Plane:";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_3[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Lakes</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Lakes:</p>
+        <p id='info1'>India has a large number of beautiful lakes and great rivers spread all over the country from Kashmir to Kerala and from Rajasthan to Assam. Lakes in India can be divide as man made as well as natural, further natural lake again divided as freshwater lake and brackish water lakes. Indira Sagar reservoir the big lake is the biggest reservoir in India and The Sambhar Salt Lake is India’s largest inland salt lake. Most of the lakes in India are fresh water lakes, Dal Lake in Kashmir and Sasthamkotta Lake in Kerala are the example of freshwater lakes. These water bodies on the land surface are one of the most beautiful tourist attraction in India. The Cholamu Lake is counted as one of most beautiful lake in the world. The Lonar Crater the world’s oldest and largest crater in India is located in state of Maharashtra’s District Buldhana. There are so may beautiful lakes which are famous for bird watching such as Kolleru Lake, Pulicat Lake and Nal Sarovar Lake. The Kanwar Taal or Kabar Taal Lake at Bihar is Asia largest Fresh Water lake, Oxbow lake an oxbow lake is a U-shaped body of water.Wular Lake is one of the largest fresh water lakes in Asia and the largest in India, is located in Jammu and Kashmir. It is measures 24 kms across and surrounded by towering mountains, The green water of the Wular Lake is an important natural habitat for fish, a rich population of birds and wildlife.Loktak Lake is the largest freshwater lake in northeastern India, located in Manipur. It is also called the only floating lake in the world due to the floating phumdis. This ancient lake plays an important role in the economy of Manipur. It serves as a source of water for hydro power generation, irrigation drinking water supply and wildlife. The Keibul Lamjao National Park, which is the last natural refuge of the endangered sangai now found only in Manipur.Chilika Lake, popularly known as Chilka, is the queen of natural scenery in the tribal state Orissa, also known as the Swiss-lake in the continent. Attraction of chilika lake are fishing boats, migratory birds and an entertaining baba. The beautiful chilka lake is paradise for the migratory birds.These lake are an important destination for canoeing and other water activities. The Takia island in Upper Lake and marine drive are the major attraction of lakes. Bhopal is also considered as one of the green city in India.</p>
+        <p id="head2">Few Popular Lakes:</p>
+        <p id="info2">Pangong Tso, Ladakh.Prashar Lake, Mandi.Lake Pichola, Udaipur.Loktak Lake, Manipur.Chandrataal Lake, Spiti.Tsomgo Lake, Gangtok.Vembanad Lake, Kumarakom.Dal Lake, Srinagar.Chilika lake, Ganjam.Vembanad lake.</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Pangong Tso, Ladakh</h2><p>The brackish water of the lake has very low micro-vegetation. Guides report that there are no fish or other aquatic life on the Indian side of the lake, except for some small crustaceans.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.667112,33.762218]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Prashar Lake, Mandi</h2><p>Prashar Lake lies 49 km north of Mandi, Himachal Pradesh, India, with a three storied pagoda-like temple dedicated to the sage Prashar.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.101124,31.754420]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Lake Pichola, Udaipur</h2><p>Lake Pichola, situated in Udaipur city in the Indian state of Rajasthan, is an artificial fresh water lake, created in the year 1362 AD, named after the nearby Picholi village.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.676339,24.570515]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Loktak Lake, Manipur</h2><p>Loktak Lake is the largest freshwater lake in Northeast India and is famous for the phumdis floating over it. The lake is located near Moirang in Manipur state, India.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [93.814277,24.560274]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Chandrataal Lake, Spiti</h2><p>Chandra Taal, or Chandra Tal is a lake situated in the Spiti part of the Lahul and Spiti district of Himachal Pradesh.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.615683,32.482417]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Tsomgo Lake, Gangtok</h2><p>Tsomgo Lake, also known as Tsongmo Lake or Changu Lake, is a glacial lake in the East Sikkim district of the Indian state of Sikkim, some 40 kilometres from the capital Gangtok.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [88.763227,27.374650]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Vembanad Lake, Kumarakom</h2><p>Kumarakom is a village on Vembanad Lake in the backwaters of Kerala, southern India. It’s laced with canals, where houseboats ply the waters. Kumarakom Bird Sanctuary is home to many species including cuckoos and Siberian storks.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.416649,9.616770]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Dal Lake, Srinagar</h2><p>Dal is a lake in Srinagar, the summer capital of Jammu and Kashmir, India. The urban lake, which is the second largest in the state, is integral to tourism and recreation in Kashmir and is named the 'Jewel in the crown of Kashmir' or 'Srinagar's Jewel'.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [74.867790,34.111258]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Chilika lake</h2><p>Chilika Lake is a brackish water lagoon, spread over the Puri, Khurda and Ganjam districts of Odisha state on the east coast of India.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [85.478010,19.848514]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Vembanad lake</h2><p>Vembanad is the longest lake in India, and the largest lake in the state of Kerala.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.397202,9.599827]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

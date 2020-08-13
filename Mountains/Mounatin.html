@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta charset='utf-8' />
+    <title>Mountains</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#info3,#head3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Moinatins";
+          document.getElementById("head1").innerHTML = "Hello";
+          document.getElementById("info1").innerHTML = "A mountain is a large landform that rises above the surrounding land in a limited area, usually in the form of a peak.A mountain is generally steeper than a hill. Mountains are formed through tectonic forces or volcanism. These forces can locally raise the surface of the earth. Mountains erode slowly through the action of rivers, weather conditions, and glaciers. A few mountains are isolated summits, but most occur in huge mountain ranges.High elevations on mountains produce colder climates than at sea level. These colder climates strongly affect the ecosystems of mountains: different elevations have different plants and animals. Because of the less hospitable terrain and climate, mountains tend to be used less for agriculture and more for resource extraction and recreation, such as mountain climbing.The highest mountain on Earth is Mount Everest in the Himalayas of Asia, whose summit is 8,850 m (29,035 ft) above mean sea level. The highest known mountain on any planet in the Solar System is Olympus Mons on Mars at 21,171 m (69,459 ft).";
+          document.getElementById("head2").innerHTML = "Highest Peakes:";
+          document.getElementById("info2").innerHTML = "Kanchenjunga,Nanda Devi,Saltoro Kangri,Kamet,Reo Purgyil, Saramati,Sandakphu, Anamudi,Doddabetta,Khayang.";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+       
+          }
+            
+        function myfunction() {
+        var mainhead1=["Kanchenjunga","Nanda Devi","Saltoro Kangri","Kamet","Reo Purgyil","Saramati","Sandakphu","Anamudi","Doddabetta","Khayang"];
+        var head_about_1=["Welcome to Kanchenjunga","Welcome to Nanda Devi","Welcome to Saltoro Kangri","Welcome Kamet","Welcome to Reo Purgyil","Welcome to  Saramati","Welcome to Sandakphu", "Welcome to Anamudi","Welcome to Doddabetta","Welcome to Khayang"];
+        var head_about_2=["Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights"];
+        var body_about_1=["It can be viewed from many points of Darjeeling and Gangtok. Tiger Hills is the best spot to have a spectacular view of the mountain.The literal translation of Kanchenjunga means “The Five Treasures of Snows” and these treasures are gold, silver, gems, grain, and holy books. Kanchenjunga is a group of five peaks out of which four are over 8450 ft.",
+                         "This is the highest peak in the country as Kanchenjunga lies on the border of India and Nepal. Until 1808, it was the highest known mountain when Dhaulagiri was discovered. Nanda Devi literally means ‘Blessed Goddess’. It is regarded as the pearl of the Himalayas because of its beauty. The grace full symmetry of its twin peaks, the main and the East, thrusting them up to the sky, is a visual treat, a rare example of perfect Twin Peaks.",
+                         "Saltoro Kangri is the highest peak of the Saltoro Mountains, also known as the Saltoro Range, which is a part of the Karakoram. It is the 31st highest mountain in the world, but it is in a very remote location deep in the Karakoram. It is located on the Actual Ground Position Line between Indian controlled territory in the Siachen region and Pakistani-controlled territory west of the Saltoro Range. It is currently controlled by India.",
+                         "It is the highest peak in Garhwal Himalayas and lies in the Chamboli District. It is 29th highest peak in the world and the third highest peak in India (according to India however, the rank is much lower as it includes in its list of mountains all those in Pakistan occupied Kashmir).",
+                         "At 6,816 m Reo Purgyil is the highest mountain peak in the state of Himachal Pradesh. Geologically the peak is a dome structure and is part of a great massif that rises above the Satluj River (Sutlej) and overlooks the western valley of Tibet.[2] The Spiti River, a right hand tributary of the Satluj, drains the northern face of the massif.The highest peak is often obscured by clouds and is located about 2 km to the south of Peak 6791, a well known slightly shorter twin with a height of 6,791 m. Peak 6791 is widely referred to as Leo Pargial and has sufficient topographic prominence to be classified as a mountain in its own right. Nako village is located on the slopes of the mountain, close to the India-Tibet border.",
+                         "In Nagaland Saramati hill range is the biggest in the mountain range of Nagaland and is situated on the extreme south east of the state. At 3841 mt , Saramati Peak is highest in Nagaland and it remains snow covered during winter. The mountain range is covered with rich , natural and diverse forests , visible at various altitudes , ranging from sub-tropical ever green and semi ever green to temperate broad leaved and Alpine vegetation. It also has good bio-diversity with natural flora and fauna and various kinds of orchids.",
+                         "It is the highest point of Singalia Ridge. Four of the Five peaks in the world, Mount Everest, Kanchenjunga, Lhotse and Makalu, can be seen from its summit. The Kanchenjunga’s view is the best possible clear view and is known as the SLEEPING BUDDHA or the SLEEPING SHIVA.",
+                         "Anamudi  is a mountain located in the Indian state of Kerala. It is the highest peak in the Western Ghats and South India, at an elevation of 2,695 metres (8,842 ft) and a topographic prominence of 2,479 metres (8,133 ft). It lies on the border of Devikulam Taluk, Idukki district and Kothamangalam Taluk, Ernakulam district. The name Anamudi literally translates to elephant's forehead, a reference to the resemblance of the mountain to an elephants head.The first recorded ascent of Anamudi was by General Douglas Hamilton of the Madras Army on May 4, 1862 but it is likely that there had been earlier ascents by local people.",
+                         "Doddabetta is the highest mountain in the Nilgiri Mountains at 2,637 metres (8,650 feet). There is a reserved forest area around the peak. It is 9 km from Ooty, on the Ooty-Kotagiri Road in the Nilgiris District of Tamil Nadu, India. It is a popular tourist attraction with road access to the summit. It is the fourth highest peak in South India next to Anamudi, Mannamalai and Meesapulimala. The peaks Hecuba (2375 m), Kattadadu (2418 m) and Kulkudi (2439 m) are the three closely linked summits in the west of the Doddabetta range near to Udagamandalam.",
+                         "With an altitude of 3114 meter above the sea level, the Khayang Peak is the highest in the Ukhrul district. Visiting the peak one could get a complete Kaleidoscopic view of the entire region that gives a complete view of the flowing hills, the winding streams, undulating valleys and the brilliant hamlets. In simple words-the view of the Khayang Peak is just magical. "];
+    
+        var body_about_1=["It rises with an elevation of 8,586 m (28,169 ft) in a section of the Himalayas called Kangchenjunga Himal delimited in the west by the Tamur River, in the north by the Lhonak Chu and Jongsang La, and in the east by the Teesta River.Until 1852, Kangchenjunga was assumed to be the highest mountain in the world, but calculations based on various readings and measurements made by the Great Trigonometrical Survey of India in 1849 came to the conclusion that Mount Everest, known as Peak XV at the time, was the highest. Allowing for further verification of all calculations, it was officially announced in 1856 that Kangchenjunga is the third highest mountain in the world.",
+                          "Nanda Devi is a two-peaked massif, forming a 2-kilometre-long (1.2 mi) high ridge, oriented east-west. The western summit is higher, and the eastern summit, called Nanda Devi East, (locally known as Sunanda Devi) is the lower one. The main summit stands guarded by a barrier ring comprising some of the highest mountains in the Indian Himalayas, twelve of which exceed 6,400 metres (21,000 ft) in height, further elevating its sacred status as the daughter of the Himalaya in Indian myth and folklore. The interior of this almost insurmountable ring is known as the Nanda Devi Sanctuary, and is protected as the Nanda Devi National Park.",
+                          " It rises dramatically above the valleys of the Kondus and Saltoro river of Baltistan to the west of the peak. The west part is controlled by Pakistan and the east part by India.",
+                          "The West (Pachmi or Paschimi) Kamet Glacier, the East (Purbi or Purva) Kamet Glacier and the Raikana Glacier systems surround Kamet. The branches of the West Kamet Glacier head on the western slopes of Kamet, Abi Gamin, and Mukut Parbat. The East Kamet Glacier flows from the eastern side of Kamet and Mana. The Raikhana glacier originates on the east side of Meade’s Col saddle, flows east of Abi Gamin, and unites with the East Kamet Glacier. The West Kamet Glacier drains into the Saraswati River while the East Kamet Glacier feeds the Dhauliganga River; both rivers are tributaries of the Alaknanda River, the major river of the Chamoli district.",
+                          "1st official ascent (1971) by ITBP (Indo Tibetan Border Police).2nd ascent (1991) by E. Theophilus and team.Recent ascent (2018) by Rajsekhar Maity and team (South Calcutta Trekkers Association).",
+                          "The great Indian hornbill is one of the most famous birds found in the state. Blyth's tragopan, a vulnerable species of pheasant, is the state bird of Nagaland can be found here",
+                          "The western part of Sandakphu peak is located in Sandakpur rural municipality (ward no. 2 & 4) of Ilam District of Province No.1.The trekking starts from Ilam Bazar via Maipokhari, Maimajhuwa, Mabu, Kala Pokhri Bikhe Bhyanjyang to Sandakpur. And also from ilam Bazar via sulubung, jamuna, hangetham (special for birds like spiny babbler, blue tit etc.), piple, kalipokhari, bikhe vanjyang to sandakpur. In this treaking route jamuna is most valuable for trekkers",
+                          "Outside the Himalayan Mountain Ranges, it is the highest point in India. It is the home of largest surviving populations of Asian elephants, Gaurs and The Nilgiri’s Tahrs.",
+                          " It is the third highest peak in South India next to Anamudi and Meesapulimala. The Chamundi Hills can be viewed from here.",
+                          "The locals living in this area as well as the tourists coming from across the globe love trekking up to the hill to reach the peak where one could witness the scenic beauty all around that is truly mesmerising and treat to the eyes and soul. The place offers an enchanting & breathtaking view of the picturesque surroundings from atop. The sight of the sun rising from the peak is something that cannot be expressed in words but only needs to be experienced. For those who aren’t visiting Khayang Peak for trekking can hire public transport and go for a long drive to the top of the hill to breathe in the aura of nature. The Khayang Peak will help you make the most out of trekking in Ukhrul an unforgettable one."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_1[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+       
+          }
+
+          function myfunction2() {
+            var body_how_1=["The nearest airport is the Bagdogra airport, which is around 160 km from Yuksom.",
+                             "Nearest airport is Pantnagar Airport, around 304 km from Munsiyari",
+                             "Islamabad airport is only option.",
+                             "The nearest airport to Joshimath is Jolly Grant situated in Dehradun. From there, one can opt for a bus or a taxi to reach Joshimath.",
+                             "No direct flights.","No direct flights.","No direct flights.","Nearest airport at Munnar","The Coimbatore airport is the closest to the hills at 3½ hours by road.",
+                             "No Direct flights."];
+            var body_how_2=["The closest railway station of Yuksom is the New Jalpaiguri railway station, around 150 km away.",
+                             "Kathgodam railway station, 273 km from Munsiyari, is the nearest railway station.",
+                             "No direct tarins.",
+                             " Joshimath doesn’t have a railhead. Nearest railway station to Joshimath is situated in Haridwar. Haridwar is connected with major cities like Delhi, Ahmadabad and Dehradun.",
+                             "No direct Trains","No direct Trains","Darjelling is the nearest station","Nearest station at Munnar"," The Nilgiri Express (Train No. 2671) leaves from Chennai at night, and reaches Mettupalayam (which Indian Rail spells Metupalaiyam), a small town at the foothills of the Nilgiris early the next morning.",
+                             "No direct trains."];
+            var body_how_3=["Tourist can reach Yuksom within 5 hours from Geyzing (44.9 km) using shared or private jeeps. Gangtok (145.9 km) and Pelling (35.9 km) are the other nearest places where you can arrive via buses or jeeps available at Yuksom. It might be difficult to find shared jeeps after 1 PM.",
+                            "Munsiyari, the starting point of the trek, is linked well with highways. You can reach Munsiyari from neighboring tours like Haldwani, Kausani, Rishikesh, Nainital through taxi or state owned buses",
+                            "NATCO (Northern Areas Transport Corporation) , Silk Route Transport Corporation, and several other transport companies offer bus and jeep transport service to the two hubs and to several other popular destinations, lakes, and glaciers in the area.",
+                            "Joshimath has good connectivity of roads from cities like Rishikesh, Haridwar and Dehradun. One can reach to these places from Delhi and get a bus or shared taxi to Joshimath. The buses usually leave early morning from places like Haridwar and Rishikesh.",
+                            "Local buses from shimla and local transports.","From Dimapur you have to take a bus which cost around ₹300 and takes 8hrs to reach. Government-operated buses are cheaper then private cars.",
+                            "Local buses from darjelling","24 min travel time from Munnar.","There are buses and shared taxi vans that can be boarded from most parts of India to Ooty.","The district headquarters, Ukhrul, is linked with Imphal, the state capital, by national highway 150. This highway also links Ukhrul with Kohima via Jessami."];
+      
+      document.getElementById("info1").innerHTML = body_how_1[x-1];
+       document.getElementById("head1").innerHTML = "By Plane:";
+       document.getElementById("head2").innerHTML = "By Railways:";
+       document.getElementById("info2").innerHTML = body_how_2[x-1];
+       document.getElementById("head3").innerHTML = "By Bus:";
+       document.getElementById("info3").innerHTML = body_how_3[x-1];
+    
+
+    }
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Mountains</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Hello</p>
+        <p id='info1'>A mountain is a large landform that rises above the surrounding land in a limited area, usually in the form of a peak.A mountain is generally steeper than a hill. Mountains are formed through tectonic forces or volcanism. These forces can locally raise the surface of the earth. Mountains erode slowly through the action of rivers, weather conditions, and glaciers. A few mountains are isolated summits, but most occur in huge mountain ranges.High elevations on mountains produce colder climates than at sea level. These colder climates strongly affect the ecosystems of mountains: different elevations have different plants and animals. Because of the less hospitable terrain and climate, mountains tend to be used less for agriculture and more for resource extraction and recreation, such as mountain climbing.The highest mountain on Earth is Mount Everest in the Himalayas of Asia, whose summit is 8,850 m (29,035 ft) above mean sea level. The highest known mountain on any planet in the Solar System is Olympus Mons on Mars at 21,171 m (69,459 ft).</p>
+        <p id="head2">Highest Peakes:</p>
+        <p id="info2">Kanchenjunga,Nanda Devi,Saltoro Kangri,Kamet,Reo Purgyil, Saramati,Sandakphu, Anamudi,Doddabetta,Khayang.</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'> Kanchenjunga, Sikkim</h2><p>Kanchenjunga means “Five Treasures of the Snow’ and it is the third highest peak in the world and first in India with an elevation of 8.586 meters.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates":  [88.147449,27.704161]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Nanda Devi, Uttrakhand</h2><p>Nanda Devi is the second highest mountain peak in India with an elevation of 7,824 meters.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [79.970270,30.377266]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'> Saltoro Kangri, Jammu and Kashmir</h2><p>Saltoro Kangri is the highest peak of the Saltoro Mountains.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.846211,35.400627]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kamet, Uttrakhand </h2><p>Mt. Kamet means ‘lower snow’ attracted the first mountaineers in Tibet.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [79.590454,30.920632]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'> Reo Purgyil, Himachal Pradesh</h2><p>It is the highest peak of Himachal Pradesh and lies on the border of Kinnaur District of Himachal Pradesh and Tibet.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.734955,31.885705]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Saramati, Nagaland</h2><p>Saramati is the highest in Nagaland with an elevation of 3,841 meters.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [95.03680,25.741918]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Sandakphu, West Bengal</h2><p>Sandakphu is the highest peak West Bengal with an elevation of 3,636 meters.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [87.999914,27.060572]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Anamudi, Kerala</h2><p>Anamudi is the pride of Kerala and it has an elevation of 2,695 meters.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.063969,10.169785]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Doddabetta, Tamil Nadu</h2><p>Doddabetta, is the highest mountains in the Nilgiri Hills with an elevation of 2,637 meters.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.735784,11.400873]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Khayang, Manipur</h2><p>It is the highest peak of Ukhrul District with an elevation of 3,114 meters.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [94.597802,25.066690]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

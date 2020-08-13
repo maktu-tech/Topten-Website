@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta charset='utf-8' />
+    <title>Hill Stations</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Hill Stations";
+          document.getElementById("head1").innerHTML = "Welcome to Hill Stations:";
+          document.getElementById("info1").innerHTML = "The hill stations are high-altitude towns used especially by European colonialists, as a place of refuge to escape the blistering summer heat and dust of plains during the British Raj. They are prevalent in Southeast Asia and the Indian subcontinent, particularly in India.The Indian subcontinent has seven principal mountain ranges and the largest of all is the Himalayas that lies in the northern part of India. The famous peaks and ranges include the Kangchenjunga range in the Eastern Himalayas which frames the hill stations of Darjeeling and Gangtok as well as the Nanda Devi in Uttarakhand. The Shivalik range that also lies within the same region also has some famous hill stations that include Dalhousie, Kullu, Shimla, Nanital sahyadri and many more. Most of the hill stations in India were developed by the British around a central mall to get respite from the oppressive summer heat. Many have picturesque lakes as their focal point, making them excellent places for boating activities.With the highest mountain ranges in the world, the Himalayas, running north to east and the stunning Aravalli and Vindhya ranges flanking the western and central parts, the best hill stations in India offer some of the most spectacular landscapes in the world. From the misty valley of Coorg to adventure-packed Manali, here are some of India’s most-loved hill stations. India has fascinated millions of people from the various geographical locations of the world, to visit the country, where many religions were born and flourished. It is a land of varied diversity, where over a billion people speak more than 700 languages, sync together to prosper as a nation. There are numerous tourist destinations in the country. With 'Athiti Devo Bhava' (Guests are Gods) as the prime lesson being taught in each household. It is one of the most tourist-friendly nations in the world.The hills have been successful in holding up the century-old traditions and cultures that have prospered the lives of the people in Incredible India. India is dotted with the awe-inspiring hills all over the country starting right up from Jammu and Kashmir to Tamil Nadu, encapsulating over 20 mountain ranges.There are many hill station tours in India to choose from, but the problem remains which one to select. In a country with over 20 mountain ranges, choosing a hill station can be a very challenging task. Here is a list of the popular hill stations in India categorized by the part of the country you decide to visit.The travel and tourism in the northern part of the nation is dominated by the Himalayas, offering everyone a chance to get spellbound by the grandeur of the peaks and picturesque landscape, which one cannot ignore.";
+          document.getElementById("head2").innerHTML = "Few Beautiful Hill Stations:";
+          document.getElementById("info2").innerHTML = "Nainital, Uttarakhand","Manali, Himachal Pradesh","Mussoorie, Uttarakhand","Gulmarg, Jammu and Kashmir","Darjeeling, West Bengal","Shillong, Meghalaya","Binsar, Uttarakhand","Gangtok, Sikkim","Kodaikanal, Tamil Nadu","Tawang, Arunachal Pradesh";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          
+          }
+            
+        function myfunction() {
+        var mainhead1=["Nainital, Uttarakhand","Manali, Himachal Pradesh","Mussoorie, Uttarakhand","Gulmarg, Jammu and Kashmir","Darjeeling, West Bengal","Shillong, Meghalaya","Binsar, Uttarakhand","Gangtok, Sikkim","Kodaikanal, Tamil Nadu","Tawang, Arunachal Pradesh"];
+        var head_about_1=["Welcome to Nainital, Uttarakhand:","Welcome to Manali, Himachal Pradesh:","Welcome to Mussoorie, Uttarakhand:","Welcome to Gulmarg, Jammu and Kashmir:","Welcome to Darjeeling, West Bengal:","Welcome to Shillong, Meghalaya:","Welcome to Binsar, Uttarakhand:","Welcome to Gangtok, Sikkim:","Welcome to Kodaikanal, Tamil Nadu:","Welcome to Tawang, Arunachal Pradesh:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:",]
+        var body_about_1=["Nainital also known as Naini Tal, is a popular hill station in the Indian state of Uttarakhand and headquarters of Nainital district in the Kumaon foothills of the outer Himalayas. Situated at an altitude of 2,084 metres above sea level, Nainital is set in a valley containing a mango-shaped lake, approximately two miles in circumference, and surrounded by mountains, of which the highest are Naina on the north, Deopatha on the west, and Ayarpatha on the south. From the tops of the higher peaks, 'magnificent views can be obtained of the vast plain to the south, or of the mass of tangled ridges lying north, bound by the great snowy range which forms the central axis of the Himalayas'.","Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state. It has a reputation as a backpacking center and honeymoon destination. Set on the Beas River, it’s a gateway for skiing in the Solang Valley and trekking in Parvati Valley. It's also a jumping-off point for paragliding, rafting and mountaineering in the Pir Panjal mountains, home to 4,000m-high Rohtang PassManali is a resort town nestled in the mountains of the Indian state of Himachal Pradesh near the northern end of the Kullu Valley in the Beas River Valley. It is located in the Kullu district, about 270 km north of the state capital, Shimla, 309 km north east of Chandigarh and 544 km northeast of Delhi, the federal capital. The small town, with a population of 8,096,is the beginning of an ancient trade route to Ladakh and from there over the Karakoram Pass on to Yarkand and Khotan in the Tarim Basin. It is a popular tourist destination and serves as the gateway to Lahaul and Spiti district as well as Leh.","Mussoorie is a hill station and a municipal board in the Dehradun District of the northern Indian state of Uttarakhand. It is about 35 kilometres from the state capital of Dehradun and 290 km north of the national capital of New Delhi. The hill station is in the foothills of the Garhwal Himalayan range. The adjoining town of Landour, which includes a military cantonment, is considered part of 'greater Mussoorie', as are the townships of Barlowganj and Jharipani. The pin code for Mussoorie is 248179. Mussoorie is at an average altitude of 1,880 metres. To the northeast are the Himalayan snow ranges, and to the south, the Doon Valley and Shiwalik ranges. The second highest point is the original Lal Tibba in Landour, with a height of over 2,275 metres. Mussoorie is popularly known as The Queen of the Hills.","Gulmarg is a town, a hill station, a popular skiing destination and a notified area committee in the Baramulla district of the Indian state of Jammu and Kashmir. The town is situated in the Pir Panjal Range in the western Himalayas.Gulmarg lies in a cup shaped valley in the Pir Panjal Range of the Himalayas, at an altitude of 2,650 m, 56 km from Srinagar. The soil in Gulmarg comprises glacial deposits, lacustrine deposits and moraines of Pleistocene age covering shales, limestones, sandstones, schists and other varieties of rocks. The natural meadows of Gulmarg, which are covered with snow in winter, allow the growth of wild flowers such as daisies, forget-me-nots and buttercups during spring and summer.","Darjeeling is a city and a municipality in the Indian state of West Bengal. It is located in the Lesser Himalayas at an elevation of 6,700 ft. It is noted for its tea industry, its views of Kangchenjunga, the world's third-highest mountain, and the Darjeeling Himalayan Railway, a UNESCO World Heritage Site. Darjeeling is the headquarters of the Darjeeling District which has a partially autonomous status within the state of West Bengal. It is also a popular tourist destination in India. The recorded history of the town starts from the early 19th century when the colonial administration under the British Raj set up a sanatorium and a military depot in the region. Subsequently, extensive tea plantations were established in the region and tea growers developed hybrids of black tea and created new fermentation techniques. The resultant distinctive Darjeeling tea is internationally recognised and ranks among the most popular black teas in the world.","Shillong is a hill station in northeast India and capital of the state of Meghalaya. It’s known for the manicured gardens at Lady Hydari Park. Nearby, Ward’s Lake is surrounded by walking trails. North, the Don Bosco Centre for Indigenous Cultures features displays on the region’s native people. Waterfalls include the Elephant Falls to the southwest. East of here, forested Shillong Peak offers city views.Shillong has steadily grown in size since it was made the civil station of the Khasi and Jaintia Hills in 1864 by the British. In 1874, on the formation of Assam as the Chief Commissioner's Province, it was chosen as the headquarters of the new administration because of its convenient location between the Brahmaputra and Surma valleys and more so because the climate of Shillong was much cooler than tropical India.","Binsar Wildlife Sanctuary is perched on top of the Jhandi Dhar hills in the Himalayas. It is about 33 km north of the Almora town in Uttarakhand, India. From a place called Zero Point in Binsar one can see the Himalayan peaks like Kedarnath Peak, Shivling, Trisul and Nanda Devi.Binsar was the summer capital of the Chand Kings, who ruled over Kumaon from the 11th to 18th centuries AD. Binsar was established in 1988 for the conservation and protection of the shrinking broad leaf oak forests of the Central Himalayan region, and it has over 200 bird species.","Gangtok is a city, municipality, the capital and the largest town of the Indian state of Sikkim. It also is the headquarters of the East Sikkim district. Gangtok is located in the eastern Himalayan range, at an elevation of 1,650 m. The town's population of 100,000 are from different ethnicities such as Nepalis, Lepchas and Bhutia. Nestled within higher peaks of the Himalaya and enjoying a year-round mild temperate climate, Gangtok is at the centre of Sikkim's tourism industry. Gangtok rose to prominence as a popular Buddhist pilgrimage site after the construction of the Enchey Monastery in 1840. In 1894, the ruling Sikkimese Chogyal, Thutob Namgyal, transferred the capital to Gangtok. In the early 20th century, Gangtok became a major stopover on the trade route between Lhasa in Tibet and cities such as Kolkata in British India.","Kodaikanal is a city near Palani in the hills of the Dindigul district in the state of Tamil Nadu, India. Its name in the Tamil language means 'The Gift of the Forest'. Kodaikanal is referred to as the 'Princess of Hill stations' and has a long history as a retreat and popular tourist destination. Kodaikanal comes under Kongu Nadu region. Kodaikanal was established in 1845 as a refuge from the high temperatures and tropical diseases of the plains. Much of the local economy is based on the hospitality industry serving tourism. As of 2011, the city had a population of 36,501.Tourism has been impacted by industrial pollution issues including the closure of a mercury factory owned by Unilever's Indian subsidiary Hindustan Unilever after evidence of widespread mercury pollution.","Tawang is a town in the Indian state of Arunachal Pradesh, situated at an elevation of approximately 3,048 metres to the east of Bhutan. The town once served as the district headquarters of West Kameng district, and became the district headquarters of Tawang district when it was formed from West Kameng. The area is part of the wider dispute between India and China concerning Arunachal Pradesh and is claimed by China as a part of Tibet.Tawang was historically part of Tibet inhabited by the Monpa people. The Tawang Monastery was founded by the Merak Lama Lodre Gyatso in 1681 in accordance with the wishes of the 5th Dalai Lama, Ngawang Lobsang Gyatso, and has an interesting legend surrounding its name, which means 'Chosen by Horse'. The sixth Dalai Lama, Tsangyang Gyatso, was born in Tawang."];
+        var body_about_2=["Nainital is a small town in the Kumaon range in Uttarakhand. It is known as the ‘Lake District of India’ and is one of the most popular honeymoon destinations in India, Nainital also provides ample opportunities for fun and exploration for the solo traveller. Parasailing, horse-riding, kayaking, canoeing, and rock climbing attract adventure lovers. The Naini Lake, Tiffin Top, Snow View, and Naini Peak are among the most popular tourist spots in this town. The bazaars in this town are always busy and the streets lead to beautiful forest patches. Nainital is a place that demands to be experienced again and again.","With its scenic snow-clad peaks and lush forests, this little town in the Kullu Valley offers a variety of activities. Camping, heli-skiing, rock climbing, trekking, and rafting are among the top adventure sports here. That is not to say there isn’t more to do. Other tourist destinations of Manali include Solang Valley, Rohtang Pass, and many Tibetan monasteries around the area.","Mussoorie offers a view of the Doon valley to the south and the Himalayas to the north. This hill station is located around 34 kilometres from Dehradun and is developed especially for tourism. You will not have the slightest difficulty finding what to do next in this charming town. Stroll along Mall road, take rides in cable cars up to Gun Hill, or see the beautiful town and beyond from the highest point, Lal Tibba.","In summers, Gulmarg becomes a paradise with impressive treks to explore. The city has the highest gondola in the world that runs up to almost 4,000 metres above ground level. Skiing and snowboarding are the main tourist activities in the area. The main market offers tourists with jewellery, pashmina, and souvenirs. Hotels, bars and ‘dhabas’ serve delicious food in and around the market area.","Famous for its large tea estates, Darjeeling has magnificent views of Mount Kanchenjunga, waterfalls, and several hills. The historic Toy Train makes for a memorable ride and the Senchal Lake, Ghoom Monastery, and Observatory Hill are among the most popular tourist attractions of Darjeeling. Make sure you stay in a tea estate and resort to experience Darjeeling’s beauty to the fullest.","Widely known as the ‘Scotland of the East’, Shillong is the capital city of Meghalaya. Monsoon is the best time to visit Shillong, as the entire city breathes a new life in the rains. The surrounding landscapes in Shillong are captivating, to say the least. You can spend your time here at the Shillong peak and gaze at the lush green hills, have a picnic near Elephant Falls, or enjoy a boat ride over the Umiam Lake. For the adventurer in you, try the water sports like kayaking and water skiing at any of the stunning lakes in the city.","A small town nestled within the Binsar Wildlife Sanctuary; Binsar is blessed with overwhelming views of snow-clad peaks like Nanda Devi, Kedarnath, Panchachuli, Chaukhamba, and Nanda Kot. Among other attractions in Uttarakhand, the Zero Point is a must visit because of its panoramic views of the Himalayan peaks. On top of that, do visit the Binsar Wildlife Sanctuary which is home to several beautiful species of birds, plants and rare animals.","Gangtok, the vibrant capital of Sikkim, offers extravagant joys of the city in addition to the quaint aura of a hill station. The city has a ropeway which offers a bird’s eye view of the city and surrounding locales. Walking is the best way for visitors to explore Gangtok and its charming people. The main market features various businesses selling local handicrafts which make perfect gifts. Several restaurants and bars around the city provide local delicacies as well as international cuisine. Days in Gangtok can be well spent at the Tashi View Point, Banjhakri Hill, Rumtek Monastery and the Tsongmo Lake.","Kodaikanal literally translates to “The Gift of The Forest”. Nestled in the Palani Hills, this is a rather secluded town. The must-visit places in Kodaikanal include the Kodai Lake, Guna caves, and Green Valley view. You can cycle around the lake, go boating or horseback riding, or even take an aromatherapy session at the nearest spa.","Tawang has the country’s largest Tibetan Monastery which is a home to almost 500 lamas. The refreshing mountain air and wonderful treks make Twang a trekker’s paradise. You can visit the 400-year-old Tawang Gompa and turn the prayer wheels outside it, see yaks graze in the lovely hills, or walk around the town for a little chat with the friendly locals."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["The nearest Domestic Airport from Nainital is Pantnagar Airport, Pantnagar, roughly one hour drive from the city. It is well connected to New Delhi and Mumbai via Jet Airways, Air India and Spice Jet. The nearest International Airport is Indira Gandhi International Airport, Delhi, roughly five hour drive from Nainital.","The nearest airport is Bhuntar, located at a distance of 50km from Manali and 10km from Kullu. Air India operates a flight from Delhi to Kullu, however, services are irregular and prices very high.","Jolly Grant airport of Dehradun is the nearest airport to Mussoorie, which is approximately 54 km away and offers a smooth connectivity with National Capital Delhi through regular flights."," The nearest airport to Gulmarg is in Srinagar which is 56 kilometres away. It is a domestic airport and is well connected to major cities in India by regular flights from Delhi, Mumbai and Amritsar. Outside the airport, you can hire a prepaid cab which will cost you around Rs. 1500 one-way.","The nearest airport to Darjeeling is Bagdogra which is approximately 95 km away from the city. There are some direct flights from the cities like Kolkata, Delhi and Guwahati to Darjeeling. From the airport, one can reach the city by hiring taxis. It will take almost 3 hours to reach Darjeeling from the airport.","Shillong Airport, also known as Umroi Airport, is a civilian airport located at Umroi, 30 km from Shillong, Meghalaya, India. The airport was constructed in the mid-1960s and became operational in the mid-1970s.","The nearest airport to Binsar is Pantnagar airport, which is situated at a distance of 138 km from Binsar. From Pantnagar, you can find several taxis and buses to reach Binsar.","The airport nearest to Gangtok is about 124 kilometres away in Bagdogra, West Bengal. From the airport, you can hire a shared taxi or a private vehicle that will get you to Gangtok in a matter of two hours.","The airport nearest to Kodaikanal is Madurai, about 120 kilometres away. Others in line include the Trichy airport and the Coimbatore airport, 150 kilometres and 175 kilometres away, respectively. From the airport, you can easily get a bus to Kodaikanal.","The nearest Domestic Airport is Salonibari Airport, Tezpur, roughly six hour drive from Tawang. It is well connected to Kolkata and Guwahati through Air India flight. The nearest International Airport from Tawang is Lokpriya Gopinath Bordoloi International Airport, Guwahati, roughly 480 Kms from Tawang."];
+        var body_how_2=["The nearest railway station is located at a distance of 34 kilometres at Kathgodham, at the foothills of the Kumaon hills. Kathgodam railway station enjoys good connectivity to important places such as Delhi, Lucknow and Howrah, with daily trains running to New Delhi.","Jogindernagar railway station is the nearest railhead to Manali that connects the hill station with several important cities of the country. Chandigarh and Ambala are other options to reach Manali by train. From the railheads, one can get several mode of transportation including taxi and bus at reasonable cost.","Dehradun Railway station is the nearest rail head, hence one can come from the railway station to the city by taking bus or taxi. Road route to Mussoorie comes directly from Dehradun too, which is connected to all major cities around it.","There is no directtrain to Gulmarg.Gulmarg has its closest railway station at Jammu. Jammu railway station is at a distance of 290 km from Gulmarg. Swarak Express, Himsagar Express, Jammu Rajdhani, and Andaman Express run in between most of the major railway stations.","Darjeeling railway station is a main railway station in Darjeeling district in the Indian state of West Bengal. The station lies on UNESCO World Heritage Site Darjeeling Himalayan Railway. Darjeeling railway station is located at an altitude of 2,073 metres above mean sea level.","The nearest railway station is Guwahati. It is 104 km from Shillong and very well connected with all major cities of India. Meghalaya Transport Corporation (MTC) has bus services coordinated with train arrivals at Guwahati. The buses leave Guwahati beginning 6 am till 5 pm (three and a half hrs).","Kathgodam Railway station is the nearest railhead to Binsar situated at a distance of 119 kms. Kathgodam is well connected by major cities of India like Lucknow, Kolkata, Delhi, etc.","The nearest railway station to Gangtok is about 148 kilometres away in New Jalpaiguri in Siliguri. The station is well-connected to major cities like Kolkata and New Delhi.","Situated between Dindigul and Madurai, Kodai railway station is the nearest railway station from Kodaikanal. Coimbatore junction is another major railway station that operates trains for several other major cities in India.","The nearest Railway Station is Tezpur Railway Station which is connected to the all major cities of Arunachal Pradesh via Guwahati Express, Porvotr S Krnti, Ghy Rajdhani and Sc Ghy Express etc."];
+        var body_how_3=["Nainital enjoys excellent bus connectivity to important destinations in North India. Several tour operators operate daily bus service from New Delhi to Nainital, which includes options like air-conditioned, non-air-conditioned, sleeper and Volvo buses. Boarding an overnight bus is the most convenient way to head to Nainital, although some buses operate during the daytime as well.","Being an import tourist destination there are a number of Volvo buses available between New Delhi and Manali operated by both Government undertakings and Private bus operators.","Buses leave from Dehradun train station. There are two buses which go to opposite ends of the Mussoorie Mall, Library and Picture Palace. It is quite a hike from one to the other, so make sure you catch the right one. To reach Kempty Falls directly from Dehra Dun catch a bus from the Dehra Dun Railway station Hill Bus Services Section or take a taxi.","Gulmarg is well-connected with regular bus services from Srinagar, Sonmarg and other neighbouring towns in Kashmir. You can choose from regular, deluxe and luxury buses operated by both government and private companies.","The regular bus service from Siliguri (which is approximately 70 kilometres away) to Darjeeling is quite slow but economical. Similar bus services are also available from neighbouring towns like Kurseong and Kalimpong which is 31 and 50 kilometres away respectively.","For places within city limits, city buses are good options. There are two kinds of buses that pass from Shillong - city bus and bazaar bus. City buses are what tourists should use. Bazaar buses are for villagers coming to Shillong to sell their products. Most of times they carry vegetables, fruit, poultry, etc, along with people. City buses are notoriously slow. Drivers move their buses from the bus-stop only when the bus gets packed or another bus arrives. Many times you will find that walking will take you earlier to your destination. Bus tickets are at most INR5 for one journey.","Kathgodam (112 km) is the nearest railway station. From there, you can hire a cab or local bus to Binsar via Almora. Almora is just 33 km from Binsar.","Tourists rolling in from nearby places like Siliguri, Darjeeling, Kalimpong and Kolkata prefer to drive to Gangtok. The roads are well-maintained, except in a few places."," There are many regular state run as well as private Volvos available from various parts of the state. Timings and fares vary with different operators."," There are many regular state run as well as private Volvos available from various parts of the state. Timings and fares vary with different operators."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "By Plane:";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_2[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Hill Stations</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Hill Stations:</p>
+        <p id='info1'>The hill stations are high-altitude towns used especially by European colonialists, as a place of refuge to escape the blistering summer heat and dust of plains during the British Raj. They are prevalent in Southeast Asia and the Indian subcontinent, particularly in India.The Indian subcontinent has seven principal mountain ranges and the largest of all is the Himalayas that lies in the northern part of India. The famous peaks and ranges include the Kangchenjunga range in the Eastern Himalayas which frames the hill stations of Darjeeling and Gangtok as well as the Nanda Devi in Uttarakhand. The Shivalik range that also lies within the same region also has some famous hill stations that include Dalhousie, Kullu, Shimla, Nanital sahyadri and many more. Most of the hill stations in India were developed by the British around a central mall to get respite from the oppressive summer heat. Many have picturesque lakes as their focal point, making them excellent places for boating activities.With the highest mountain ranges in the world, the Himalayas, running north to east and the stunning Aravalli and Vindhya ranges flanking the western and central parts, the best hill stations in India offer some of the most spectacular landscapes in the world. From the misty valley of Coorg to adventure-packed Manali, here are some of India’s most-loved hill stations. India has fascinated millions of people from the various geographical locations of the world, to visit the country, where many religions were born and flourished. It is a land of varied diversity, where over a billion people speak more than 700 languages, sync together to prosper as a nation. There are numerous tourist destinations in the country. With 'Athiti Devo Bhava' (Guests are Gods) as the prime lesson being taught in each household. It is one of the most tourist-friendly nations in the world.The hills have been successful in holding up the century-old traditions and cultures that have prospered the lives of the people in Incredible India. India is dotted with the awe-inspiring hills all over the country starting right up from Jammu and Kashmir to Tamil Nadu, encapsulating over 20 mountain ranges.There are many hill station tours in India to choose from, but the problem remains which one to select. In a country with over 20 mountain ranges, choosing a hill station can be a very challenging task. Here is a list of the popular hill stations in India categorized by the part of the country you decide to visit.The travel and tourism in the northern part of the nation is dominated by the Himalayas, offering everyone a chance to get spellbound by the grandeur of the peaks and picturesque landscape, which one cannot ignore.</p>
+        <p id="head2">Few Beautiful Hill Stations:</p>
+        <p id="info2">Nainital, Uttarakhand.Manali, Himachal Pradesh.Mussoorie, Uttarakhand.Gulmarg, Jammu and Kashmir.Darjeeling, West Bengal.Shillong, Meghalaya.Binsar, Uttarakhand.Gangtok, Sikkim.Kodaikanal, Tamil Nadu.Tawang, Arunachal Pradesh</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Nainital, Uttarakhand</h2><p>Nainital is a Himalayan resort town in the Kumaon region of India’s Uttarakhand state, at an elevation of roughly 2,000m. Formerly a British hill station, it’s set around Nainital Lake, a popular boating site with Naina Devi Hindu Temple on its north shore.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [79.463563,29.380314]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Manali, Himachal Pradesh</h2><p>Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state. It has a reputation as a backpacking center and honeymoon destination.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.188505,32.239827]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Mussoorie, Uttarakhand</h2><p>Mussoorie is a hill station and a municipal board in the Dehradun District of the northern Indian state of Uttarakhand. It is about 35 kilometres from the state capital of Dehradun and 290 km north of the national capital of New Delhi.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.066624,30.459987]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Gulmarg, Jammu and Kashmir</h2><p>Gulmarg is a town, a hill station, a popular skiing destination and a notified area committee in the Baramulla district of the Indian state of Jammu and Kashmir.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [74.380474,34.048382]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Darjeeling, West Bengal</h2><p>Darjeeling is a town in India's West Bengal state, in the Himalayan foothills. Once a summer resort for the British Raj elite, it remains the terminus of the narrow-gauge Darjeeling Himalayan Railway, or “Toy Train,” completed in 1881.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [88.262428,27.036292]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Shillong, Meghalaya</h2><p>Shillong is a hill station in northeast India and capital of the state of Meghalaya. It’s known for the manicured gardens at Lady Hydari Park. Nearby, Ward’s Lake is surrounded by walking trails.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [91.893020,25.578782]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Binsar, Uttarakhand</h2><p>Binsar Wildlife Sanctuary is perched on top of the Jhandi Dhar hills in the Himalayas. It is about 33 km north of the Almora town in Uttarakhand, India.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [79.755199,29.705466]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Gangtok, Sikkim</h2><p>Gangtok is the capital of the mountainous northern Indian state of Sikkim. Established as a Buddhist pilgrimage site in the 1840s, the city became capital of an independent monarchy after British rule ended, but joined India in 1975.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [88.606248,27.338835]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kodaikanal, Tamil Nadu</h2><p>Kodaikanal is a hill town in the southern Indian state of Tamil Nadu. It’s set in an area of granite cliffs, forested valleys, lakes, waterfalls and grassy hills.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.489020,10.237659]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Tawang, Arunachal Pradesh</h2><p>Tawang is a town in the Indian state of Arunachal Pradesh, situated at an elevation of approximately 3,048 metres to the east of Bhutan.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [91.875755,27.578086]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <title>Government Buildings</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Government Buildings";
+          document.getElementById("head1").innerHTML = "Welcome to Government Buildings:";
+          document.getElementById("info1").innerHTML = "India is a country which is known as the largest democratic country in the world after getting its independence from the British Empire. The country is home to 29 states and 7 union territories, every state has its own set of ministers and governors, apart from the central government, the prime minister and the president. Every state has marvellous buildings, which were either constructed by the British or after independence, for the operating of various offices in the government, these are considered as the seats of power. Some of these structures are true architectural marvels and are simply spellbinding, to stand and glare at the sheer magnificence of these beauties is an experience in itself.Kengal Hanumanthaiah was the brainchild behind this architectural marvel, whose foundation-a stone-was laid by then then prime minister of India, Jawaharlal Nehru, in the year 1952 and was officially declared open in the year 1956.The building housed the office of the chief minister of West Bengal until 2013, the building originally served as the office for writers of the British East India Company-from where it gets name.";
+          document.getElementById("head2").innerHTML = "Few Government Buildings:";
+          document.getElementById("info2").innerHTML = "Rashtrapati Bhavan, New Delhi","Vidhana Soudha, Bengaluru","Writer's Building, Kolkata","Supreme Court, New Delhi","Kerala Government Secretariat, Thiruvananthapuram","Raj Bhawan, Nainital","The Parliament House, New Delhi","Madras High Court, Chennai","Secretariat Building, New Delhi","Mantralaya, Maharashtra";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          
+          }
+            
+        function myfunction() {
+        var mainhead1=["Rashtrapati Bhavan, New Delhi","Vidhana Soudha, Bengaluru","Writer's Building, Kolkata","Supreme Court, New Delhi","Kerala Government Secretariat","Raj Bhawan, Nainital","The Parliament House, New Delhi","Madras High Court, Chennai","Secretariat Building, New Delhi","Mantralaya, Maharashtra"];
+        var head_about_1=["Welcome to Rashtrapati Bhavan, New Delhi:","Welcome to Vidhana Soudha, Bengaluru:","Welcome to Writer's Building, Kolkata:","Welcome to Supreme Court, New Delhi:","Welcome to Kerala Government Secretariat, Thiruvananthapuram:","Welcome to Raj Bhawan, Nainital:","Welcome to The Parliament House, New Delhi:","Welcome to Madras High Court, Chennai:","Welcome to Secretariat Building, New Delhi:","Welcome to Mantralaya, Maharashtra:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:"]
+        var body_about_1=["Home to the President of the world’s largest democracy, is emblematic of Indian democracy and its secular, plural and inclusive traditions. It was designed by Sir Edwin Lutyens and Herbert Baker and stands on a 330 acre estate. It took seventeen years to build this presidential palace which was completed in the year 1929. Almost seven hundred million bricks and three million cubic feet of stone were used in building this architectural marvel that has 2.5 kilometers of corridors and 190 acres of garden area. The main building covers an area of 5 acres and has 340 rooms spread over four floors. The famous Mughal Gardens of the Rashtrapati Bhavan cover an area of 15 acres and have 159 celebrated varieties of roses, 60 varieties of bougainvillea and many other verities of flowers. The Estate also has a state-of-the-art Rashtrapati Bhavan Museum Complex (RBMC) comprising the Clock Tower, the Stables and the Garages showcasing past as well as current presidencies, the regal ceremonies, and the rich flora and fauna of Rashtrapati Bhavan, amongst other things.","Located in Bengaluru, Vidhana Soudha is the seat of the state legislature of Karnataka. The structure is constructed in style known as Mysore Neo-Dravidian, along with incorporations of Indo-Saracenic and Dravidian styles of architecture. Kengal Hanumanthaiah was the brainchild behind this architectural marvel, whose foundation-a stone-was laid by then then prime minister of India, Jawaharlal Nehru, in the year 1952 and was officially declared open in the year 1956. The five-storeyed structure is the largest legislative building in the country which is spread across an area of 2,300 ft by 1,1150 ft. At the entrance of the building, one would notice an inscription which reads, 'Government's Work is God's Work' and its Kannada equivalent 'Sarkarada Kelasa Devara Kelasa'. Intrestingly the structure celebrates its 60th anniversary this year.","The Writer's Building is the secretariat building of the State Government of West Bengal, which is located in the city of Kolkata. The building housed the office of the chief minister of West Bengal until 2013, the building originally served as the office for writers of the British East India Company-from where it gets name.The structure was designed by Thomas Lyon in the year 1777 and has been renovated multiple times over the period of time. The building measures 150 m in length and stretches itself to a water body known as Lal Dighi, it also holds an important place in the Indian Independence Movement.","The highest judicial forum, Supreme Court, is now open for the general public on Saturdays. The newly instated CJI on Friday had said that the opening of the 'public institution' is experiment, a very limited exposure to the Supreme Court, a public institution that I thought should be opened up in a limited way. They also launched a portal, through which one can book ‘guided tours’ to the Supreme Court. The guided tour is a great opportunity to gain inside access to the grand interiors of the Supreme Court building and admire the majestic structure in its full glory. During the guided tour, the visitors will be accompanied throughout the premises and introduced to parts of historical importance. The Supreme Court of India is open to the general public from 10:00 AM to 1:00 PM every Saturday except on declared holidays. The tour is expected to be an hour long where an official of the Court will be assigned as your tour guide who will elaborate upon the structure of the Indian legal system and will also give intriguing examples of decided cases and the historical significance behind the architecture of the building.","The seat of administration of the government of Kerala, the secretariat is the office of important ministers and bureaucrats. The structure is a very popular landmark which is located right at the heart of Thiruvananthapuram city located on the Narmada Road; the complex was originally built as to serve as the Durbar Hall for the Travancore kingdom. The foundation of the structure was laid by His Highness Ayilyam Thirunal Maharaja in the year 1865 and was completed in the year 1869. The structure was planned as the Durbar Hall where the king could meet his council of ministers, it was designed and built under the leadership of Barton who was the then chief engineer of Travancore, who incorporated Roman and Dutch elements in its architecture.","Uttarakhand is one of the few states in the country which has two Raj Bhavans, which is the official residence of the governor of the state. The first one is located in Dehradun and the second one in Nainital. During the pre-independence time, Nainital was the summer capital of the United Provinces which is the present Uttar Pradesh. Built on the lines of a Scottish castle, it was named as Government House and was renamed as Raj Bhavan after Independence. The structure is the only Raj Bhavan which is open for tourists unlike the other, where entry is restricted.","Located at the end of the Sansad Marg, the Parliament House or Sansad Bhavan is one of the most impressive buildings in New Delhi. The Parliament House comprises of a central hall which is circular in shape and is considered to be very important part of the building since this is the place where the Indian Constitution was drafted. The Parliament houses the Lok Sabha, Rajya Sabha and a library hall. There lies a garden in between three chambers. Not just this, but Parliament House also has the facilities for the accommodation for the ministers, the important officers of the Lok Sabha and the Rajya Sabha, Chairman and Parliamentary Committees. With the aim of educating people on Democratic Heritage of India, The Parliament House also houses a museum which dates back to 2500 back and is set up in a very interesting way and is made complete with light videos and sounds, large interactive computer screens and others. Constructed in the Imperial Style, the Parliament House consists of an open verandah with around 144 columns.","The Madras High Court is a fine example of Indo-Saracenic style of architecture and was built in the year 1892. The structure was designed by J.W. Brassington along with the guidance of the well-known architect, Henry Irwin. The court is one of the three high courts in the country which was established in the three presidency cities by the letters patent granted by Her Majesty Queen Victoria in the year 1862.","Secretariat Building, New Delhi is where the Cabinet Secretariat is housed, which administers the Government of India. Built in the 1910s, it is home to some of the most important ministries of theCabinet of India. Situated on Raisina Hill, New Delhi, the Secretariat buildings are two blocks of symmetrical buildings (North Block and South Block) on opposite sides of the great axis of Rajpath, and flanking The Rashtrapati Bhavan (President’s House). Both the identical building have four levels, each with about 1,000 rooms, in the inner courtyards to make space for future expansions. In continuation with the Viceroy’s House, these buildings also used cream and red Dholpur sandstone from Rajasthan, with the red sandstone forming the base. Together the buildings were designed to form two squares. They have broad corridors between different wings and wide stairways to the four floors and each building is topped by a giant dome, while each wings end with colonnaded balcony. These are visible in the use of Jali, perforated screens, to protect from scorching sun and monsoon rains of India. Another feature of the building is a dome-like structure known as the Chatri, a design unique to India, used in ancient times to give relief to travelers by providing shade from the hot Indian sun.","Earlier known as Sachivalaya, Mantralaya is the administrative headquarters of the state government of Maharashtra. Located in South Mumbai near Nariman Point, the building was built in 1955 and is one of the most prominent landmarks of the city. The Parliment building is a seven storeyed building housing most of the departments of the state government. Officials like the Chief Minister and the Deputy Chief Minister sit on the sixth floor and the Chief Secretary on the fifth floor. There is also a new building constructed due to the increasing number of departments and staff. The building stands opposite Mantralaya and contains 13 floors. An example of stunning architecture, you may not be allowed to enter the building, but it's worth seeing from the outside."];
+        var body_about_2=["Water features are present throughout the mansion, such as near the Viceroy's stairs, which has eight marble lion statues spilling water into six basins. These lions were symbolic of the heraldry of Great Britain. There is also an open area in one room to the sky, which lets in much of the natural light.The Mughal Gardens are situated at the back of the Rashtrapati Bhavan, incorporate both Mughal and English landscaping styles and feature a great variety of flowers. The Rashtrapati Bhavan gardens are open to the public in February every year.The Mughal Gardens opens for general public viewing in February–March every year during Udyanotsav.","The front of the building is inscribed with the slogan 'Government's Work is God's Work, and the Kannada equivalent, 'ಸರ್ಕಾರದ ಕೆಲಸ ದೇವರ ಕೆಲಸ' (sarkarada kelasa devara kelasa). In 1957, the Mysore government planned to replace the inscription with Satyameva Jayate, at a cost of 7,500 rupees, but the change did not take place. In 1996, the inscription inspired a visiting U.S. state governor, George Voinovich of Ohio, to propose etching 'With God, all things are possible' onto the Ohio Statehouse, prompting a high-profile lawsuit.","Writers' acquired its Greco-Roman look, complete with the portico in the central bay and the red surface of exposed brick. The parapet was put in place and the statues sculpted by William Fredric Woodington in 1883, that line the terrace, were installed.","The building is shaped to symbolize scales of justice with its centre-beam being the Central Wing of the building comprising the chief justice’s court, the largest of the courtrooms, with two court halls on either side. The Right Wing of the structure has the bar – room, the offices of the Attorney General of India and other law officers and the library of the court. The Left Wing has the offices of the court. In all, there are 15 courtrooms in the various wings of the building.","There are 20 doors located in each side of the Durbar Hall. The Central block has 3 stories and houses offices of various departments. The Old Assembly Hall is located in ground floor of the Central Block at the right, which is now converted into a public legislative museum, depicting the legislative history of Kerala. There are plans to introduce Kerala Institute of Parliamentary Affairs to this complex.","The Raj Bhavan estate is spread over 205 acre of area with a Golf Course in 45 acre of land. It has 75 rooms. The Golf Course of Raj Bhavan, built in 1936, is one of the vintage golf courses in India, and is affiliated to the Indian Golf Union. It also consists of a garden and swimming pool. In the post-Independence period, Sarojini Naidu, the first Governor of Uttar Pradesh, was the first occupant of this historic monument.","A new Parliament building may replace the existing complex. The new building is being considered on account of the stability concerns regarding the current complex. A committee to suggest few alternatives to the current building has been set up by the ex-Speaker, Meira Kumar. The present building, an 85-year-old structure suffers from inadequacy of space to house members and their staff and is thought to suffer from structural issues. The building also needs to be protected because of its heritage tag.","The vestiges of the colonial High Court continue to characterise the premises till date. In a rare tradition which is today a distinction, Judges of the Madras High Court are still led by orderlies who bear a ceremonial mace made of silver. This is a practice so old and Anglican that most High Courts and even the Supreme Court of India have either not had the practice at all or have abandoned it long back.","The Secretariat Building was designed by the prominent British architect Herbert Baker in Indo-Saracenic Revival architecture. Both the identical buildings have four levels, each with about 1,000 rooms, in the inner courtyards to make space for future expansions. In continuation with the Viceroy's House, these buildings also used cream and red Dholpur sandstone from Rajasthan, with the red sandstone forming the base.","Mantralaya is a seven storeyed building which houses most of the departments of the state government in this building. The Chief Minister and Deputy Chief Minister sit on the sixth floor. The Chief Secretary, sits on the fifth floor. Due to an increasing number of departments and staff, a new 'annexe' building was built. Also, a new administrative building of 13 floors was constructed opposite Mantralaya to accommodate additional departments."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["It takes 15 minutes to travel from Delhi Airport to Rashtrapati Bhavan. Approximate driving distance between Delhi Airport and Rashtrapati Bhavan is 13 kms.","It takes 12 minutes to travel from Vidhana Soudha Bangalore to Bangalore International Airport. Approximate driving distance between Vidhana Soudha Bangalore and Bangalore International Airport is 10 kms.","It takes 21 minutes to travel from Kolkata Airport to Writers Building. Approximate driving distance between Kolkata Airport and Writers Building is 18 kms.","It takes 24 minutes to travel from Delhi Airport to Supreme Court. Approximate driving distance between Delhi Airport and Supreme Court is 20 kms.","It takes 6 minutes to travel from Government Secretariat to Trivandrum Airport. Approximate driving distance between Government Secretariat and Trivandrum Airport is 5 kms.","It takes 26 minutes to travel from Raj Bhawan to Pantnagar Airport. Approximate driving distance between Raj Bhawan and Pantnagar Airport is 22 kms.","It takes 15 minutes to travel from Indira Gandhi International Airport to Parliament House. Approximate driving distance between Indira Gandhi International Airport and Parliament House is 13 kms.","It takes 25 minutes to travel from Madras High Court to Chennai Airport. Approximate driving distance between Madras High Court and Chennai Airport is 21 kms.","It takes 280 minutes to travel from Secretariat Building to Jaipur Airport. Approximate driving distance between Secretariat Building and Jaipur Airport is 268 kms.","It takes 26 minutes to travel from Domestic Airport Mumbai to Mantralaya. Approximate driving distance between Domestic Airport Mumbai and Mantralaya is 22 kms."];
+        var body_how_2=["It takes 4 minutes to travel from Rashtrapati Bhavan to New Delhi Railway Station. Approximate driving distance between Rashtrapati Bhavan and New Delhi Railway Station is 4 kms.","It takes 6 minutes to travel from Vidhana Soudha to Bangalore Railway Station. Approximate driving distance between Vidhana Soudha and Bangalore Railway Station is 5 kms.","It takes 3 minutes to travel from Howrah Railway Station to Writer's Building. Approximate driving distance between Howrah Railway Station and Writer's Building is 3 kms.","It takes 4 minutes to travel from New Delhi Railway Station to Supreme Court. Approximate driving distance between New Delhi Railway Station and Supreme Court is 4 kms.","It takes 2 minutes to travel from Trivandrum Central Railway Station to Government Secretariat. Approximate driving distance between Trivandrum Central Railway Station and Government Secretariat is 2 kms.","Raj Bhawan or Governor House is located at Tallital area 3 km from Mall Road of Nainital city. One can reach Raj Bhawan easily by walk or taking rickshaw from Nainital bus stand. Nearest railway station is at Kathgodam railway station (36 kms) and airport at Pantnagar airport (56 kms) or Delhi IGI airport.","It takes 4 minutes to travel from New Delhi Railway Station to Parliament House. Approximate driving distance between New Delhi Railway Station and Parliament House is 4 kms.","It takes 2 minutes to travel from Chennai High Court to Beach Railway Station. Approximate driving distance between Chennai High Court and Beach Railway Station is 2 kms.","It takes 275 minutes to travel from Secretariat Building, New Delhi to Jaipur Railway Station. Approximate driving distance between Secretariat Building, New Delhi and Jaipur Railway Station is 265.6 kms.","It takes 2 minutes to travel from Mantralaya to Churchgate Railway Station. Approximate driving distance between Mantralaya and Churchgate Railway Station is 2 kms or 1.2 miles."];
+        var body_how_3=["It takes 15 minutes to travel from Rashtrapati Bhavan to Mahipalpur Extension Bus Stop. Approximate driving distance between Rashtrapati Bhavan and Mahipalpur Extension Bus Stop is 13 kms.","It takes 6 minutes to travel from Kempegowda Bus Stand to Vidhana Soudha Bus Stop. Approximate driving distance between Kempegowda Bus Stand and Vidhana Soudha Bus Stop is 5 kms.","It takes 26 minutes to travel from Dharmatala Bus Stop to Writers Building. Approximate driving distance between Dharmatala Bus Stop and Writers Building is 22 kms.","It takes 16 minutes to travel from Supreme Court to Delhi Bus Stand. Approximate driving distance between Supreme Court and Delhi Bus Stand is 14 kms.","It takes 48 hrs to travel from Kerala Government Secretariat to Hari Marg Bus Stand. Approximate driving distance between Kerala Government Secretariat and Hari Marg Bus Stand is 2766 kms.","Raj Bhawan or Governor House is located at Tallital area 3 km from Mall Road of Nainital city. One can reach Raj Bhawan easily by walk or taking rickshaw from Nainital bus stand.","It takes 4 hrs to travel from Parliament of India to OTS Bus Stand. Approximate driving distance between Parliament of India and OTS Bus Stand is 262 kms.","It takes 14 minutes to travel from High Court Of Madras to Koyambedu Bus Stand. Approximate driving distance between High Court Of Madras and Koyambedu Bus Stand is 12 kms.","It takes 4 hrs to travel from Secretariat Building to OTS Bus Stand. Approximate driving distance between Secretariat Building to OTS Bus Stand is 264 kms.","It takes 12 minutes to travel from Mumbai Central Bus Stand Maharashtra to Mantralaya Maharashtra India. Approximate driving distance between Mumbai Central Bus Stand Maharashtra and Mantralaya Maharashtra India is 10 kms."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "By Plane:";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_3[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Government Buildings</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Government Buildings:</p>
+        <p id='info1'>India is a country which is known as the largest democratic country in the world after getting its independence from the British Empire. The country is home to 29 states and 7 union territories, every state has its own set of ministers and governors, apart from the central government, the prime minister and the president. Every state has marvellous buildings, which were either constructed by the British or after independence, for the operating of various offices in the government, these are considered as the seats of power. Some of these structures are true architectural marvels and are simply spellbinding, to stand and glare at the sheer magnificence of these beauties is an experience in itself.Kengal Hanumanthaiah was the brainchild behind this architectural marvel, whose foundation-a stone-was laid by then then prime minister of India, Jawaharlal Nehru, in the year 1952 and was officially declared open in the year 1956.The building housed the office of the chief minister of West Bengal until 2013, the building originally served as the office for writers of the British East India Company-from where it gets name.</p>
+        <p id="head2">Few Government Buildings:</p>
+        <p id="info2">Rashtrapati Bhavan, New Delhi.Vidhana Soudha, Bengaluru.Writer's Building, Kolkata.Supreme Court, New Delhi.Kerala Government Secretariat, Thiruvananthapuram.Raj Bhawan, Nainital.The Parliament House, New Delhi.Madras High Court, Chennai.Secretariat Building, New Delhi.Mantralaya, Maharashtra.</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Rashtrapati Bhavan, New Delhi</h2><p>The Rashtrapati Bhavan is the official home of the President of India located at the Western end of Rajpath in New Delhi, India.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.199430,28.614376]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Vidhana Soudha, Bengaluru</h2><p>The Vidhana Soudha located in Bangalore, is the seat of the state legislature of Karnataka. It is constructed in a style sometimes described as Mysore Neo-Dravidian, and incorporates elements of Indo-Saracenic and Dravidian styles. The construction was completed in 1956.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.589588,12.977948]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Writer's Building, Kolkata</h2><p>The Writers' Building, often shortened to just Writers', is the secretariat building of the State Government of West Bengal in India. It is located in West Bengal's capital city of Kolkata.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [88.348651,22.573782]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Supreme Court, New Delhi</h2><p>The Supreme Court of India is the highest judicial court and the final court of appeal under the Constitution of India, the highest constitutional court, with the power of judicial review.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.239372,28.622329]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kerala Government Secretariat, Thiruvananthapuram</h2><p>The Kerala Government Secretariat in Thiruvananthapuram is the seat of administration of the Government of Kerala, housing important ministries and bureaucratic offices.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.949543,8.497024]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Raj Bhawan, Nainital</h2><p>The second Raj Bhavan of Uttarakhand is situated in Nainital. In the pre-Independence era, Nainital served as the summer capital of United Provinces and this building, built like a Scottish castle was christened as the 'Government House'.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [79.457005,29.374255]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>The Parliament House, New Delhi</h2><p>The Sansad Bhavan is the house of the Parliament of India, which contains the Lok Sabha and the Rajya Sabha located in New Delhi.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.208207,28.617265]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Madras High Court, Chennai</h2><p>The Madras High Court is the high court of the Indian state of Tamil Nadu. The court is one of the three High Courts in India established in the three Presidency Towns of Bombay, Calcutta and Madras by letters patent granted by Queen Victoria, bearing date 26 June 1862.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.287750,13.086737]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Secretariat Building, New Delhi</h2><p>The Secretariat Building or Central Secretariat is where the Cabinet Secretariat is housed, which administers the Government of India. Built in the 1910s, it is home to some of the most important ministries of the Cabinet of India.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.205934,28.615232]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Mantralaya, Maharashtra</h2><p>Mantralaya is the administrative headquarters of the state government of Maharashtra in South Mumbai, built in 1955. Mantralaya was earlier known as Sachivalaya.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.830122,18.929008]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta charset='utf-8' />
+    <title>Palace</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+
+        function myfunction1() {
+       
+       document.getElementById("mhead").innerHTML = "Palace";
+       document.getElementById("head1").innerHTML = "Welcome to Palace:";
+       document.getElementById("info1").innerHTML = "A palace is a grand residence, especially a royal residence, or the home of a head of state or some other high-ranking dignitary, such as a bishop or archbishop.The word is derived from the Latin name Palātium, for Palatine Hill in Rome which housed the Imperial residences.Most European languages have a version of the term (palais, palazzo, palast etc), and many use it for a wider range of buildings than English. In many parts of Europe, the equivalent term is also applied to large private houses in cities, especially of the aristocracy; often the term for a large country house is different.";
+       document.getElementById("head2").innerHTML = "Few Renowed Palace:";
+       document.getElementById("info2").innerHTML = "Mysore Palace,Umaid Bhawan Palace,City Palace,Taj Lake Palace,Chowmahalla Palace,Jai Vilas Mahal,Laxmi Vilas Mahal,Falaknuma Palace,Rambagh Palace,Jag Mandir Palace";
+       document.getElementById("head3").innerHTML = "";
+       document.getElementById("info3").innerHTML = "";
+       
+       }
+         
+     function myfunction() {
+     var mainhead1=["Mysore Palace","Umaid Bhawan Palace","City Palace","Taj Lake Palace","Chowmahalla Palace"," Jai Vilas Mahal","Laxmi Vilas Mahal","Falaknuma Palace","Rambagh Palace","Jag Mandir Palace"];
+     var head_about_1=["Welcome to Mysore Palace","Welcome to Umaid Bhawan Palace","Welcome to City Palace","Welcome to Taj Lake Palace","Welcome to Chowmahalla Palace","Welcome to Jai Vilas Mahal","Welcome to Laxmi Vilas Mahal","Welcome to Falaknuma Palace","Welcome to Rambagh Palace","Welcome to Jag Mandir Palace"];
+     var head_about_2=["Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights"]
+     var body_about_1=["The architecture is an amazing amalgamation of the Rajput, Muslim, Hindu, and Gothic architecture. It took 15 complete years to build this remarkable stone palace which is 3 floors high planned by an architect from Europe.It consists of many courtyard, lake gardens, exquisite Durbar hall, Antique Doll Pavilion, and a Royal Gallery for Art and Portraits. There are also around 12 temples inside among other great buildings. The best time to visit is on Sunday and on public holiday evenings when 100,000 lights illumine the palace from 7 PM to 7:45 PM.",
+                      "Built over an area of 26 acres with 347 rooms overlooking Jodhpur, the blue city, Umaid Bhawan Palace is presently one of the world’s largest private residences. This great architecture dates back to 1943 with an amazing opening spotting western art decor, classical revival comma and Indo-Saracenic architecture.A portion of 64 rooms is now a royal heritage hotel run by Taj Hotels. There is an amazing museum where you find ancient antiques and Kings personal stuff. This includes classic cars, varied sizes & shapes of clocks, stuffed wild cat exhibits, old portraits, and memorabilia. Presently, Maharajah Gaj Singh owns this must- visit palace right on top of the Chittar Hill.",
+                      "The palace is situated on top of a hill in front of the Lake Pichola. There are several stunning buildings inside including temples, lakes, and palaces.There are beautiful structures to visit inside like Diwan-i-Aam, Diwan-E-Khas, Mubarak Mahal, City Palace Museum, etc. The inside is decorated with intricate mirror work, murals, silver work, exquisite marble, and ancient wall paintings of the Mewar kingdom. It also has a pool that goes along the spread of rooms. The entrances have colorful structures of great peacocks.",
+                      "Taj Lake Palace (formerly known as Jag Niwas) is a hotel, which has 83 rooms and suites featuring white marble walls. The Lake Palace is located on the island of Jag Niwas in Lake Pichola, Udaipur, India, and its natural foundation spans 4 acres (16,000 m2). The hotel operates a speed boat which transports guests to the hotel from a jetty at the City Palace.",
+                      "Chowmahalla Palace or Chowmahallatuu (4 Palaces), is a palace of the Nizams of Hyderabad state.It was the seat of the Asaf Jahi dynasty and was the official residence of the Nizams of Hyderabad while they ruled their state. The palace was built by Nizam Salabat Jung.The palace remains the property of Barkat Ali Khan Mukarram Jah, heir of the Nizams. Other members of the Hyderabadi Nizam family have also wed here.The place is named chowmahalla, which means four palaces. The word char, and its variation chau, means four and the word mahal means palace in Urdu and Hindi.",
+                      "The three storey structure built over 28.4 acres is a Gwalior Palace of Jiyaji Rao Scindia, the 19th century Maharajah. This royal palace features an electric mix of various architectural styles. Tuscan traces are found in the first floor while Italian-Doric is seen in the second storey and Corinthian architecture is found in the last and third floor.There are gold furnishings, intricate chandeliers and massive royal carpets on display in the main Durbar Hall. Other ancient items include weaponry, manuscripts, and antiques giving a sight into the times of royal era.",
+                      "The royal family of Gaekwads of Vadodara still occupy this palace. There are many structures, banquet halls, a museum and palaces inside the complex. Explore various collections of antiques from over the world and old portraits here.There are great exteriors with manicured gardens and lush greenery for a 10 hole golf course inside the compound. The palace is closed on Mondays and public holidays and is open from 9.30 AM to 5.00 PM on all other days.",
+                      "This hotel is perched on the hilltop at a height of 2000 feet providing a great view of the City of Pearls – Hyderabad. A part of this palace is now a premium ultra luxury hotel managed by Taj Hotels. The exteriors are magnificent featuring gardens in Japanese, Rajasthani, and Mughali style.There are sculptured statues, roman pillars, marble steps, venetian chandeliers, and exquisite period portraits. The interiors give a view of the princely Nizams grandeur which also has a library that has a rare specialty.",
+                      "The grounds of this great jungle hunting gardens of the royal Jaipur maharajah is now a heritage hotel run by Taj Group. Started in the year 1957 this heritage hotel is famous for the grandly appointed suites, accommodating rooms, lush green gardens, corridors made of marble and impeccable hospitable staff and offers luxury services.Every corner inside provides a ultra luxury feel with regal experience. The best is the suite overlooking the awesome gardens is called Peacock Suite & Mughal Terrace.",
+                      "The palace is located in Udaipur city in the Indian state of Rajasthan. Its construction is credited to three Maharanas of the Sisodia Rajputs of Mewar kingdom. The construction of the palace was started in 1551 by Maharana Amar Singh, continued by Maharana Karan Singh (1620–1628) and finally completed by Maharana Jagat Singh I (1628–1652). It is named as Jagat Mandir in honour of the last named Maharana Jagat Singh. The royal family used the palace as a summer resort and pleasure palace for holding parties.The palace served as a refuge to asylum seekers on two separate occasions."];
+
+     var body_about_2=["The main complex is 245 Ft in length and 156 Ft in width. There are fire extinguishing machines located in all parts of the palace in order to prevent any fires.[5] The palace has three entrances: the East Gate (the front gate, opened only during the Dasara and for dignitaries), the South Entrance (for public), and the West Entrance (usually opened only during the Dasara). In addition, there are numerous secret tunnels from the palace cellar leading to Srirangapatna, other palaces, and confidential areas.The three-story stone building of fine grey granite with deep pink marble domes has a facade with several expansive arches and two smaller ones flanking the central arch, which is supported by tall pillars.",
+                       "The hotel wing of the palace is run by the Taj Group of Hotels and is called the 'Taj Umaid Bhawan Palace Jodhpur.Inside the museum of Umaid Bhawan PalaceThe museum has exhibits of stuffed leopards, a very large symbolic flag given to Maharaja Jaswant Singh by Queen Victoria in 1877, light house shapes.The classic cars of the Maharajas are also on display in the garden in front of the museum.",
+                       "City Palace, Udaipur, is a palace complex situated in the city of Udaipur, Rajasthan. It was built over a period of nearly 400 years, with contributions from several rulers of the Mewar dynasty. Its construction began in 1553, started by Maharana Udai Singh II of the Sisodia Rajput family as he shifted his capital from the erstwhile Chittor to the new found city of Udaipur.The palace is located on the east bank of Lake Pichola and has several palaces built within its complex.",
+                       "The Lake Palace was built between 1743 and 1746 under the direction of the Maharana Jagat Singh II (62nd successor to the royal dynasty of Mewar) of Udaipur, Rajasthan as a summer palace. It was initially called Jagniwas or Jan Niwas after its founder.The palace was constructed facing east, allowing its inhabitants to pray to Surya, the Hindu sun god, at the crack of dawn.The successive rulers used this palace as their summer resort, holding their regal durbars in its courtyards lined with columns, pillared terraces, fountains and gardens.",
+                       "While Salabat Jung initiated its construction in 1750,it was completed by the period of Afzal ad-Dawlah, Asaf Jah V between 1857 and 1869.The palace is unique for its style and elegance. Construction of the palace began in the late 18th century and over the decades a synthesis of many architectural styles and influences emerged. The palace consists of two courtyards as well as the grand Khilwat (the Dharbar Hall), fountains and gardens. The palace originally covered 45 acres (180,000 m2), but only 12 acres (49,000 m2) remain today.",
+                       "The Jai Vilas Mahal also known as the Jai Vilas Palace, is a nineteenth century palace in Gwalior, India. It was established in 1874 by Maharajadhiraj Shrimant Jayajirao Scindia Alijah Bahadur, the Maharaja of Gwalior, and is still the residence of his descendants the former royal Maratha Scindia dynasty.It is a fine example of European architecture, designed and built by Sir Michael Filose. A combination of architectural styles, the first storey is Tuscan, the second Italian-Doric and the third Corinthian. The area of the Jai Vilas palace is 1,240,771 square feet and it is particularly famous for its large Durbar Hall. The interior of the Durbar Hall is decorated with gilt and gold furnishings and adorned with a huge carpet and gigantic chandeliers. It is 100 feet long, 50 feet wide and 41 feet in height.",
+                       "In the 1930s Maharaja Pratapsinh created a golf course for use by his European guests. In the 1990s Pratapsinh’s grandson Samarjitsinh, a former Ranji trophy cricket player, renovated the course and opened it to the public.Movies shot here include Prem Rog in 1982 and Grand Masti.",
+                       "It was built by Nawab Sir Viqar-ul-Umra - Prime Minister of Hyderabad and the uncle & brother-in-law of the sixth Nizam.Falak-numa means Like the Sky or Mirror of Sky in Urdu.An English architect designed the palace. Sir Vicar's monogram VO is on the furniture, walls and ceiling of the palace. It is made completely with Italian marble with stained-glass windows and covers an area of 1,011,500 square feet.The palace was built in the shape of a scorpion with two stings spread out as wings in the north. The middle part is occupied by the main building and the kitchen, Gol Bangla, Zenana Mehal, and harem quarters stretch to the south.",
+                       "The first building on the site was a garden house built in 1835 for the wet nurse of prince Ram Singh II. In 1887, during the reign of Maharaja Sawai Madho Singh, it was converted into a modest royal hunting lodge, as the house was located in the midst of a thick forest at that time. In the early 20th century, it was expanded into a palace to the designs of Sir Samuel Swinton Jacob.Maharajah Sawai Man Singh II made Rambagh his principal residence and added a number of royal suites in 1931.",
+                       "The three storey building dates back to the 17th century and also popularly called Lake Garden Palace. To reach the island palace you can take an exciting jet ferry ride across the Lake Pichola.The highlight of this place is the marble life-size elephant structure at the entrance. There are structures octagonal in shape covered with various styled domes. The Durbar halls & suites provide a great experience. Gul Mahal is made from red and black marble stone carved with exquisite murals & ancient paintings. There is also a museum called Jag Mandir museum housed here."];
+
+       document.getElementById("mhead").innerHTML = mainhead1[x-1];
+       document.getElementById("head1").innerHTML = head_about_1[x-1];
+       document.getElementById("info1").innerHTML = body_about_1[x-1];
+       document.getElementById("head2").innerHTML = head_about_2[x-1];
+       document.getElementById("info2").innerHTML = body_about_2[x-1];
+       document.getElementById("head3").innerHTML = "";
+       document.getElementById("info3").innerHTML = "";
+       }
+
+       function myfunction2() {
+     var body_how_1=["Mysore has its own airport, located 10 km south of the city centre.The nearest international airport is located in Bangalore185 km northeast.",
+                      "Jodhpur (JDH IATA) is connected to Delhi, Mumbai, Jaipur, Udaipur; the airport is about 5 km from the city centre.",
+                      "Dabok Airport, also known as Maharana Pratap Airport after the son of Udai Singh, is 25km northeast of the city center. There are daily flights from Delhi and Mumbai on Jet Airways, Air India, SpiceJet. and indiGo.",
+                      "Dabok Airport, also known as Maharana Pratap Airport after the son of Udai Singh, is 25km northeast of the city center. There are daily flights from Delhi and Mumbai on Jet Airways, Air India, SpiceJet. and indiGo.",
+                      "Rajiv Gandhi International Airport (HYD IATA) is 22 km (14 mi) from the city. The sleek and well-organized airport is one of the best in India.",
+                      "Gwalior Airport, (GWL IATA) is one of four airports in the region. It is also the site of an Indian Air Force Base.",
+                      "You can get into Vadodara on a domestic flight, and it is reasonably connected to the rest of the country by domestic airlines like Air India, Indigo and Jet Airways. The nearest international airport is about 100 km away in Ahmedabad to which is served by Air India, Emirates Airlines, Qatar Airways and Singapore Airlines.",
+                      "Rajiv Gandhi International Airport (HYD IATA) is 22 km (14 mi) from the city. The sleek and well-organized airport is one of the best in India.",
+                       "Jaipur Airport. Offers sporadic (chartered) service to London and Dublin. Direct flights to Singapore, Bangkok, Abu Dhabi, Sharjah, Muscat and Dubai are also available. Jaipur also has daily domestic air links with many Indian cities such as Jodhpur, Udaipur, Aurangabad, Delhi, Hyderabad, Kolkata, Goa, Chennai, Ahmedabad, Bangalore, Mumbai, Pune.",
+                       "Dabok Airport, also known as Maharana Pratap Airport after the son of Udai Singh, is 25km northeast of the city center. There are daily flights from Delhi and Mumbai on Jet Airways, Air India, SpiceJet and indiGo."];
+   
+     var body_how_2=["Mysore Junction is the city's main station, and there are daily trains plying the route to Bangalore.",
+                     "Jodhpur is an important division of the North Western zone of the Indian Rail network . It is well connected by direct trains from all metros and major cities in India, including Delhi, Mumbai, Ahmedabad, Jaipur, Jaisalmer, Barmer, Bikaner, Ajmer, Alwar, Agra, Kanpur, Allahabad, Gaya, Kolkata, Indore, Lucknow, Varanasi, Patiala, Chandigarh, Kalka, Jammu, Chennai, Bangalore and Hyderabad.",
+                     "Udaipur has direct train connections to many major cities ",
+                     "Udaipur has direct train connections to many major cities ",
+                     "There are three major railway stations serving the twin cities: 2 Hyderabad Station [HYB] (Deccan or Nampally), 3 Secunderabad Station [SC] (Junction), and 4 Kachiguda [KCG] and a minor station at Begumpet. Most of the trains bound for South India and North India originate from Hyderabad and leave via Secunderabad.",
+                     "Gwalior is very well connected to major cities across India by direct train links. You can reach Gwalior from India's capital New Delhi, in 3 hours by New Delhi-Bhopal Shatabdi Express(India's fastest train).",
+                     "Vadodara Junction Railway Station. edit - This is the busiest Railway Station in Gujarat. It is situated on the Mumbai - Delhi Western Railway Main Line.",
+                     "There are three major railway stations serving the twin cities: 2 Hyderabad Station [HYB] (Deccan or Nampally), 3 Secunderabad Station [SC] (Junction), and 4 Kachiguda [KCG] and a minor station at Begumpet. Most of the trains bound for South India and North India originate from Hyderabad and leave via Secunderabad.",
+                     "Indian Railways connects Jaipur from all over the country and is one of the cheapest options.",
+                     "Udaipur has direct train connections to many major cities" ];
+     
+     var body_how_3=["Buses run every 5 minutes from Bangalore. There is a choice of air-conditioned and ordinary vehicles. During the weekends, these buses can fill up, but most do not allow you to purchase your tickets in advance.",
+                     "Jodhpur can be reached by RSRTC (Rajasthan State Road Transport Corporation) buses and private luxury buses which operate from all major towns and cities in Rajasthan as well as Ahmedabad and Delhi.",
+                     "Udaipur is connected by an efficient bus service to most cities in Rajasthan, which sometimes be much faster than the train. Buses operate between Udaipur and Mount Abu (₹5 hours, ₹100), Agra (6 hours, ₹120), Ahmedabad (6 hours, ₹200), Jodhpur (8 hours, ₹125), Ranakpur (3 hours, ₹85), Ajmer (8 hours, ₹150), Jaipur (9 hours, ₹200), Bikaner, Delhi (14 hours, ₹420), and Mumbai (16 hours, sleeper ₹600 or seat ₹400). RSRTC runs Volvo & other Multiple axle bus services which can be booked through its RSRTC Bus Ticket Booking mobile app.",
+                     "Udaipur is connected by an efficient bus service to most cities in Rajasthan, which sometimes be much faster than the train. Buses operate between Udaipur and Mount Abu (₹5 hours, ₹100), Agra (6 hours, ₹120), Ahmedabad (6 hours, ₹200), Jodhpur (8 hours, ₹125), Ranakpur (3 hours, ₹85), Ajmer (8 hours, ₹150), Jaipur (9 hours, ₹200), Bikaner, Delhi (14 hours, ₹420), and Mumbai (16 hours, sleeper ₹600 or seat ₹400). RSRTC runs Volvo & other Multiple axle bus services which can be booked through its RSRTC Bus Ticket Booking mobile app.",
+                     "MGBS Bus Station (Mahatma Gandhi Bus Station or Imliban or Gowliguda Bus-Station). This is said to be the largest bus station in the world with around 84 bus bays side by side. JBS (Jubilee Bus Station) in Secunderabad. APSRTC runs direct air-conditioned coaches to Mumbai, Bengaluru (Bangalore) and Chennai. AP tourism runs air-conditioned coaches to the same cities. ",
+                     "Gwalior is situated on the North-South corridor of National Express Highway. National highway No.3(Agra-Mumbai road) connects Gwalior To Delhi, Agra, Indore and Mumbai. National Highway No.75 connects Gwalior to Jhansi.",
+                     "The main bus station is at Maharaja Sayajirao University. Non-air conditioned buses arrive from here which connect Vadodara with all the parts of Gujarat and the major cities of Madhya Pradesh, Rajasthan and Maharashtra.",
+                     "MGBS Bus Station (Mahatma Gandhi Bus Station or Imliban or Gowliguda Bus-Station). This is said to be the largest bus station in the world with around 84 bus bays side by side. JBS (Jubilee Bus Station) in Secunderabad. APSRTC runs direct air-conditioned coaches to Mumbai, Bengaluru (Bangalore) and Chennai. AP tourism runs air-conditioned coaches to the same cities.",
+                     "There is an excellent bus service between Jaipur to Delhi by Rajasthan State Road Transport Corporation (RSRTC) with buses approximately every half an hour in both directions. Non-A/C and AC Volvo bus services are offered.",
+                     "Udaipur is connected by an efficient bus service to most cities in Rajasthan, which sometimes be much faster than the train. Buses operate between Udaipur and Mount Abu (₹5 hours, ₹100), Agra (6 hours, ₹120), Ahmedabad (6 hours, ₹200), Jodhpur (8 hours, ₹125), Ranakpur (3 hours, ₹85), Ajmer (8 hours, ₹150), Jaipur (9 hours, ₹200), Bikaner, Delhi (14 hours, ₹420), and Mumbai (16 hours, sleeper ₹600 or seat ₹400). RSRTC runs Volvo & other Multiple axle bus services which can be booked through its RSRTC Bus Ticket Booking mobile app."];
+
+       document.getElementById("info1").innerHTML = body_how_1[x-1];
+       document.getElementById("head1").innerHTML = "By Plane:";
+       document.getElementById("head2").innerHTML = "By Railways:";
+       document.getElementById("info2").innerHTML = body_how_2[x-1];
+       document.getElementById("head3").innerHTML = "By Bus:";
+       document.getElementById("info3").innerHTML = body_how_2[x-1];
+       
+       }       
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Palaces</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Palace</p>
+        <p id='info1'>A palace is a grand residence, especially a royal residence, or the home of a head of state or some other high-ranking dignitary, such as a bishop or archbishop.The word is derived from the Latin name Palātium, for Palatine Hill in Rome which housed the Imperial residences. Most European languages have a version of the term (palais, palazzo, palast etc), and many use it for a wider range of buildings than English. In many parts of Europe, the equivalent term is also applied to large private houses in cities, especially of the aristocracy often the term for a large country house is different.</p>
+        <p id="head2">Few Renowed Palace:</p>
+        <p id="info2">Mysore Palace,Umaid Bhawan Palace,City Palace,Taj Lake Palace,Chowmahalla Palace,Jai Vilas Mahal,Laxmi Vilas Mahal,Falaknuma Palace,Rambagh Palace,Jag Mandir Palace</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+      <script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'> Mysore Palace, Karnataka</h2><p>The magnificent palace in Mysore originally belonged to the warriors who were the royal family of Mysore and still reside in the palace.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.656092,12.306141]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Umaid Bhawan Palace, Jodhpur</h2><p>Umaid Bhawan Palace, located in Jodhpur in Rajasthan, India, is one of the world's largest private residences. <hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.049281,26.282175]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>City Palace, Udaipur</h2><p>This amazing palace that dates back to the sixteenth century is situated in Udaipur, the city of lakes amidst the majestic Aravalli ranges.<hr><button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.684026,24.577418,]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Taj Lake Palace, Udaipur</h2><p>This is one of the most magnificent palaces of the royal rule of the Mewar Dynasty.<hr><button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.681046,24.576249]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Chowmahalla Palace, Hyderabad</h2><p>This was the princely residence of he Hyderabadi Nizams of the nineteenth century.<hr><button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.473106,17.358765]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Jai Vilas Mahal, Gwalior</h2><p>This royal palace features an electric mix of various architectural styles.<hr><button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.168608,26.204442]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Laxmi Vilas Mahal, Vadodara</h2>The World’s largest private residence is spread across 500 acres and 4 times bigger than the Buckingham Palace.<hr><button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.193109,22.294314]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Falaknuma Palace</h2>Falaknuma is a palace in Hyderabad, Telangana, India.It originally belonged to the Paigah family, and was later owned by the Nizam of Hyderabad.<hr><button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.467201,17.332436]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>The Rambagh Palace in Jaipur</h2>Rajasthan is the former residence of the Maharaja of Jaipur and now a hotel.<hr><button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [75.809781,26.898986]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Jag Mandir Palace, Udaipur</h2>Built on an island on the tranquil Lake Pichola, this scintillating ultra luxury palace is now converted into a luxury hotel.<hr><button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.677847,24.567731]
+                    } 
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>
