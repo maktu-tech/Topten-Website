@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Buildings</title>
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Buildings";
+          document.getElementById("head1").innerHTML = "Welcome to Buildings:";
+          document.getElementById("info1").innerHTML = "High-rise structures are also called 'vertical cities', having the potential to decongest urban sprawl. Indian cities are witnessing immense demographic expansion due to migration from surrounding villages, leading to urban sprawl, housing demand, rise in cost of land. Housing has developed into an economy generating industry. Given this demand, while high-rise residential structures have become a solution in the metropolitan cities, they remain eluded in tier II cities in India. Low-rise or mid-rise high-density dwelling types have developed in these cities. A study of Pune city’s housing needs, demands, market, and type of structures being built, reveal that tall buildings of 11 floors are being developed on the city’s urban fringe. Most of the high-rise projects remain as proposals. An investigation in this case study reveal that high rise structures are not preferred due to user perception of insecurity in case of fire and high cost of the building. The paper aims at studying the availability and use of fly ash in various proportions, which can be used in Indian high-rise residential buildings.";
+          document.getElementById("head2").innerHTML = "Few Top Buildings:";
+          document.getElementById("info2").innerHTML = "Omkar 1973, Mumbai. Palais Royale, Mumbai. The 42, Kolkata. Imperial Towers, Mumbai. Ahuja Towers, Mumbai. One Avighna Park, Mumbai. Bayview, House of Hiranandani, Chennai.";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          
+          }
+            
+        function myfunction() {
+        var mainhead1=["Omkar 1973, Mumbai","Palais Royale, Mumbai","The 42, Kolkata","Imperial Towers, Mumbai","Ahuja Towers, Mumbai","One Avighna Park","Bayview, Chennai","Ireo Victory Valley Tower","Mantri Pinnacle","Lodha Towers, Hyderabad"];
+        var head_about_1=["Welcome to Omkar 1973, Mumbai:","Welcome to Palais Royale, Mumbai:","Welcome to The 42, Kolkata:","Welcome to Imperial Towers, Mumbai:","Welcome to Ahuja Towers, Mumbai:","Welcome to One Avighna Park, Mumbai:","Welcome to Bayview, House of Hiranandani, Chennai:","Welcome to Ireo Victory Valley Tower, Gurugram:","Welcome to Mantri Pinnacle, Bengaluru:","Welcome to Lodha Bellezza 3 & 4 Towers, Hyderabad:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:"]
+        var body_about_1=["Omkar 1973 in Worli, a development offering bespoke sky bungalows, encompasses 3 towers scaling beyond a combined height of 900 + meters. The company's Rs. 10,000 Crore plus flagship development spread over 9 acres, derives its unique name from the latitude and longitudinal coordinates of Mumbai city and is designed by the world's most admired architecture design firm, Foster + Partners. The 400+ sky bungalows with luxury 3, 4 & 5 BHK apartments in Worli, ranging from 3000 sq. ft. to 21,500 sq. ft. (approx.) floor plate, offer a stunning view of the city and the Arabian Sea.","Palais Royale is an unfinished skyscraper in Lower Parel, Mumbai. It is on land previously owned by Shree Ram Mills Ltd. It is the first supertall building in India to achieve a Leadership in Energy and Environmental Design Platinum rating for environmental sustainability.The luxury building has 120 apartments with areas of between 740 and 1,300 square metres (8,000 and 14,000 sq ft). With a floor plate of 2,300 square metres (25,000 sq ft), the premises have amenities like a cinema house, spa, cricket pitch, badminton court, football pitch and three swimming pools. It has 820,000 square metres of residential space.","The 42 is a residential skyscraper in Kolkata in the state of West Bengal, India. The project is located in Chowringhee, the central business district of the city. It stands between Tata Centre and Jeevan Sudha. It was first proposed in 2008 but construction was delayed for nearly two years.THE 42 is a very important addition to the skyline of the city of Kolkata. The tallest ultra-luxurious apartment in Eastern India is situated at Chowringhee, the heart of the city of joy. This ultra-luxury apartment offers 360-degree panorama view of the city from the apartments.","The Imperial is a twin-tower residential skyscraper complex in Mumbai that is one of the tallest completed buildings in India. In 2010 its construction was completed and the towers were inaugurated.Designed by architect Hafeez Contractor, The Imperial is built on former slum land in Tardeo, South Mumbai and is perhaps Contractor's most recognisable project to date. The project's use of the modern urban redevelopment model in which the building firm provides free land and rehabilitation to slum dwellers in exchange for rights for property development was the first implementation of this model on a large scale. The project is an example of success in the redevelopment of slum and cotton mill land across the city and across India as a whole.","The Ahuja Towers in Worli, Mumbai.As many as 106 skyscrapers rising 200 metres or above were completed across the world in 2015, setting a new global record for tall building construction, says the latest Council on Tall Buildings and Urban Habitat report.The 54-storey Ahuja Towers (249m) at Worli came in at 36 on the list of tallest buildings built last year. The tallest was Shanghai Tower, now the tallest (128 floors) building in China, and the second-tallest in the world at 632m.The second-tallest building completed in 2015 was 432 Park Avenue in New York City, becoming the world’s tallest all-residential building (426m and 85 floors) and the 100th supertall tower.","One Avighna Park is a Twin 61-storey Luxury Residential Towers, strategically located in the heart of Lower Parel, Mumbai. With close proximity to central business districts like - BKC, Nariman Point and excellent connectivity to entertainment and leisure avenues like Palladium, Atria, ITC Grand, Shangri-La, Four Seasons. Temples like Siddhivinayak, Mahalaxmi, Mumbadevi and Wadala Hanumanji are just 10-15 mins drive away. Domestic and International airports are separated by a drive of 30-35 mins. Also, affluent residential areas and hospitals like- Worli, Peddar Rd, Napean Sea Rd, Breach Candy, Jaslok, Lilavati and Hinduja hospitals are close by.","House of Hiranandani is known as the tallest building of South India.Every moment here will be elevated with joy when you enter the benchmark for aesthetic urban comfort. An address of unprecedented beauty, 45 floored Anchorage floors you in with its breath-taking view, lavish interiors, lush green expanse, outdoor recreational facilities, a world class club house and a well-equipped gymnasium complements the stunning architecture.This 40-floored architectural bliss offers you a modern haven of indulgence, style and comfort all rolled into one. You can enjoy the sea view from your very own room while having an early morning cup of tea. It houses all the modern facilities and even a puja room for a holistic lifestyle.","Ireo victory valley is a new residential destination embellishing the address of Sector 67, Gurgaon. The individuals seeking an excellent and comprehensive residential solution now have an access to every amenity that they have been dreaming of. With an area of 25 acres and more then 750 apartments in simplex and duplex form, the Ireo Victory Valley is simply an incredible residential dream come true. This Residential township exudes great architectural designing and indulging modern lifestyle. There is an engulfing cover of vast greenery around Ireo Victory Valley in the form of a Central Garden, and themed gardens. Also at disposal are tennis & squash courts, Theater Plaza, Fitness Centers and an exciting club. Residents can choose from the options of 2, 3, and 4 bedroom residential units having exotic interiors and striking exteriors. The residents will get a villa-like experience of living with lots and comfort and grandeur floating around.","Mantri DSK Pinnacle is South India’s Tallest Residential Tower. Since 1999, Mantri, Known for its pioneering spirit, has been transforming the south Indian Skyline. And now, they bring pride to that skyline with Mantri DSK Pinnacle, South India's tallest residential tower. This marvel comprises 3/4/5 BHK homes and rises to 46 floors. Homes equipped with smart home technology. The Pinnacle transcends your expectations with features like helipad, Sky Lounge-Coffee shop on the 41st floor, an observatory on the 42nd, Aqua Gym and a mini Theatre, Tennis Court, Children’s Play Area, Swimming pool with toddler’s pool and a jogging/walking trail, among others. So come, move in to Mantri DSK pinnacle, and let its grandeur floor you.","Lodha Bellezza is another venture of the most famous builders and developers, Lodha Group. It is situated at kukatpally, Hyderabad. It turns into the fantasy venture that is offering 3 bhk and 4 bhk villas. It's a home that has the entire world in it, yet doesn't cost the earth. It changes the way you live, forever. Furthermore, in years to come, this notorious address will give you tremendous fulfilment, both as far as nature of way of life and degree of profitability. The units are available from 3447 sq. ft to 4761 sq. ft. It is in ready to move stage. This project covers all the amenities that help you in living a whole modern life. The external amenities in the Bellezza are swimming pool, Lift, Land Scape, Tennis, Children Play Area, Gym, Water Supply, Party Hall, Power Back Up, Library and many more.When it comes to safety and security this project stands as the best. Lodha Group is established in the year 1980. This Group is India leading real estate developer and amongst the worlds selects multinational real estate developers with presence in India and the United Kingdom. This company is one of the most profitable players in india and the largestby sales for three consecutive years. The Group has 28 ongoing projects across London, Mumbai, Pune and Hyderabad and expanding in Bangalore."];
+        var body_about_2=["Rising majestically above the city and the Arabian Sea, Omkar 1973 is set to have three high rise towers after its completion. For now Tower A & B are complete and stand tall at 76-storey and 75-storey, respectively. There are 400-plus sky bungalows, ranging from 2,500 sq. ft. to 18,200 sq. ft. area in this project. It has been constructed over a height of over 450 meters.","A sky scrapper with 88 floors is located in Lower Parel of Mumbai; its height is 320 m. The luxury building was designed keeping sustainability and responsible consumption in mind from the onset of the project. The development team has successfully achieved a LEEDS platinum rating – it is one the first residential buildings in the world to do so. The building has 120 apartments with amenities like a cinema house, spa, cricket pitch, badminton court, football pitch and three swimming pools.","The 42 is a residential skyscraper and the tallest building in Kolkata. The 42 with a height of 268 metres (879 ft), comprises of 56 residential apartments and one duplex at the top of two floors. The 63 storeyed building offers ultra-premium luxury apartment and 360-degree panoramic view of the city.","With a height of 254 meters, the Imperial Towers are twin residential skyscrapers located in Tardeo, Mumbai. The building has a landscaped podium on the ninth floor which offers green space amenity for the residents. The 60 floored Imperial offers an excellent lifestyle and luxury apartments to live.","It offers exclusive 4BHK apartments and limited edition 6BHK penthouses. The Ahuja Towers were crowned among World’s Top 50 High Rises, built in 2015. The 53 storeyed homes with a height of 250 meters come equipped with home automation.","One Avighna Park is located in the heart of Lower Parel, Mumbai with 60 floors. The twin towers stand at the height of 246 meters. It has won 7 international awards apart from 32 other national awards. The project was pre-certified as a platinum rated green building by IGBC. It has received a 7 Star Rating by CARE in the Real Estate Category – 2014 and has also acquired an Environmental Clearance – 2014.","These 3 BHK luxury apartments are located off Old Mahabalipuram Road, Egattur. Bayview is a 40 storeyed tower and with a height of 204 meters, it is known as the tallest building of South India. The homes overlook the Bay of Bengal and the backwaters.","Ireo Victory Valley is a new residential destination embellishing the address of Sector 67, Gurgaon. It is a 51 floors residential complex with the height of 178 meters and spread on an area of 25 acres and has more than 750 apartments. This residential township exudes great architectural designing and an indulging modern lifestyle.","Mantri Pinnacle rises in the skyline of Bengaluru with 46 floors and offers 3, 4, & 5 BHK homes. Located at Banerghatta Road, Bengaluru, Mantri Pinnacle has 133 residences and a breath taking view of the city. Crowning the tower and commanding the most impressive views are a Sky Lounge on the 41st floor and an observatory on the 42nd. Residents can also avail a helipad on the 46th floor. Height is 153 metres.","Located in Kukatpally, Lodha Bellezza is the tallest building in Hyderabad with a height of 125 meters. The skyscraper with 40 floors offers luxury apartments along with yoga and meditation platform, techno-luxury spa, helipad and other required facilities."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["You can reach here from Mumbai Airport using Buses and Taxi.","You can reach here from Mumbai Airport using Buses and Taxi.","You can reach here from Netaji Subhash Chandra Bose International Airport using Buses and Taxi.","You can reach here from Mumbai Airport using Buses and Taxi.","You can reach here from Mumbai Airport using Buses and Taxi.","You can reach here from Mumbai Airport using Buses and Taxi.","You can reach here from Chennai International Airport using Buses and Taxi.","You can reach here from New Delhi Airport using Buses and Taxi.","You can reach here from Kempegowda International Airport Bengaluru using Buses and Taxi.","You can reach here from Rajiv Gandhi International Airport, Hyderabad using Buses and Taxi."];
+        var body_how_2=["You can use the nearby Railway Stations are Lower Parel Bridge Railway Station, Currey Road and Dadar Western Railway Station to Reach here.","You can use the nearby Railway Stations are Lower Parel Bridge Railway Station, Currey Road and Dadar Western Railway Station to Reach here.","You can use the nearby Kolkata Transit Station to Reach here.","You can use the nearby Railway Stations are Lower Parel Bridge Railway Station, Currey Road and Dadar Western Railway Station to Reach here.","You can use the nearby Railway Stations are Lower Parel Bridge Railway Station, Currey Road and Dadar Western Railway Station to Reach here.","You can use the nearby Railway Stations are Lower Parel Bridge Railway Station, Currey Road and Dadar Western Railway Station to Reach here.","You can use the nearby Railway Stations are Velachery Station,Tambaram Station and Chennai Central Also to Reach here.","You can use the nearby Railway Stations are Basai Dhankot Train station to Reach here.","You can use the nearby Railway Stations are Krantivira Sangolli Rayanna Station to Reach here.","You can use the nearby Railway Station are Hyderabad Deccan Railway Station to Reach here."];
+        var body_how_3=["You can use formally rental Buses and government Buses to Reach Here.","You can use formally rental Buses and government Buses to Reach Here.","You can use formally rental Buses and government Buses to Reach Here.","You can use formally rental Buses and government Buses to Reach Here.","You can use formally rental Buses and government Buses to Reach Here.","You can use formally rental Buses and government Buses to Reach Here.","You can use formally rental Buses and government Buses to Reach Here.","You can use formally rental Buses and government Buses to Reach Here.","You can use formally rental Buses and government Buses to Reach Here.","You can use formally rental Buses and government Buses to Reach Here."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "By Plane:";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_3[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Buildings</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Buildings:</p>
+        <p id='info1'>High-rise structures are also called 'vertical cities', having the potential to decongest urban sprawl. Indian cities are witnessing immense demographic expansion due to migration from surrounding villages, leading to urban sprawl, housing demand, rise in cost of land. Housing has developed into an economy generating industry. Given this demand, while high-rise residential structures have become a solution in the metropolitan cities, they remain eluded in tier II cities in India. Low-rise or mid-rise high-density dwelling types have developed in these cities. A study of Pune city’s housing needs, demands, market, and type of structures being built, reveal that tall buildings of 11 floors are being developed on the city’s urban fringe. Most of the high-rise projects remain as proposals. An investigation in this case study reveal that high rise structures are not preferred due to user perception of insecurity in case of fire and high cost of the building. The paper aims at studying the availability and use of fly ash in various proportions, which can be used in Indian high-rise residential buildings.</p>
+        <p id="head2">Few Top Buildings:</p>
+        <p id="info2">Mehrangarh Fort, Jodhpur. Red Fort, Delhi. Jaisalmer Fort, Jaisalmer. Lohagad Fort,Lonavala. Golkonda Fort, Hyderabad. Amer Fort, Jaipur. Gwalior Fort, Gwalior.</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Omkar 1973, Mumbai</h2><p>Rising majestically above the city and the Arabian Sea, Omkar 1973 is set to have three high rise towers after its completion.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.823421,19.009154]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Palais Royale, Mumbai</h2><p>A sky scrapper with 88 floors is located in Lower Parel of Mumbai; its height is 320 m.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.820402,18.999337]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>The 42, Kolkata</h2><p>The 42 is a residential skyscraper and the tallest building in Kolkata.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [88.349553,22.548595]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Imperial Towers, Mumbai</h2><p>The 60 floored Imperial offers an excellent lifestyle and luxury apartments to live.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.812833,18.971048]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Ahuja Towers, Mumbai</h2><p>The Ahuja Towers were crowned among World’s Top 50 High Rises, built in 2015.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.825727,19.011988]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>One Avighna Park, Mumbai</h2><p>One Avighna Park is located in the heart of Lower Parel, Mumbai with 60 floors. The twin towers stand at the height of 246 meters.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.835004,18.994652]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Bayview, House of Hiranandani, Chennai</h2><p>These 3 BHK luxury apartments are located off Old Mahabalipuram Road, Egattur.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.234015,12.835460]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Ireo Victory Valley Tower, Gurugram</h2><p>This residential township exudes great architectural designing and an indulging modern lifestyle.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.065126,28.391642]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Mantri Pinnacle, Bengaluru</h2><p>Mantri Pinnacle rises in the skyline of Bengaluru with 46 floors and offers 3, 4, & 5 BHK homes.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.598060,12.875955]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Lodha Bellezza 3 & 4 Towers, Hyderabad</h2><p>Lodha Bellezza is the tallest building in Hyderabad with a height of 125 meters.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.393381,17.474182]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

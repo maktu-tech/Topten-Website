@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Beaches</title>
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Beaches";
+          document.getElementById("head1").innerHTML = "Welcome to Beaches:";
+          document.getElementById("info1").innerHTML = "India is blessed with a number of beautiful beaches which have pristine blue and turquoise waters. A holiday to one of these beaches makes you feel like you have traveled to an exotic location abroad.Once voted the best beach in Asia, the Radhanagar beach in Andaman and Nicobar's Havelock island is famous for its mesmerizing blue waters and pristine white sand. Not only is it one of the most romantic beaches in India, it also makes for an excellent holiday spot for families with stunning views all around.Lakshadweep islands are India's exotic hidden gem when it comes to tourist destinations. The Bangaram island resort is a part of Bangaram atoll and attracts tourists on account of its stunning beach with clean sand and deep blue waters. It is also famous for its amazing coral reef making it a hot scuba-diving and snorkeling destination. Once voted the best beach in Asia, the Radhanagar beach in Andaman and Nicobar's Havelock island is famous for its mesmerizing blue waters and pristine white sand. Not only is it one of the most romantic beaches in India, it also makes for an excellent holiday spot for families with stunning views all around.";
+          document.getElementById("head2").innerHTML = "Few Enjoyable Beaches:";
+          document.getElementById("info2").innerHTML = "Goa Beach, Goa.Gokarna Beach, Karnataka.Ganpatipule Beach, Maharashtra.Marari Beach, Kerala.Kovalam Beach, Kerala.Havelock Beach, Andaman";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          
+          }
+            
+        function myfunction() {
+        var mainhead1=["Goa Beach, Goa","Gokarna Beach, Karnataka","Ganpatipule Beach, Maharashtra","Marari Beach, Kerala","Kovalam Beach, Kerala","Havelock Beach, Andaman","Rock Beach, Pondicherry","Mahabalipuram Beach, Chennai","Vizag Beach, Visakhapatnam","Gopalpur Beach, Orissa"];
+        var head_about_1=["Welcome to Goa Beach, Goa:","Welcome to Gokarna Beach, Karnataka:","Welcome to Ganpatipule Beach, Maharashtra:","Welcome to Marari Beach, Kerala:","Welcome to Kovalam Beach, Kerala:","Welcome to Havelock Beach, Andaman:","Welcome to Rock Beach, Pondicherry:","Welcome to Mahabalipuram Beach, Chennai:","Welcome to Vizag Beach, Visakhapatnam:","Welcome to Gopalpur Beach, Orissa:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:"]
+        var body_about_1=["A place where people can be seen sunbathing, swimming, parasailing or relaxing in their hammocks sipping a cold beer all year round, Goa is my first pick. In fact, Goa is the best place to kick-start your beach blast in advance with Sunburn Goa this December! Sunburn is when a conglomerate of party mongers and DJs from all over the world get together at the Candolim beach for the grandest New Year beach party. Late night parties, hypnotic music and people dancing away; Sunburn exponentially increases the fun quotient.","Gokarna in Karnataka is situated 190 kilometres south of Goa and makes for a wonderful change from Goa’s fast pace! Famous for the Mahabaleshwar temple and its pristine beaches, in this tranquil town, you can enjoy a day basking in the sun or laying in a hammock reading a book without distractions. Gokarna is well-connected to major cities through buses and trains and the closest airport is Dabolim Airport in Goa.Though an important pilgrimage site, Gokarna blends religion with beach fun. Om Beach, Paradise Beach and Half-Moon Beach are the famous ones, which have both fine sand and rocky coasts mostly untouched by commercial activities.","A tiny coastal town in Maharashtra, Ganpatipule has a grand beach, one of the most spectacular on the Konkan coast. The beach has distinctive red sand and shallow water, making it ideal for swimming. Ganpatipule can be visited en route to Ratnagiri and is just 35 kilometres from the famous Jaigad Fort, which offers a panoramic view of the sea and villages from the cliff. Ganpatipule is also famous for the Swaymbhu Ganesh temple where Lord Ganesh’s statue is believed to have originated from the ground.","Kerala and its exotic beauty is an open secret. This vibrant state draws tourists from over the world who readily succumb to its magnificence. This time round, visit the lesser known treasures in Kerala like Marari Beach in Alleppey district. A sleepy town brimming with beauty on all four sides, this town is your paradisiacal retreat from the world. In Marari, you can stay at the Marari Beach Resort, a lavish property that subtly blends modern day comforts and a range of recreational activities with surrounding natural beauty.","Further down south from Marari, another rejuvenating beach holiday destination in Kerala is Kovalam. Basically a fishing village, Kovalam has garnered a lot of tourist attention in recent years and its famous Eve and Lighthouse beaches are pristine and clean lined with coconut trees of one side. You can opt for a highly rewarding cruise early in the morning with the fishermen or hire a surfboard and set on a mission to control the waves.","Sparkling white sand, turquoise waters, vibrant coral reefs and a calmness that fills the air. Havelock in Andaman promises a pleasant and highly rejuvenating holiday where celebration comes from being one with nature. The Radhanagar and Elephant beaches are the best places to go for a swim in the warm water and enjoy water sports.","One of the best known places in India for meditation and relaxation, Pondicherry or Puducherry is famous as India’s French connection. The erstwhile French colony retains French culture and architecture and is definitely a unique place to visit. Famous for the Sri Aurobindo Ashram in neighbouring Auroville where thousands go to seek solace, a well-maintained waterfront is just completes the package of a beach holiday. Beach activities in Pondicherry include camping at the beach, sunbathing, canoeing, kayaking and backwater sailing.","Clean, beautiful, sunbathed beaches, a string of restaurants offering fresh seafood preparations and a dash of cultural history, a holiday to Mahabalipuram will give you ultimate relaxation and culinary indulgence on the beach along with a sneak peek into this city’s rich culture.  Activities like windsurfing and swimming can also be enjoyed on a warm day at Mahabalipuram. A must-visit is the famous monolithic Pandava Rathas and Varaha Cave Temples that date back to the 7th century with scenes from Mahabharat sculpted from the rocks.","Despite being a busy coastal city with Indian Navy headquarters and India’s busy harbour, Vizag or Visakhapatnam has plenty to offer a tourist for relaxation like beautiful beaches, lakes, gardens and museums. The Ram Krishna Beach is ideal for spending evenings where one can stroll down the beach or along pedestrian tracks that lead to beautiful parks and open air restaurants. Book a cottage at the beautiful Rishikonda beach for a comfortable stay right at the beach. Also visit Kailasagiri, a well-maintained hilltop that offers a panoramic view of the sea.","The coastal stretch of Orissa is dotted with hamlets of tribal fishermen and Hindu temples that Orissa is famous for. Gopalpur Beach in Orissa, just 190 kilometres from Bhubneshwar, is a popular beach with golden sand and a gentle slope that makes it ideal for swimming and sunbathing. An old light house now remains of an ancient seaport at Gopalpur but the natural beauty that abounds is eternal."];
+        var body_about_2=["One of the most popular sea beaches among foreigners in Goa because of its night parties, Curlies and other good eating joints, peaceful seashore, western seafood with chilled beer and good music in nearby restaurants and flea markets. Anjuna is situated 21 km north of Panaji and 7 km from Baga.Palolem Beach is situated in Canacona in southern Goa, India. The beach attracts many international tourists, mainly during the winter season between November and March. It is considered to be one of the region's most beautiful beaches.","The drive up the winding path that leads to Gokarna is scenic, with the rocky mountains and Western Ghats on one side and the Arabian Sea on the other. Gokarna is known for the beaches. The Gokarna main beach is in town and Kudle beach are west facing. Om beach, Half moon Beach, Paradise Beach (also known as Full moon) and Belekan beach are south facing.Om beach is a naturally Om-shaped beach, it attracts local tourists on weekends. It has a few shacks and eateries, and also boat service to other beaches.","Ganpatipule is a small town located 25 kms north of the city of Ratnagiri in Ratnagiri district on the Konkan coast of Maharashtra, in the sub-continent of India. The town of Chiplun is located to its north.The 400-year-old Ganpati idol at Ganpatipule is said to have sprung up from the soil. This deity faces the west, so as to guard the western gates, unlike deities in other Indian temples who face the east. The temple is at the base of a hill, and pilgrims walk around the hill as a mark of respect.","It has the famous temple Mararikulam Mahadevar temple dedicated to Lord Siva. It is the fertile land of communism and it has a very beautiful beach which is known by the name Marari Beach or Mararikulam beach. There are two village panchayts for this village, Mararikulam South and Mararikulam North. Mararikulam North consists of parts of Mararikulam, Perunormangalam, Kanichukulangara, Beach, Poklasheri and Chennaveli.","Kovalam is a small coastal town in the southern Indian state of Kerala, south of Thiruvananthapuram. At the southern end of Lighthouse Beach is a striped lighthouse with a viewing platform. Palm-backed beaches also include Hawa Beach and Samudra Beach. Heading south, Vizhinjam Juma Masjid mosque overlooks the busy fishing harbor. Inland, Sagarika Marine Research Aquarium displays technology used in pearl production","The Indian government has been advocating eco-friendly tourism development on Havelock for a while now, and while it's the most visited of the islands it sees only a fraction of the visitors that crowd other island destinations such as Thailand. The pace of life is slow, the locals are friendly and still not too affected by tourism, and the facilities are moderately basic for the most part.","Rock Beach (or, known as, 'Pondicherry Beach') is the popular stretch of beachfront in the city of Puducherry, India, along the Bay of Bengal. It is a 1.2-kilometre-long stretch in Pondicherry, starts from War Memorial and end at Dupleix Park on the Goubert Avenue.","Mamallapuram was one of two major port cities by the 7th century within the Pallava kingdom. Along with economic prosperity, it became a center of a group of battle monuments carved out of rock. These are dated to the 7th and 8th centuries: rathas (temples in the form of chariots), mandapas (cave sanctuaries), giant open-air rock reliefs such as the famous Descent of the Ganges, and the Shore Temple dedicated to Shiva, Durga, Vishnu, Krishna and others. The contemporary town plan was established by the British Raj in 1827.","Visakhapatnam Beach Road (also known as, Beach Road) is a major highway road in Visakhapatnam. It is home for Tourist destinations such as RK Beach and Kailasagiri. The Beach Road has cultural importance with the presence of buildings and structures such as, , Rajiv Smruthi Bhavan (city's cultural hub), Annamayya Mandapam, AU Convention Center and organising rallies, city parades etc. The Visakhapatnam beach road to Bhimli will be developed at a cost of Rs, for 200 crore to promote tourism as a part of the city project 'Vizag to develop beach road under smart city project'","Gopalpur is a town and a Notified Area Council on the Bay of Bengal coast in Ganjam district in the southern part of Odisha, India. Today it is a commercial port , a famous sea beach and a tourist destination around 15 km from Berhampur. The reconstruction of an all weather port including new berths is under development."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["The nearest beach to the Goa International Airport (Dabolim Airport) is the Bogmalo Beach, which literally neighbors the airport at a distance of approximately 2 kilometers. In order to reach Bogmalo, one needs to undertake a 10-15 minute drive/ride from the airport terminal.","The nearest airports are Hubli Airport, Karnataka which has domestic flights only, Goa International Airport at Goa and Mangalore International Airport at Bajpe, Karnataka are the nearest airports to reach at Gokarna.","The nearest airport to Ganapatipule is the Ratnagiri airport which is located at a distance of 50 kms from the place. Belgaum airport is also there at a distance of 300 kms. From both of these airports, one can get taxis to reach Ganapatipule at a very reasonable cost.","Kochi is the nearest airport to reach Marari beach. From the airport, you can hire car or taxi to reach the beach.","Located at a distance of about 15 kilometres, the Trivandrum International Airport is the nearest airport to Kovalam. The airport is connected to all major airports in India and major cities around the world, like Singapore and Colombo.","You can take a seaplane or ferry, to reach Havelock Island from Port Blair. Nearest Airport: The nearest airport to Havelock Island is Veer Savarkar Airport, in Port Blair. It is 63 Km away from Havelock Island.","Pondicherry has an airport with facilities for the landing of small aircraft like Dornier, Cessna, etc. Spicejet provides travel to all major indian cities.","There are no direct flight services to Mahabalipuram. The nearest airport is in Chennai, around 40 km away. You can hire a taxi from the Chennai airport to reach Mahabalipuram.","It takes 19 minutes to travel from Visakhapatnam Airport to Beach Road. Approximate driving distance between Visakhapatnam Airport and Beach Road is 16 kms.","By air - The nearest airport is at Bhubaneswar, 180 km from Gopalpur-on-sea. Bhubaneshwar is a one-hour flight from Kolkata. By rail - The nearest railhead is Berhampur (16 km) on the Kolkata-Chennai line. Berhampur is 608 km from Howrah and 1069 km from Chennai."];
+        var body_how_2=["Via railways, it is quite easy to reach Goa as the major railway stations in Goa are located in Margao. The main railway station is known as Madgaon and Vasco-da-gama. These railway stations are well linked with Mumbai and then other major parts of the country as well.","It can be reached by Konkan Railway on the Mumbai to Mangalore route or Goa to Mangalore route. The railway station (called Gokarna Road) is 6 km from the town. The station has a retiring room at a nominal price. Many important trains like Matsyagandha Express, KSR Bengaluru Karwar Express, Poorna Express, Marusagar Express and Mangalore Local and DEMU local are the Daily Local Trains halt here.","There is no railway station at Ganapatipule. The nearest railway stations are at Ratnagiri and Bhoke. All the express, passenger trains stop at Ratnagiri, being a city. Bhoke is a small village and only passenger trains will stop there.","The nearest railheads are at Alleppey (16 kms), Kottayam (42kms), and Cochin (Ernakulam) (55 kms).Mararikulam is connected by rail and has a railway station by the same name.","The nearest train station is Thiruvananthapuram Central railway station, about 16 km (9.94 mi) away. The nearest airport is Trivandrum International Airport, about 10 km (6.21 mi) away.","The aerial distance from Chennai to Port Blair is 1367 km. No direct flights or trains or buses are available between Chennai to Port Blair.The convenient, fastest and cheapest way to reach from Chennai to Port Blair is to take Spicejet from Chennai to Port Blair.","Pondicherry is connected to Chennai by an electric broad gauge railway line through Villupuram. There are 2 passenger trains running daily to Chennai Egmore Railway station and Tirupati and there is a weekly express train service to Bhubaneswar.","Chengalpattu (22 kms) is the nearest railway station. However, Chennai railhead (60 kms) is the nearest major station having trains to Mahabalipuram from major cities of India like Bangalore, Delhi, Mumbai and Kolkata. Taxi/cabs and buses are available from these stations to reach Mahabalipuram.","It takes 6 minutes to travel from Vizag Railway Station to R.k.beach. Approximate driving distance between Vizag Railway Station and R.k.beach is 5 kms.","The nearest railway station is Berhampur on the Howrah-Chennai line of Southeastern Railway. One can take trains to Calcutta and Chennai from this place. By Road - Gopalpur is connected by motorable road to Barkul (75 km), Berhampur (16 km), Bhubaneshwar (180 km), and Puri (242 km)."];
+        var body_how_3=["Travelers can also reach Goa through roadways as there are n numbers of buses offer their services to travelers. The nearest bus stand is Kadamba bus stand of Panaji which is considered as the main bus station.","Gokarna can be reached by buses and maxicabs from Kumta (30 km), Ankola (26 km), Karwar (59 km) and Bhatkal(88 km) on National Highway 17 (NH-17). Karnataka State Road Transport Corporation (KSRTC) runs long-journey buses from cities like Panaji, Bengaluru and Mangalore. Private buses (Vijayanand Roadlines - VRL, Sugama, Sea Bird, etc.) operate night journeys from the capital city of Bengaluru to Gokarna daily.","There are frequent buses from the MSRTC Bus Station (Ratnagiri) to Ganapatipule via Ratnagiri Railway Station, Nevade Road and MSRTC Bus Station (Ratnagiri) to Ganapatipule via Ratnagiri Railway Station, Nevade Road, Malgund. One can reach Ganapatipule faster by taking the MSRTC City Bus from Ratnagiri Railway Station to MSRTC Bus Station (Ratnagiri) and then changing buses there to a bus to Ganapatipule via Arevare.","There are numerous buses throughout the day leaving from Ernakulam Junction to Mararikulam. It takes close to 1 hour 30 minutes to 2 hours to reach Mararikulam from Kochi by bus.","You can reach kovalam by bus from trivandrum.The buses going to kovalam depaart from the end of the bus stand of east fort.","Local buses and shared jeeps ply the 2 main roads between the port (on Beach #1), Radhanagar Beach (Beach #7), and Beach #5 where the bulk of the accommodation is located. There is a local bus for Radhanagar waiting at beach #1 at around the time the ferry arrives.","The Pondicherry Tourism Development Corporation (PTDC) has daily bus services for tourists and it covers all the important tourist spots to be seen in Pondicherry. PTDC offers full-day service (starting 9:30AM, all seven days) and half-day service (afternoon, not on Sunday).","There are various buses to Mahabalipuramfrom the cities in and around the region through both Tamil Nadu Public Transport Services and private tourist buses (operating from Chennai Central). The city is well connected with Chennai through East Coast Road (ECR) and old Mahabalipuram Road.","t takes 1 minutes to travel from Vizag Bus Stand to Vishagapatnam Rk Beach. Approximate driving distance between Vizag Bus Stand and Vishagapatnam Rk Beach is 1 kms.","There are no direct long distance buses to Gopalpur, but tourists can take a bus to the nearest town of Berhampur, which is 15 km from Gopalpur. Local buses and auto rickshaws can be hired to travel from Berhampur to Gopalpur. Odisha State Road Transport Corporation (OSRTC) operates Hi-Tech, Deluxe, and Express buses from Berhampur to Cuttack, Bhubaneswar, Sambalpur, and other cities in Orissa."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "By Plane:";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_3[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Beaches</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Beaches:</p>
+        <p id='info1'>India is blessed with a number of beautiful beaches which have pristine blue and turquoise waters. A holiday to one of these beaches makes you feel like you have traveled to an exotic location abroad.Once voted the best beach in Asia, the Radhanagar beach in Andaman and Nicobar's Havelock island is famous for its mesmerizing blue waters and pristine white sand. Not only is it one of the most romantic beaches in India, it also makes for an excellent holiday spot for families with stunning views all around.Lakshadweep islands are India's exotic hidden gem when it comes to tourist destinations. The Bangaram island resort is a part of Bangaram atoll and attracts tourists on account of its stunning beach with clean sand and deep blue waters. It is also famous for its amazing coral reef making it a hot scuba-diving and snorkeling destination. Once voted the best beach in Asia, the Radhanagar beach in Andaman and Nicobar's Havelock island is famous for its mesmerizing blue waters and pristine white sand. Not only is it one of the most romantic beaches in India, it also makes for an excellent holiday spot for families with stunning views all around.</p>
+        <p id="head2">Few Enjoyable Beaches:</p>
+        <p id="info2">Goa Beach, Goa.Gokarna Beach, Karnataka.Ganpatipule Beach, Maharashtra.Marari Beach, Kerala.Kovalam Beach, Kerala.Havelock Beach, Andaman</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Goa Beach,Goa</h2><p>Goa is a state in western India with coastlines stretching along the Arabian Sea. Goa is also known for its beaches, ranging from popular stretches at Baga and Palolem to those in laid-back fishing villages such as Agonda.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [74.023275,15.010054]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Gokarna Beach, Karnataka</h2><p>Gokarna is a town on the Arabian Sea, in the southwestern Indian state of Karnataka. A popular pilgrimage destination for Hindus, it’s known for sacred sites like Mahabaleshwar Temple, which has a shrine dedicated to the deity Shiva.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [74.315281,14.526043]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Ganpatipule Beach, Maharashtra</h2><p>On Ganpatipule Beach, the centuries-old Swayambhu Ganpati Temple is a pilgrimage site and houses a large orange statue of Ganesh.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.265279,17.147053]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Marari Beach, Kerala</h2><p>In Marari, you can stay at the Marari Beach Resort, a range of recreational activities with surrounding natural beauty.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.298332,9.601584]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kovalam Beach, Kerala</h2><p>Kovalam is a small coastal town in the southern Indian state of Kerala, south of Thiruvananthapuram.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.976025,8.388919]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Havelock Beach, Andaman</h2><p>Havelock Island is part of Ritchie’s Archipelago, in India’s Andaman Islands. It’s known for its dive sites and beaches.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [92.987486,11.976262]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Rock Beach, Pondicherry</h2><p>Rock Beach is the popular stretch of beachfront in the city of Puducherry, India, along the Bay of Bengal. It is a 1.2-kilometre-long stretch in Pondicherry.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [79.834531,11.925965]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Mahabalipuram Beach, Chennai</h2><p>It’s known for its temples and monuments built by the Pallava dynasty in the 7th and 8th centuries. The seafront Shore Temple comprises 3 ornate granite shrines.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.197116,12.611967]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Vizag Beach, Visakhapatnam</h2><p>Vizag or Visakhapatnam has plenty to offer a tourist for relaxation like beautiful beaches, lakes, gardens and museums.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [83.322201,17.712865]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Gopalpur Beach, Orissa</h2><p>Gopalpur is a town and a Notified Area Council on the Bay of Bengal coast in Ganjam district in the southern part of Odisha, India.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [84.909338,19.257232]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

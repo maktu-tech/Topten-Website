@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta charset='utf-8' />
+    <title>Forts</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+
+        function myfunction1() {
+       
+       document.getElementById("mhead").innerHTML = "Forts";
+       document.getElementById("head1").innerHTML = "Welcome to Forts:";
+       document.getElementById("info1").innerHTML = "Most of the forts in India are actually castles or fortresses. But when the British Government in India were cataloging them in the 17th–19th century they used the word forts as it was common in Britain then. All fortifications whether European or Indian were termed forts. Thereafter this became the common usage in India. In local languages, the fort names are suffixed by local word for fort thus usage of the Sanskrit word durga, or Hindi word qila or the word garh or gad in Rajasthan,and Maharashtra is common. For example, Suvarnadurg, Mehrangarh, Sudhagad etc.";
+       document.getElementById("head2").innerHTML = "Few Renowed Forts:";
+       document.getElementById("info2").innerHTML = "Mehrangarh Fort, Jodhpur. Red Fort, Delhi. Jaisalmer Fort, Jaisalmer. Lohagad Fort,Lonavala. Golkonda Fort, Hyderabad. Amer Fort, Jaipur. Gwalior Fort, Gwalior.";
+       document.getElementById("head3").innerHTML = "";
+       document.getElementById("info3").innerHTML = "";
+       
+       }
+         
+     function myfunction() {
+     var mainhead1=["Mehranghar Fort","Red Fort","Gwalior Fort, Gwalior","Jaisalmer Fort","Golconda Fort","Red Fort", "Agra","Amber Fort","Kangra Fort","Chittaurgarh Fort","Kumbhalgarh Fort"];
+     var head_about_1=["Welcome to Mehranghar Fort:","Welcome to Red Fort","Welcome to Gwalior ","Welcome to Jaisalmer Fort","Welcome to Golconda Fort","Welcome to Agra Fort","Welcome to Amber Fort","Welcome to Kangra Fort","Welcome to Chittaugarh Fort","Welcome to Kumbhalgarh Fort"];
+     var head_about_2=["Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights","Highlights"]
+     var body_about_1=["It is more then 500 years old and one of the largest forts in India.The Mehrangarh Fort is situated 400 above form the city and founded by Rao Jodha. There are seven gates built by each Maharaja’s for their victory,A gate named Jayapol built by Maharaja Man Singh. Inside the fort, several brilliantly crafted and decorated palaces are found like Moti Mahal,Sheesha Mahal etc. The Chamunda Devi temple and museum is situated inside of the Mehrangarh Fort. The museum in the Mehrangarh fort is one of the most well-stocked museums in Rajasthan. The Royal State Rajasthan is great for many reasons, it is one of the most visited tourist destination in India. Rajasthan is famous for its Great Thar Desert, Beautiful lakes, National parks and a attractive lifestyle."," Important buildings and other structures inside the forts are A mosque known as Moti Masjid,Diwan-i-Aam etc.The fort lies along the “holy river of India” Yamuna River. There is an archaeological museum and an Indian war memorial museum within the fort. It is most powerful symbol of India’s sovereignty,The Prime Minister of India addresses the nation and raises the flag of India on Independence and Republic Day of India",
+     "The majestic monument is one of the biggest forts in India and a postage stamp has been issued to remember the importance of this fort. Madhya Pradesh the Heartland of India ranks among the most popular tourist attractions in India for its wonderful ancient Indian architecture.The major attraction of Gwalior fort are famous Sas-Bahu temple,Gujari Mahal which is now a museum and The Man Mandir.",
+     "Jaisalmer fort is also known as Sonar quila and “Golden Fort, built on the triangular shaped Trikuta hill, 76 m above the town.The second oldest fort in the state of Rajasthan counted as one of the most invincible forts in India. Major attractions inside the forts are Jain temples,Royal palace and big gates. Jaisalmer is the land of sand also famous for it Trikuta Hill,Havelis, palace and Lakes.",
+     "The heritage monument is known for its rich history and a majestic and imposing grand structure. Golkonda was once renowned for the Magnificent diamonds found on the south-east at Kollur Mine near Kollur lake.The awesome Golconda Fort is famous for its military architecture and One of the most wonderful monuments in India. Golconda Fort is counted as Seven Wonders of Hyderabad, others are Charminar,Birla Mandir,Ramoji Film City, Hussain sagar, salarjung museum and Mecca Masjid the Biggest mosque in Hyderabad.",
+     "Agra Fort also known as the red fort of Agra is among the best tourist places in Uttar Pradesh. Jhansi fort another marvelous architecture of forts in India.The fort was a residence of Rani Laxmibai of Jhansi located in Uttar Pradesh.Agra Fort is the only fort in India where all early Mughal emperors lived. The Fort stands on an ancient site and was traditionally known as Badalgarh. It was captured by Ghaznavi for some time but in 15th century A.D. the Chahman Rajputs occupied it. Soon after Agra assumed the status of capital when Sikandar Lodi (A.D. 1487-1517) shifted his capital from Delhi and constructed few buildings in the pre-existing Fort at Agra. After the first battle of Panipat (A.D. 1526) Mughals captured the fort ",
+     "Overlooking a serene lake in the town of Amer in Rajasthan, the Amer Fort is built on a hill and is a popular tourist attraction in Jaipur. Constructed of red sandstone and marble, you can find many Hindu style elements inside this fort. The fort is also a palace, and you can stroll in the vast courtyards here or experience unmatched opulence in the Diwan-i-Khas. You could also visit the intriguing Sheesh Mahal which is made entirely from mirrors inside the palace.","The famous monumental fort is count amongst the oldest forts in the world. It is the largest fort in the Himalayas and the oldest forts in India.The most valuable monuments in the Kangra Fort is Vajreshwari temple. The most beautiful way to look Kangra Fort by the road during journey. The famous monumental attractions of Himachal Pradesh is very near to famous Dharamsala.",
+     "It is also called as Water Fort, The fort had 84 water bodies inside, out of which only about 22 exist today. This living testimony represent the bravery of Maharana Pratap Singh and the great Rajput rulers of Rajasthan.","The mighty fort is 3600 ft tall and 38km long that surrounds the area of Udaipur. It was considered to have been built by Rana Kumbha in the 15th century. The fort is further declared a UNESCO World Heritage Site that is under the group Hill Forts of Rajasthan. It is located strategically on the western Aravalli hills.Having witnessed a large number of wars, the hill serves as the boundary that is unbreakable. The fort that has seven fortified gateways and a number of Jain temples within it , along with the Lakhola Tank which is the most famous tank inside the fort that was constructed by Rana Lakha. "];
+
+     var body_about_2=["Chamunda Mataji Temple. Tucked away at the far end of the battlements, this temple is devoted to Rao Jodha's favorite goddess and remains a local favorite to this day. Moti Mahal. (Pearl Hall). Pearl-coloured inside and decorated with coloured glass windows, this is where the Maharaja held his audiences, with the five alcoves on the far wall allowing his queens to listen. Phool Mahal. (Flower Hall). The most extravagant of them all, this was the Maharaja's pleasure chamber, for dancing girls and revelry. Sheesh Mahal. (Mirror Hall). Just what the name says. Zenana Deodi. The inner sanctum of the palace once guarded by eunuchs, this is where the Maharaja's wives whiled away their days. The delicate sandstone screens and carvings are exquisite.","The Lahori Gate is the main gate to the Red Fort, named for its orientation towards the city of Lahore. During Aurangzeb's reign, the beauty of the gate was spoiled by the addition of bastions, which Shahjahan described as a veil drawn across the face of a beautiful woman. Every Indian Independence Day since 1947, the national flag is unfurled and the Prime Minister makes a speech from its ramparts.The Delhi Gate is the southern public entrance and in layout and appearance similar to the Lahori Gate. Two life-size stone elephants on either side of the gate face each other.Adjacent to the Lahori Gate is the Chhatta Chowk, where silk, jewellery and other items for the imperial household were sold during the Mughal period. The bazaar leads to an open outer court, where it crosses the large north-south street which originally divided the fort's military functions (to the west) from the palaces (to the east). The southern end of the street is the Delhi Gate.",
+     "Urvahi:Jain statues carved out of rock in the Gwalior Fort near the Urwai Gate.The entire area of Gwalior fort is divided into five groups namely Urvahi, North West, North East, South West and the South East areas. In the Urvahi area 24 idols of Tirthankar in the padmasana posture, 40 in the kayotsarga posture and around 840 idols carved on the walls and pillars are present. The largest idol is a 58 feet 4 inches high idol of Adinatha outside the Urvahi gate and a 35 feet high idol of Suparshvanatha in the Padmasana in Paththar-ki bavadi area.Gopachal:58 feet 4 inches high idol of Bhagwan Adinatha.There are around 1500 idols on the Gopachal Hill.","Ghadsisar (Lake): is a rainwater lake which supplies water to the city. Sar means a lake. King Ghadsi of Jaisalmer got it made 650 years ago with the help of the people. It is surrounded by temples and tombs of saints. Boat rides are offered. Nearby is the desert cultural centre and a local museum built out of the collections of a local schoolteacher, Mr. N.K. Sharma. This centre conducts puppet shows in the morning and evening. There are people who will try and sell you bread to feed the huge number of catfish in the lake.",
+     "The Golkonda Fort used to have a vault where the famous Koh-i-Noor and Hope diamonds were once stored along with other diamonds.Golkonda is renowned for the diamonds found on the south-east at Kollur Mine near Kollur, Guntur district, Paritala and Atkur in Krishna district and cut in the city during the Kakatiya reign. At that time, India had the only known diamond mines in the world. Golkonda's mines yielded many diamonds. Golkonda was the market city of the diamond trade, and gems sold there came from a number of mines. The fortress-city within the walls was famous for diamond trade.",
+     "Jahangir's Hauz (tank) A.D. 1610: This monolithic tank (hauz) was used for bathing. It is 5 feet high, 8 feet in diameter and 25 feet in circumference. On the external side of the rim there is an inscription in Persian which mentions it as 'Hauz-e-Jahangir'. It was first discovered near the courtyard of Akbar's palace. In A.D. 1843 and later it was placed in front of Diwan-e-Am. In 1862, it was shifted to public garden(Company Bagh) where it suffered much damage. Later, Sir John Marshall brought it back to Agra Fort and placed there","Amer, or Amber, derives its name from the Ambikeshwar Temple, built atop the Cheel ka Teela. Ambikashwara is a local name for the god Shiva. However, local folklore suggests that the fort derives its name from Amba, the Mother Goddess Durga.",
+     "Also near to old Kangra is the famous Jayanti Mata temple on a hill top. The Temple was built by the General of the Gorkha Army, Bada Kaji Amar Singh Thapa. Also close to entrance is a small museum which exhibits the history of Kangra fort.Adjoining the Fort is the Maharaja Sansar Chand Katoch Museum run by the Royal Family of Kangra. The Museum also provides audio guides for the fort and the museum and has a cafeteria.",
+     "The fort complex comprises 65 historic built structures, among them 4 palace complexes, 19 main temples, 4 memorials and 20 functional water bodies. These can be divided into two major construction phases. The first hill fort with one main entrance was established in the 5th century and successively fortified until the 12th century. Its remains are mostly visible on the western edges of the plateau. The second, more significant defence structure was constructed in the 15th century during the reign of the Sisodia Rajputs, when the royal entrance was relocated an fortified with seven gates, and the medieval fortification wall was built on an earlier wall construction from the 13th century.","A Ganesh temple built on a 12 ft (3.7 m) platform and is considered the earliest of all temples built inside the fort. Neel Kanth Mahadeva temple is located on the eastern side of the fort built during 1458 CE. The central shrine of Shiva is approached through a rectangular enclosure and through a structure supported by 24 huge pillars. The idol of Shiva is made of black stone and is depicted with 12 hands. The inscriptions indicate that the temple was renovated by Rana Shanga."];
+      document.getElementById("mhead").innerHTML = mainhead1[x-1];
+       document.getElementById("head1").innerHTML = head_about_1[x-1];
+       document.getElementById("info1").innerHTML = body_about_1[x-1];
+       document.getElementById("head2").innerHTML = head_about_2[x-1];
+       document.getElementById("info2").innerHTML = body_about_2[x-1];
+       document.getElementById("head3").innerHTML = "";
+       document.getElementById("info3").innerHTML = "";
+       }
+
+       function myfunction2() {
+     var body_how_1=["Jodhpur (IATA: JDH) (ICAO: VIJO) is connected to Delhi and Mumbai,; the airport is about 5 km from the city centre. Take a taxi (Rs 200) or autorickshaw (Rs 100) from the airport to your hotel. July 2016: prices are MUCH higher- 300 for autorickshaw in the thousands for taxi. Air India operates daily flights to Jodhpur from Delhi and Mumbai. Contacts for the airport counter are +91 291 2512617, +91 291 2511516. Jet Airways also operates daily flights from Delhi and Mumbai.",
+                     "Delhi Airport has three operational terminals:Terminal 1C/1D, also known as Palam Airport or Domestic, is used only by low-cost carriers IndiGo, GoAir and SpiceJet. Flights arrive at Terminal 1C but depart from terminal 1D.Terminal 3, the enormous main terminal, is used by all international flights and all full-service domestic carriers which include Jet Airways, Air India, AirAsia India and Vistara.Terminal 2 is only in use during the Haj pilgrimage for flights to Mecca and Medina.",
+                     "Gwalior Airport, (GWL IATA) is one of four airports in the region. It is also the site of an Indian Air Force Base.Gwalior airport has some scheduled domestic services however they are not available daily.Air India, provides services to Delhi and Mumbai.Air India Regional, provide services to Delhi and Jabalpur.",
+                     "Jaisalmer Airport (IATA: JSA ICAO: VIJR), a civilian enclave of a military base, is the closest airport, 17 km southeast of the city. Domestic flights are offered by Spicejet and Supreme Airlines",
+                     "Hyderabad International Airport is 20km away from Hyderabad and is well connected to Indian cities and other countries. Rajiv Gandhi terminal is the international terminal while NT Rama Rao terminal is the domestic terminal.",
+                     "Agra's Kheria Airport (AGR IATA). Service to is seasonal. The city is served by Air India Regional, which flies on the Delhi-Agra-Jaipur tourist triangle route. ",
+                     "Jaipur Airport is in the satellite town of Sanganer. Offers sporadic (chartered) service to London and Dublin. Direct flights to Singapore, Bangkok, Abu Dhabi, Sharjah, Muscat and Dubai are also available. Jaipur also has daily domestic air links with many Indian cities such as Jodhpur, Udaipur, Aurangabad, Delhi, Hyderabad, Kolkata, Goa, Chennai, Ahmedabad, Bangalore, Mumbai, Pune and Indore.",
+                     "No direct flight",
+                     "The nearest airport is the Maharana Pratap Airport at Udaipur, about 90 km from Chittorgarh."];
+   
+   var body_how_2=["Jodhpur is an important division of the North Western zone of the Indian Rail network . It is well connected by direct trains from all metros and major cities in India, including Delhi, Mumbai, Ahmedabad, Jaipur, Jaisalmer, Barmer, Bikaner, Ajmer, Alwar, Agra, Kanpur, Allahabad, Gaya, Kolkata, Indore, Lucknow, Varanasi, Patiala, Chandigarh, Kalka, Jammu, Chennai, Bangalore and Hyderabad. The popular Mandor Express leaves Delhi at 8:45 PM and arrived in Jodhpur at 8 AM the next morning (Rs 1,000 in AC2).Jodhpur is connected to Mumbai by daily train Suryanagari express which departs from Jodhpur at 18:45 hours and from Bandra Terminus(Mumbai) at 13:30 hours and takes 17 hours. ","Delhi has a confusing slew of inter-state bus termini (ISBT), which all have two names. The Delhi Transport Corporation [127] is the major operator, but every state also runs its own buses and there are some private operators.Kashmere Gate ISBT (aka Maharana Pratap), Metro Kashmere Gate, Line 1/2. This is 'the' ISBT and the largest of the lot. Buses to points north, including Nepal.Sarai Kale Khan ISBT (aka Vir Hakikat Rai), next to Hazrat Nizamuddin railway station. Buses to points south including RJST Ordinary buses.",
+                     "Gwalior is very well connected to major cities across India by direct train links. You can reach Gwalior from India's capital New Delhi, in 3 hours by New Delhi-Bhopal Shatabdi Express(India's fastest train). This city is directly connected to Jammu, Chandigarh, Amritsar, Dehradun, Ahmedabad, Nagpur, Mumbai, Bangalore, Hyderabad, Chennai, Thiruvananthapuram, Kanyakumari, Vishakhapattnam, Patna, Kolkata, etc.Gwalior railway station is a major Railway station and comes under the jurisdiction of Jhansi Rail Division.",
+                     "There is a direct train service from Delhi. Delhi-Jaisalmer Express Shalimar Exp, departure time at 5:30PM, reaches Jaisalmer at 11:30AM the next morning. When arriving by train you will pass the station of Pokharan, India's nuclear testing area. The train does not leave from the Station New Delhi next to the Backpacker-Ghetto Main-Bazar, but a 15-min auto-rickshaw ride north from the Dehli Jn - Station.",
+                     "There are three major railway stations of Hyderabad which are Secunderabad, Hyderabad, and Kacheguda. All these stations are well-connected to many cities all over India. Rajdhani, shatabdi, duronto, double decker, superfast, mail, express and passenger trains connect Hyderabad to various cities",
+                     "Agra Cantt  is the main railway station and lies southwest of the Taj and Agra Fort, both of which are a short ride from the station by car, auto-rickshaw or cycle rickshaw. There is a prepaid taxi stand right outside that charges a flat rate to any hotel in the city. You may catch an auto-rickshaw, if you walk a short way from the station, but they may not speak English. The station has a food court that also sells cheap, hygienic takeaway snacks such as sandwiches and samosas.Agra Fort station near Agra Fort, is infrequently serviced by the interstate express trains. The station serves trains to the east (Kanpur, Gorakhpur, Kolkata), and some of these trains also stop at Agra Cantt.",
+                     "Indian Railways connects Jaipur from all over the country and is one of the cheapest options. A number of daily trains connect Jaipur to Delhi, Ahmedabad, Agra, Mumbai, Jodhpur, Kota, Alwar and Ajmer. Daily connections are also available for Udaipur, Chittorgarh, Bikaner, Jaisalmer, Barmer, Kolkata, Jammu, Pathankot, Ludhiana, Kanpur, Roorkee, Haridwar, Gwalior, Indore, Jabalpur and Bhopal.Long-distance trains arrive from many other major cities including Lucknow, Allahabad, Varanasi, Vadodara, Surat, Nagpur, Bilaspur, Raipur, Patna, Ranchi, Bhubaneswar, Puri, Chennai, Bangalore, Mysore, Hyderabad, Goa, Mangalore, Kozhikode and Kochi.",
+                     "The slow and exceedingly scenic Kangra Valley railway line from Pathankot stops at Kangra Mandir (several departures per day, ₹20, 98 km, 4 hr), which the main stop for accessing Kangra (and also Dharamsala). Don't get off at the preceding stop Kangra, which is on the wrong side of the valley. Once off the train at Kangra Mandir, follow the path, cross the footbridge, follow the path a little more to the cluster autorickshaw drivers.",
+                     "Chittorgarh is well connected by rail to other cities and towns of Rajasthan and India. The Chittorgarh railway station connects Chittorgarh to cities such as Ahmedabad, Jaipur, Ajmer, Kota, Udaipur, and Delhi. In addition to this, you also have the option to travel by the Palace on Wheels luxury train.",
+                     "No direct Rail connection."];
+     
+     var body_how_3=["Jodhpur can be reached by RSRTC (Rajasthan State Road Transport Corporation) buses and private luxury buses which operate from all major towns and cities in Rajasthan as well as the cities of Ahmedabad and Delhi.",
+                    "Trains arrive at one of four main stations: Delhi Junction, also called Old Delhi or Purani Dilli; the second at New Delhi which lies in Central Delhi; Hazrat Nizamuddin a few kilometers to the south; and the upcoming Anand Vihar station to the east (very few trains use Delhi Sarai Rohilla or Delhi Cantt stations). Delhi Junction and New Delhi Railway Station are now conveniently connected by Metro Line 2, just minutes apart, while Anand Vihar is served by Line 3. It will take about 40 min-1 hr to travel from the New Delhi Railway Station to the airport by car, depending on traffic.","body hello this matter is for text. 2.3.2",
+                    "Buses are available to visit near by places as well as for travel to different cities. These buses are available from the Bus Stand near the Railway Station. M.P., Rajastahan, U.P, State Roadways Corporation have a number of bus services connecting to cities and towns around Gwalior. Some private operators also have luxury bus services on selected routes mostly starts from various parts of the city.",
+                    "Bus or car-taxi from Jodhpur or by bus from Bikaner is available. A daily bus runs to and from Jaipur. Ordinary and Deluxe buses of private companies and Rajasthan Roadways run from Mount Abu, Barmer, Bikaner, Jaipur, Jodhpur and Ahmadabad to Jaisalmer.There are various deluxe and semi-deluxe buses available at regular intervals for Jodhpur. Rajasthan State buses also connect Jaisalmer city with some neighboring cities. The ticket charges are around ₹2-3 per km.",
+                    "Andhra Pradesh State Road Transport Corporation manages the bus services in Hyderabad. The city is connected to Mumbai, Tirupati, Bangalore, Nagpur etc. through buses. State and private companies offer sleeper, deluxe, and super deluxe buses for travelling.",
+                    "Idgah Bus Stand is the primary bus stand for travelling towards Rajasthan/Madhya Pradesh, in the heart of the city, 8 km from the Taj.ISBT at Transport Nagar, 12 km from the Taj, is an inter state bus terminal. Most of the buses pass through here, except for buses originating from Idgah Bus Stand and going towards Rajasthan.",
+                    "There is an excellent bus service between Jaipur to Delhi by Rajasthan State Road Transport Corporation (RSRTC) with buses approximately every half an hour in both directions. Non-A/C and AC Volvo bus services are offered. The air-conditioned bus is taken through a well-maintained highway and has good shock absorbers. From Delhi you can board the bus from Bikaner House on Pandara Road next to India Gate. From Jaipur you can board the bus from Narayan Singh Circle or the main Sindhi Camp bus stand. You can also book tickets up to 6 days in advance from both these places. These buses typically take 6 hours for the Volvo and 6-7 hours for the others.",
+                    "Kangra is around 460 km from New Delhi. There are direct buses. All buses from Delhi pass through Chandigarh, which is 223 km (6-7 hours) from Kangra. Roads in good condition and there is no risk of being robbed. Its a safe place to visit.Frequent buses run the 20 km up to Dharamsala (₹30).",
+                    "The completed Golden Quadrilateral highway system will pass through Chittorgarh, connecting it to much of the rest of India. Also crossing the East West Corridor (Express Highway). The Chittorgarh is situated at National Highway No. 76 & 79, both the Highways are crossing at Chittorgarh.Rajasthan roadways (RSRTC) provide a very good service for visiting areas around Chittorgarh. Numbers of private bus services are available in Chittorgarh, connecting all major cities in India. There are regular bus services from Chittorgarh to other cities in Rajasthan and India. Bus services operate for Delhi, Mount Abu, Jaipur, Indore, and Ajmer.",
+                    "The most convenient way to reach Kumbhalgarh is to book a private cab from Udaipur en route to Nathdwara and Haldi Ghati covering a distance of 102 km in 1 hour 38 minutes approximately."];
+
+       document.getElementById("info1").innerHTML = body_how_1[x-1];
+       document.getElementById("head1").innerHTML = "By Plane:";
+       document.getElementById("head2").innerHTML = "By Railways:";
+       document.getElementById("info2").innerHTML = body_how_2[x-1];
+       document.getElementById("head3").innerHTML = "By Bus:";
+       document.getElementById("info3").innerHTML = body_how_2[x-1];
+       
+       }       
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Forts</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Forts:</p>
+        <p id='info1'>Most of the forts in India are actually castles or fortresses. But when the British Government in India were cataloging them in the 17th–19th century they used the word forts as it was common in Britain then. All fortifications whether European or Indian were termed forts. Thereafter this became the common usage in India. In local languages, the fort names are suffixed by local word for fort thus usage of the Sanskrit word durga, or Hindi word qila or the word garh or gad in Rajasthan,and Maharashtra is common. For example, Suvarnadurg, Mehrangarh, Sudhagad etc.</p>
+        <p id="head2">Few Renowed Forts:</p>
+        <p id="info2">Mehrangarh Fort, Jodhpur. Red Fort, Delhi. Jaisalmer Fort, Jaisalmer. Lohagad Fort,Lonavala. Golkonda Fort, Hyderabad. Amer Fort, Jaipur. Gwalior Fort, Gwalior.</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+      <script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'> Mehranghar Fort, Jodhpur</h2><p>The Great Mehrangarh Fort is located in Jodhpur city of Rajasthan, It is more then 500 years old and one of the largest forts in India.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.0200214,26.3017861]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Red Fort,Delhi</h2><p>Lal Quila or The Red Fort is the most important historical buildings in India,located at Delhi built by the Mughal Emperor Shah Jahan<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        
+                        "type": "Point",
+                        "coordinates": [77.242007,28.656611]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Gwalior Fort, Gwalior</h2><p>Gwalior Fort the beautiful historical monument located in Madhya Pradesh built by Rana Man Singh Tomar. This magnificent monument holds a specimen of the wonderful ancient Indian architecture<hr><button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.170998,26.231748]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Jaisalmer Fort</h2><p>Jaisalmer fort,one of the largest forts in the world,situated in the state of Rajasthan,built by Rawal Jaisal. The magnificent foundation of Jaisalmer Fort is situated in the midst of the sandy terrain of the Great Thar Desert.<hr><button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [70.957739,26.926771]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Golconda Fort,Hyderabad</h2><p>The famous Golconda fort located at Hyderabad, Andhra Pradesh, built by Kakatiya kings.<hr><button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.402555,17.384456]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.png' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Red Fort, Agra</h2><p>It is the most important fort in India situated in AgraUttar Pradesh,about 2Km form its more famous sister monument, “The Taj Mahal”. Sikandar Lodi was the first Sultan of Delhi who shifted to Agra and lived in the fort.<hr><button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.022528,27.179953]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Amber Fort</h2>It is an old fort, built in 1592 by Raja Man Singh.This is one of the most iconic forts of India.<hr><button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [ 75.851217,26.986175]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kangra Fort</h2>The famous Kangra fort built by the Royal family of Kangra, situated on the confluence of the Banganga and Manjhi Rivers in the Kangra valley of Himachal Pradesh.<hr><button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [ 76.256846,32.087947]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Chittaurgarh Fort</h2>Chittaurgarh Fort is the largest fort of India and the grandest in the state of Rajasthan. It is situated on the left bank of the Berach river.<hr><button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [74.645779,24.888288,]
+                    }
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kumbhalgarh Fort</h2>The fort that has made its mark in history as the second largest wall after the Great Wall of China – it is none but the Kumbhalgarh fort in Rajasthan.<hr><button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.592835,25.154145]
+                    } 
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta charset='utf-8' />
+    <title>Caves</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Caves";
+          document.getElementById("head1").innerHTML = "Welcome to Caves:";
+          document.getElementById("info1").innerHTML = "A cave or cavern is a natural void in the ground, specifically a space large enough for a human to enter. Caves often form by the weathering of rock and often extend deep underground. The word cave can also refer to much smaller openings such as sea caves, rock shelters, and grottos, though strictly speaking a cave is exogene, meaning it is deeper than its opening is wide, and a rock shelter is endogene. The earliest caves used by humans were natural caves that they occupied or used for a variety of purposes, such as shrines and shelters. Evidence suggests that the caves were first occupied and slightly altered during the Palaeolithic and Mesolithic periods, up to about 6000 BC. These changes are not classified as architecture. Early examples included decorating overhanging rock with rock-cut designs. The Rock Shelters of Bhimbetka, now designated as a UNESCO World Heritage Site, are located on the edge of the Deccan Plateau, where dramatic erosion has left massive sandstone outcrops. Researchers have found primitive tools and decorative rock paintings made by humans in the area's many caves and grottos.During the time of the Buddha, Buddhist monks were also in the habit of using natural caves, such as the Saptaparni Cave, southwest from Rajgir, Bihar. Many believe it to be the site in which Buddha spent some time before his death, and where the first Buddhist council was held after the Buddha died. The Buddha himself had also used the Indrasala Cave for meditation, starting a tradition of using caves, natural or man-made, as religious retreats, that would last for over a millennium.";
+          document.getElementById("head2").innerHTML = "Few Popular Caves:";
+          document.getElementById("info2").innerHTML = "Ajanta and Ellora Caves. Elephanta Caves, Mumbai. Badami Caves, Karnataka. Tabo Caves. Khandagiri Caves, Bhubaneshwar. Udayagiri Caves. Mawsmai Caves, Meghalaya. Bhimbetka Caves. Trichy Rock Fort, Tamil Nadu. Dungeshwari Caves, Bodhgaya.";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          
+          }
+            
+        function myfunction() {
+        var mainhead1=["Ajanta and Ellora Caves","Elephanta Caves, Mumbai","Badami Caves, Karnataka","Tabo Caves","Khandagiri Caves, Bhubaneshwar","Udayagiri Caves","Mawsmai Caves, Meghalaya","Bhimbetka Caves","Trichy Rock Fort, Tamil Nadu","Dungeshwari Caves, Bodhgaya"];
+        var head_about_1=["Welcome to Ajanta and Ellora Caves:","Welcome to Elephanta Caves, Mumbai:","Welcome to Badami Caves, Karnataka:","Welcome to Tabo Caves:","Welcome to Khandagiri Caves, Bhubaneshwar:","Welcome to Udayagiri Caves:","Welcome to Mawsmai Caves, Meghalaya:","Welcome to Bhimbetka Caves:","Welcome to Trichy Rock Fort, Tamil Nadu:","Welcome to Dungeshwari Caves, Bodhgaya:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:"]
+        var body_about_1=["The Ajanta Caves are 30 rock-cut Buddhist cave monuments which date from the 2nd century BCE to about 480 CE in Aurangabad district of Maharashtra state of India. The caves include paintings and rock-cut sculptures described as among the finest surviving examples of ancient Indian art, particularly expressive paintings that present emotion through gesture, pose and form. According to UNESCO, these are masterpieces of Buddhist religious art that influenced the Indian art that followed. The caves were built in two phases, the first phase starting around the 2nd century BCE, while the second phase was built around 400–650 CE, according to older accounts, or in a brief period of 460–480 CE according to later scholarship. The site is a protected monument in the care of the Archaeological Survey of India, and since 1983, the Ajanta Caves have been a UNESCO World Heritage Site. The rock cut caves of Ajanta and Ellora are found in the Sahyadri mountain range, which was once home to hermits of various religions. While the Ajanta is a group of 29 caves which date back to the 2nd century BC and the 6th century AD these caves are considered to be one amongst the ancient caves in India. The Ellora is a group of 34 caves which date back to the 6th and 11th centuries AD. The caves at Ajanta are Buddhist caves, while the Ellora caves are a mixture of Buddhist, Hindu and Jain religions. While the Ajanta caves are rich in paintings and sculptures, the caves at Ellora are known for their exquisite architecture.","Elephanta Caves are a UNESCO World Heritage Site and a collection of cave temples predominantly dedicated to the Hindu god Shiva. They are located on Elephanta Island, or Gharapuri in Mumbai Harbour, 10 kilometres to the east of the city of Mumbai in the Indian state of Mahārāshtra. The island, located offshore about 2 kilometres west of the Jawaharlal Nehru Port, consists of five Shaivite caves and a few Buddhist stupa mounds that date back to the 2nd century BCE, as well as a small group of two Buddhist caves with water tanks.Amongst the popular caves in the country, these are located at a distance of 7 km from Mumbai. One can find here seven rock cut caves, which have been carved out in detail and date back to the 6th and the 7th centuries. Amongst the seven caves, the Cave No.1 attracts a large number of visitors as it houses beautiful sculptures of Shiva in various forms.","The caves at Badami reflect the immense love which the Chalukya rulers had towards architecture. The caves here are one amongst the top tourist destinations in the state of Karnataka. The caves date back to the 6th and 7th centuries AD and are situated at the mouth of a ravine. One can find a total of four caves here, out of which three are Hindu shrines and one houses a Jain temple.","The caves at Tabo are carved out from the hill and are believed to have been used for the purpose of meditation by the Buddhist monks. It is also said that the caves were used by the monks during winters as shelters. There are a number of large caves which might have been used as assembly halls and smaller caves which had been used for lodging and dwelling purposes. Many of the caves here are adorned with prayer flags which signify that these caves are still used by the monks for meditation.","Located at a short distance from the city of Bhubaneshwar, Khandagiri is a group of 15 caves. The caves here are believed to be the earliest Jain rock cut shelters which were used by the Jain monks during the reign of King Kharavela. The caves provide you a bird's eye view of Bhubaneswar from its summit. The Ananta cave or cave number 3 is most popular amongst the lot which houses carved figures of women, elephants, geese carrying flowers, etc.","Udayagiri and Khandagiri Caves, formerly called Kataka Caves or Cuttack caves, are partly natural and partly artificial caves of archaeological, historical and religious importance near the city of Bhubaneswar in Odisha, India. The caves are situated on two adjacent hills, Udayagiri and Khandagiri, mentioned as Kumari Parvata in the Hathigumpha inscription. They have a number of finely and ornately carved caves built during 2nd century BCE. It is believed that most of these caves were carved out as residential blocks for Jaina monks during the reign of King Kharavela. Udayagiri means 'Sunrise Hill' and has 18 caves while Khandagiri has 15 caves.Udayagiri caves are situated near the city of Vidisha in Madhya Pradesh. Built in the Gupta period, these caves date back to the 4th and the 5th century AD and are amongst the most incredible caves in India. There are about 14 caves in total that consist of many sculptures. The most famous sculpture is the figure of Vishnu in his incarnation as the boar-headed Varaha.","The Caves of Meghalaya comprise a large number of caves in the Jaintia, Khasi Hills and Garo Hills districts in the Indian state of Meghalaya, and are amongst the longest caves in the world. Of the ten longest and deepest caves in India, the first nine are in Meghalaya, while the tenth is in Mizoram. The longest is Krem Liat Prah in the Jaintia Hills, which is 30,957 m. The word 'Krem' means cave in the local Khasi language.There are scores of natural caves in Meghalaya and amongst them Mawsmai caves near the Bangladesh border are amongst the best. They have impressive formations of large passages and chambers; there are also many stalactite and stalagmite formations that add to the beauty of the caves. While at some places, the openings are big and there are a few places where one has to crawl through, the entrances are large and roomy whereas the exits so small that one has to kneel down to come out.","This cave marks the early traces of human existence in the Indian sub-continent. The paintings on the wall offer evidences of existence of dance and celebrations and have also been recognized as a World Heritage Site. According to legends it is believed that it was used as a shelter by the Pandavas, who were serving exile and as is evident, the name Bhimbetka was given to the place as it refers to ‘the sitting place of Bhim'.","The Thayumanavar Temple is a temple situated in the Rockfort complex in the city of Tiruchirappalli, India. The temple is situated close to the base of the Rockfort and was constructed by the Pallava king Mahendravarman I in the 6th century AD. Shiva is worshiped as Thayumanavar, and is represented by the lingam and his consort Parvati is depicted as Mattuvar Kuzhalammai. The presiding deity is revered in the 7th century Tamil Saiva canonical work, the Tevaram, written by Tamil saint poets known as the nayanars and classified as Paadal Petra Sthalam. Placed inside the complex of Tiruchirapalli Rock Fort, the two cave temples, namely the Lower Cave Temple and the Upper Cave Temple are amongst the most incredible cave temples in India. These caves are said to have been built during the Pallavas; however, one cannot ignore the extensive contribution of the rulers of the Chola dynasty, Nayaks of Madurai and Vijaynagara. These unfinished cave shrines have a temple of Shiva in the east and Vishnu in the west. The lower caves are marked with a unique form of pillars, which are otherwise not seen in other temples in Tamil Nadu."," Dungeshwari Cave Temples, also known as Mahakala caves, is situated 12 km north-east of Bodhgaya, in Gaya district Bihar. Gautama Siddhartha is believed to have piously meditated at this place for six years before he went to Bodhgaya for the final realization. Two small shrines are built to commemorate this phase of Buddha. A golden emaciated Buddha sculpture memorising the rigid penance is enshrined in one of the cave temples and a large (about 6’ tall) Buddha’s statue in the other. A Hindu goddess deity Dungeshwari is also placed inside the cave temple.Dungeshwari cave temple is situated about 12 km from Bodhgaya. There are three caves that have Buddhist shrines, where it is believed that Buddha had spent time meditating. Legend has it that when Buddha was practicing self-mortification, he became weak, feeble and started starving and while he was resting under a Banyan tree, a poor village woman named Sujata offered him food. After Buddha accepted the food offered to him he was presented with a divine truth that neither extreme self-indulgence nor self-abasement is the right way to attain enlightenment. It is in fact the middle path that is required to attain nirvana. There are two small shrines that were built to commemorate this significant event. Also, a golden statue of the emaciated form of the Buddha depicting the strict penance is enshrined in one of the cave temples and in the other temple is a large Buddha statue."];
+        var body_about_2=["The Ajanta Caves constitute ancient monasteries and worship-halls of different Buddhist traditions carved into a 75-metre wall of rock. The caves also present paintings depicting the past lives and rebirths of the Buddha, pictorial tales from Aryasura's Jatakamala, and rock-cut sculptures of Buddhist deities. Textual records suggest that these caves served as a monsoon retreat for monks, as well as a resting-site for merchants and pilgrims in ancient India. While vivid colours and mural wall-painting were abundant in Indian history as evidenced by historical records, Caves 16, 17, 1 and 2 of Ajanta form the largest corpus of surviving ancient Indian wall-painting.","The Elephanta Caves contain rock cut stone sculptures that show syncretism of Hindu and Buddhist ideas and iconography. The caves are hewn from solid basalt rock. Except for a few exceptions, much of the artwork is defaced and damaged. The main temple's orientation as well as the relative location of other temples are placed in a mandala pattern. The carvings narrate Hindu mythologies, with the large monolithic 20 feet Trimurti Sadashiva (three-faced Shiva), Nataraja (Lord of dance) and Yogishvara (Lord of Yoga) being the most celebrated.The origins and date when the caves were constructed have attracted considerable speculations and scholarly attention since the 19th century. These date them between 5th and 9th century, and attribute them to various Hindu dynasties. They are more commonly placed between 5th and 7th centuries. Most scholars consider it to have been completed by about 550 CE.","The Badami cave temples are a complex of four Hindu cave temples located in Badami, a town in the Bagalkot district in northern part of Karnataka, India. The caves are considered an example of Indian rock-cut architecture, especially Badami Chalukya architecture, which dates from the 6th century. Badami was previously known as Vataapi Badami, the capital of the early Chalukya dynasty, which ruled much of Karnataka from the 6th to the 8th century. Badami is situated on the west bank of a man made lake ringed by an earthen wall with stone steps; it is surrounded on the north and south by forts built in later times.The Badami cave temples represent some of the earliest known examples of Hindu temples in the Deccan region. They along with the temples in Aihole transformed the Malaprabha River valley into a cradle of temple architecture that influenced the components of later Hindu temples elsewhere in India.","Tabo Monastery is located in the Tabo village of Spiti Valley, Himachal Pradesh, northern India. It was founded in 996 CE in the Tibetan year of the Fire Ape by the Tibetan Buddhist lotsawa Rinchen Zangpo, on behalf of the king of western Himalayan Kingdom of Guge, Yeshe-O. Tabo is noted for being the oldest continuously operating Buddhist enclave in both India and the Himalayas. A large number of frescoes displayed on its walls depict tales from the Buddhist pantheon. There are many priceless collections of thankas (scroll paintings), manuscripts, well-preserved statues, frescos and extensive murals which cover almost every wall. The monastery is in need of refurbishing as the wooden structures are aging and the thanka scroll paintings are fading. After the earthquake of 1975, the monastery was rebuilt, and in 1983 a new Du-kang or Assembly Hall was constructed. It is here that the 14th Dalai Lama held the Kalachakra ceremonies in 1983 and 1996. The monastery is protected by the Archaeological Survey of India (ASI) as a national historic treasure of India.","The caves of Udayagiri and Khandagiri, called lena or leṇa in the inscriptions, were dug out mostly during the reign of Kharavela for the abode of Jaina ascetics. The most important of this group is Ranigumpha in Udayagiri which is a double storeyed monastery. Other important caves include Hathi gumpha, Ananta gumpha, Ganesha gumpha, Jaya Vijaya gumpha, Mancapuri gumpha, Bagha/Byaghra/Vyaghra gumpha and Sarpa gumpha.","They are notable for the ancient monumental relief sculpture of Vishnu in his incarnation as the man-boar Varaha, rescuing the earth symbolically represented by Bhudevi clinging to the boar's tusk as described in Hindu mythology. The site has important inscriptions of the Gupta dynasty belonging to the reigns of Chandragupta II and Kumaragupta I. In addition to these, Udayagiri has a series of rock-shelters and petroglyphs, ruined buildings, inscriptions, water systems, fortifications and habitation mounds, all of which remain a subject of continuing archaeological studies. The Udayagiri Caves complex consists of twenty caves, of which one is dedicated to Jainism and all others to Hinduism. The Jain cave is notable for one of the oldest known Jaina inscriptions from 425 CE, while the Hindu Caves feature inscriptions from 401 CE.","The exploration of the Caves of Meghalaya is currently undertaken for both scientific and recreational pursuits, and there are still many unexplored and partially explored caves in the state. The annual caving expeditions organized by Meghalaya Adventurers Association (MAA) are known as 'Caving in the Abode of the Clouds Project'. The caves, because they are located primarily in limestone formations, continue to come under threat from the limestone mining industry.","The Bhimbetka rock shelters are an archaeological site in central India that spans the prehistoric paleolithic and mesolithic periods, as well as the historic period. It exhibits the earliest traces of human life on the Indian subcontinent and evidence of Stone Age starting at the site in Acheulian times. It is located in the Raisen District in the Indian state of Madhya Pradesh about 45 kilometres (28 mi) southeast of Bhopal. It is a UNESCO world heritage site that consists of seven hills and over 750 rock shelters distributed over 10 kilometres. At least some of the shelters were inhabited more than 100,000 years ago. The rock shelters and caves provide evidence of, according to Encyclopædia Britannica, a 'rare glimpse' into human settlement and cultural evolution from hunter-gatherers, to agriculture, and expressions of spirituality.","According to Hindu legend, a pregnant woman named Rathnavathi was an ardent devotee of Shiva and he arrived in the form of her mother to attend to her delivery. The presiding deity is thus named Thayumanaswamy, the one who acted as mother. The Rockfort is a fortress which stands atop a 273-foot-high rock, consisting of a set of monolithic rocks accommodating many rock-cut cave temples. Originally built by the Pallavas, it was later reconstructed by the Madurai Nayaks and Vijayanagara rulers.The major complex in the temple are believed to be built during the 8th century by the Pandyan Empire.","Dungeshwari cave temples are also popular as Sujata Sthan to local people. It is believed that when Buddha was doing his self-mortification, he became frail, feeble and starved. When he rested under a Banayan tree, a village woman named Sujata offered him food. Buddha accepted her offerings and consumed the food; his explicit approval presented him with a divine truth that neither extreme self indulgence nor self-abasement is the right way to attain enlightenment. Buddha attained the knowledge that following the middle path will lead to attaining the supreme nirvana. Sujata Sthan or Dungeshwari Temple stands as a symbol commemorating this event."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["It is about 100 km away from Ajanta and 30 km away from Ellora. Aurangabad Airport is the nearest airport which is well connected via several flights from major cities across India.","The quickest way to get from Mumbai Airport (BOM) to Elephanta Caves (Station) is to train and ferry. The distance between Mumbai Airport (BOM) and Elephanta Caves (Station) is 16 km.","Badami caves are located at Badami which is a small town but is well-connected by road and rail network to major cities of India. There is no airport in the town but Belgaum and Hubli are nearest airports from where flights frequently depart and arrive from major Indian cities.","The nearest airbase to Tabo is the Kullu airport which is located at a distance of 294 km from the village. Frequent cab services are available from the airport. ","Distance between Udayagiri And Khandagiri Caves and Bhubaneswar Airport. It takes 10 minutes to travel from Udayagiri And Khandagiri Caves to Bhubaneswar Airport. Approximate driving distance between Udayagiri And Khandagiri Caves and Bhubaneswar Airport is 9 kms.","Distance between Udayagiri And Khandagiri Caves and Bhubaneswar Airport. It takes 10 minutes to travel from Udayagiri And Khandagiri Caves to Bhubaneswar Airport. Approximate driving distance between Udayagiri And Khandagiri Caves and Bhubaneswar Airport is 9 kms.","Shillong Airport feeds as the nearest airport to Mawsynram. It connects all the major cities and states nationally as well as internationally. You can take a cab or local transport bus to cover a distance of 86 km between the Airport and Mawsynram. It will take 3 hours for you to reach Mawsynram from the airport.","The nearest airport is Raja Bhoj Airport, Bhopal, which is approximately 45kms away. One can hire taxis from there to Bhimbetka.","Tiruchirappalli is served by Tiruchirappalli International Airport 5 km from the city centre. The airport handles fivefold more international air traffic than domestic services, making it the only airport in India with this huge variation. It serves as a gateway to immigrants from South-east Asian countries","Dungeshwari Cave Temples. Drive about 12 km northeast of Gaya to reach the ancient Dungeshwari Cave Temples, also known as Mahakala Caves."];
+        var body_how_2=["Jalgaon and Aurangabad Railway station are the two railway junctions which are well connected with all the cities in India.","The quickest way to get Elephanta Caves is train The distance between Mumbai Airport and Elephanta Caves (Station) is 16 km.","The Nearest airports to Badami are Hubli and Belgaum.These airports have connectivity to Bangalore and Mumbai. From Hubli and Belgaum we can reach Badami by taxi OR by bus. The 'Badami Railway Station' is around 5 km from the Badami Bus stand.","The nearest railhead is the Kalka railway station which is near about 452 km from the village.","It takes 10 minutes to travel from Bhubaneswar Railway Station to Khandagiri Caves. Approximate driving distance between Bhubaneswar Railway Station and Khandagiri Caves is 9 kms.","It takes 12 minutes to travel from Bhubaneswar Railway Station to Udayagiri Caves. Approximate driving distance between Bhubaneswar Railway Station and Udayagiri Caves is 10 kms.","Guwahati Railway station serves tourists with Railway services. Drop down at Guwahati Station and take a taxi or bus to Mawsynram. The distance between the two is 151 km and it will take near about 4 hours to reach Mawsynram from Guwahati Station.","The nearest railhead is Bhopal Jn., at a distance of approximately 37kms from Bhimbetka.","At a distance of 5 km from Trichy Railway Junction, The Rock Fort is a historic fort and temple complex built on a large rock with a height of 85 meters.","It takes 16 minutes to travel from Gaya Junction to Dungeshwari Cave. Approximate driving distance between Gaya Junction and Dungeshwari Cave is 14 kms."];
+        var body_how_3=["Ellora to Aurangabad is 30 km, the distance between Aurangabad and Ajanta is 99 km. Aurangabad, which is one of the major cities of Maharashtra has higher connectivity to other cities. Once you have reached Aurangabad, you can take buses to reach Ajanta Ellora bus stand.","To get to the Elephanta Caves, you will need to go to the Gateway of India in the city of Mumbai. From here you can purchase the tickets for the launch from the Maharastra tourism development corp (MTDC) at the entrance of Gateway. The journey by sea takes 1 hour to reach the island."," From Hubli and Belgaum we can reach Badami by bus.The 'Badami Railway Station' is around 5 km from the Badami Bus stand.","Tabo is connected to other parts of the state by local bus services. Himachal Road Transportation Corporation (HRTC) buses ply the roads between Kaza and Tabo.","Udayagiri & Khandagiri Caves. Six kilometres west of the city centre are two hills riddled with rock-cut shelters. Khandagiri is topped with a fine temple. Many of the caves are ornately carved and thought to have been chiselled out for Jain ascetics in the 1st century BC.","Udayagiri & Khandagiri Caves. Six kilometres west of the city centre are two hills riddled with rock-cut shelters. Khandagiri is topped with a fine temple. Many of the caves are ornately carved and thought to have been chiselled out for Jain ascetics in the 1st century BC.","At a distance of 4 km from Cherrapunji Bus Stand, Mawsmai Cave is a beautiful limestone cave located at Cherrapunji in the North East Indian state of Meghalaya. It is one of the most popular historical Caves in Meghalaya and among the best places to experience Cherrapunji Tourism.","Bhopal is best suitable place to reach for visiting Bimbetka rock shelters. It is just 40kms from Bhopal city. Similarly tourist visiting Pachmarhi, Jabalpur, Satpura National Park may also visit this World Heritage Site on the way to their destination.","It takes 2 hours, 25 minutes to travel from Bus Stand to Trichy Rockfort Temple. Approximate driving distance between Bus Stand and Trichy Rockfort Temple is 121 kms.","Drive about 12 km northeast of Gaya to reach the ancient Dungeshwari Cave Temples."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "By Plane:";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_3[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Caves</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Caves:</p>
+        <p id='info1'>A cave or cavern is a natural void in the ground, specifically a space large enough for a human to enter. Caves often form by the weathering of rock and often extend deep underground. The word cave can also refer to much smaller openings such as sea caves, rock shelters, and grottos, though strictly speaking a cave is exogene, meaning it is deeper than its opening is wide, and a rock shelter is endogene. The earliest caves used by humans were natural caves that they occupied or used for a variety of purposes, such as shrines and shelters. Evidence suggests that the caves were first occupied and slightly altered during the Palaeolithic and Mesolithic periods, up to about 6000 BC. These changes are not classified as architecture. Early examples included decorating overhanging rock with rock-cut designs. The Rock Shelters of Bhimbetka, now designated as a UNESCO World Heritage Site, are located on the edge of the Deccan Plateau, where dramatic erosion has left massive sandstone outcrops. Researchers have found primitive tools and decorative rock paintings made by humans in the area's many caves and grottos.During the time of the Buddha, Buddhist monks were also in the habit of using natural caves, such as the Saptaparni Cave, southwest from Rajgir, Bihar. Many believe it to be the site in which Buddha spent some time before his death, and where the first Buddhist council was held after the Buddha died. The Buddha himself had also used the Indrasala Cave for meditation, starting a tradition of using caves, natural or man-made, as religious retreats, that would last for over a millennium.</p>
+        <p id="head2">Few Popular Caves:</p>
+        <p id="info2">Ajanta and Ellora Caves. Elephanta Caves, Mumbai. Badami Caves, Karnataka. Tabo Caves. Khandagiri Caves, Bhubaneshwar. Udayagiri Caves. Mawsmai Caves, Meghalaya. Bhimbetka Caves. Trichy Rock Fort, Tamil Nadu. Dungeshwari Caves, Bodhgaya.</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Ajanta and Ellora, Maharashtra</h2><p>The Ajanta Caves are 30 rock-cut Buddhist cave monuments which date from the 2nd century BCE to about 480 CE in Aurangabad district of Maharashtra state of India.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [75.703252,20.551861]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Elephanta Caves, Mumbai</h2><p>Elephanta Caves are a UNESCO World Heritage Site and a collection of cave temples predominantly dedicated to the Hindu god Shiva.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.931486,18.963350]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Badami Caves, Karnataka</h2><p>The Badami cave temples are a complex of four Hindu cave temples located in Badami, a town in the Bagalkot district in northern part of Karnataka, India. The caves are considered an example of Indian rock-cut architecture, especially Badami Chalukya architecture, which dates from the 6th century.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [75.691004,15.916652]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Tabo Caves, Himachal Pradesh</h2><p>Tabo Monastery is located in the Tabo village of Spiti Valley, Himachal Pradesh, northern India. It was founded in 996 CE in the Tibetan year of the Fire Ape by the Tibetan Buddhist lotsawa Rinchen Zangpo.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.382269,32.093826]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Khandagiri Caves, Bhubaneshwar</h2><p>Udayagiri and Khandagiri Caves, formerly called Kataka Caves or Cuttack caves, are partly natural and partly artificial caves of archaeological, historical and religious importance near the city of Bhubaneswar in Odisha, India.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [85.784659,20.262543]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Udayagiri Caves, Bhubaneshwar</h2><p>The Udayagiri Caves are twenty rock-cut caves near Vidisha, Madhya Pradesh from the early years of the 5th century CE. They contain some of the oldest surviving Hindu temples and iconography in India.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.772198,23.536273]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Mawsmai Caves, Meghalaya</h2><p>Narrow, rugged limestone cave with a dimly-lit access point, low overhangs & often uneven footing.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [91.724088,25.244574]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Bhimbetka Caves, Madhya Pradesh</h2><p>The Bhimbetka rock shelters are an archaeological site in central India that spans the prehistoric paleolithic and mesolithic periods, as well as the historic period. It exhibits the earliest traces of human life on the Indian subcontinent and evidence of Stone Age starting at the site in Acheulian times.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.612433,22.939547]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Trichy Rock Fort, Tamil Nadu</h2><p>The Thayumanavar Temple is a temple situated in the Rockfort complex in the city of Tiruchirappalli, India. The temple is situated close to the base of the Rockfort and was constructed by the Pallava king Mahendravarman I in the 6th century AD.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.697118,10.828282]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Dungeshwari Cave Temple, Bodhgaya</h2><p>Dungeshwari Cave Temples, also known as Mahakala caves, is situated 12 km north-east of Bodhgaya, in Gaya district Bihar.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [85.047540,24.736627]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

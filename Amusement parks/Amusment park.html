@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Amusment Parks</title>
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Amusment Parks";
+          document.getElementById("head1").innerHTML = "Welcome to Amusment Parks:";
+          document.getElementById("info1").innerHTML = "An amusement park is a park that features various attractions, such as rides and games, as well as other events for entertainment purposes. A theme park is a type of amusement park that bases its structures and attractions around a central theme, often featuring multiple areas with different themes. Unlike temporary and mobile funfairs and carnivals, amusement parks are stationary and built for long-lasting operation. They are more elaborate than city parks and playgrounds, usually providing attractions that cater to a variety of age groups. While amusement parks often contain themed areas, theme parks place a heavier focus with more intricately-designed themes that revolve around a particular subject or group of subjects. Amusement parks evolved from European fairs, pleasure gardens and large picnic areas, which were created for people's recreation. World's fairs and other types of international expositions also influenced the emergence of the amusement park industry. Lake Compounce opened in 1846 and is considered the oldest continuously-operating amusement park in North America. The first theme parks emerged in the mid-twentieth century with the opening of Santa Claus Land in 1946, Santa's Workshop in 1949, and Disneyland in 1955.";
+          document.getElementById("head2").innerHTML = "Few Best Amusment Parks:";
+          document.getElementById("info2").innerHTML = "Adlabs Imagica,Kingdom of Dreams,Wonderla Bangalore,Wonderla, Kochi,Ramoji Film City,Della Adventure Park.";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          
+          }
+            
+        function myfunction() {
+        var mainhead1=["Adlabs Imagica","Kingdom of Dreams","Wonderla","Wonderla","Wonderla Hyderabad","Ramoji Film City","Essel World and Water Kingdom","Della Adventure Park","Nicco Park ","Queens land"];
+        var head_about_1=["Welcome to Adlabs Imagica, Khopoli:","Welcome to Kingdom of Dreams, Gurgaon(Delhi):","Welcome to Wonderla, Bangalore:","Welcome to Wonderla, Kochi:","Welcome to Wonderla, Hyderabad:","Welcome to Ramoji Film City, Hyderabad:","Welcome to Essel World and Water Kingdom, Mumbai:","Welcome to Della Adventure Park, Lonavala:","Welcome to Nicco Park, Kolkata:","Welcome to Queens land in Sembarambakkam, Chennai:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:",]
+        var body_about_1=["Adlabs Imagica is a 130-acre theme park in Khopoli, India. It is owned by Adlabs Entertainment Ltd. The park has an estimated daily capacity of 15,000 visitors. To date, the park has hosted over 3.5 million visitors. They have three parks: Theme Park, Water Park and Snow Park.They have different rides for different age groups. Guests can bump into the in-house characters of Tubbby – The Elephant, Roberto – The Star Chef, The Lost Astronaut, Mogambo of Mr. India fame and The Gingerbread Man while hopping from one ride to another.The theme has 5 uniquely designed restaurants that offer a host of food options to the visitors.This Mykonos-themed Water Park is very popular as a favourite day party hangout destination.","Kingdom of Dreams is India's first live entertainment, theatre and leisure destination. It is located in Sector 29, Gurgaon in NCR Delhi, near the Leisure Valley Park. It was inaugurated on 29 January 2010 by the Chief Minister of Haryana and opened to public on 18 September 2010 by Union Minister of Tourism, Kumari Selja. The opening showcased a special preview of the Bollywood musical, Zangoora, starring Hussain Kuwajerwala, Gauhar Khan and Kashmira Irani. Spread over 6 acres (24,000 m2) and built at a cost of over Rs. 2 billion, Kingdom of Dreams is run by the Great Indian Nautanki Company (GINC), a joint venture between Apra Group and Wizcraft.","Wonderla, is one of the largest chain of amusement parks in India. It is owned and operated by Wonderla Holidays Limited which is headquartered near Bidadi, 28 kilometres (17 mi) from Bengaluru, Karnataka. Wonderla Holidays currently operates 3 amusement parks in Kochi, Bengaluru and Hyderabad, and 1 resort in Bengaluru. It is promoted by Kochouseph Chittilappilly and his son Arun Chittilappilly as a subsidiary of V-Guard Industries. The first amusement park, Wonderla Kochi, was set up in 2000. The third amusement park project Wonderla Hyderabad was commissioned in April 2016. Wonderla holidays is currently planning to open its 4th amusement park in Chennai. Wonderla amusement parks offers a variety of rides for all ages to enjoy, some of their rides are Recoil, Maverick, Y-Scream, and their latest addition Mission interstellar.","Lush and tropical Wonderla Kochi is set into the side of a hill, and is popular with families. It has around 40 rides and attractions, classified into four types: Family, Water, Kiddies, and Hair Raising. Wonder Splash, a boat journey into a cave filled with mystery followed by a splash down into a crystal clear pool, is popular. There's a 3D movie theater as well.The Kochi park was started in 2000 as Veegaland until it was re-branded in 2011. This park is situated on the top of a hill at Pallikkara, 12 kilometres from the city center. The park was set up in 2000 and was designed by architect Joseph John. Wonderla Kochi is the first park in India to get ISO 14001 certificate for eco-friendliness and OHSAS 18001 certificate for safety. The park is spread over 30 acres of landscaped space with more than 50 amusement rides. In July 2018, Wonderla Kochi was ranked eleventh in the TripAdvisor 'Travellers' choice awards for amusement parks and water parks in Asia.","The third and newest Wonderla opened in Hyderabad in April 2016 with 43 rides, including 18 that are water-based and six that are high-thrill. The park also has India’s first reverse-looping roller coaster, and first space flying experience. Wonderla Hyderabad offers 25 land based rides and 18 water based attractions on 50 acres of land. Wonderla Amusement Park is located 28 km away from Hyderabad City.","Near Hyderabad, Ramoji Film City is a huge film studio complex where thousands of Indian movies are filmed every year. If you've ever wanted to see how movie sets come to life, this is the place. It also has live shows, an eco zone (including a bonsai park and butterfly park), bird park, theme park with rides, adventure park, and entertainment park for the kids. Activities include All Terrain Vehicles, bungee jumping, zorbing, and paintball. Special celebrations are held during Dussehra and Diwali.","Essel World, established in 1999, was the first amusement park in India. Although it's a bit dated these days, it is one of the largest in the country and has managed to remain a favorite. There are more than 30 rides, a Water Kingdom water park, bowling alley, ice skating rink, and Aquadrome dance floor. The highlight is the frightening new Monsters in the Mist dark ride, which is apparently the first of its kind in India. Special celebrations are held during Holi. Location of it is Gorai, in the outer northwest suburbs of Mumbai. It's about 1.5 hours from the city center.EsselWorld is home to a variety of rides appropriate for individuals of all ages. It boasts of fourteen family rides, eleven adrenaline-pumping thrill rides and fifteen children's rides. Apart from the conventional features of a theme park such as roller coasters and rides, EsselWorld is also host to Mumbai's first ice skating rink, spanning 3400 square feet.","Della Adventure is India’s Largest Extreme Adventure Park in Lonavala, located at an equidistance from Mumbai and Pune. It certainly is a hub for adventure sports near Pune and Mumbai, attracting adventure seekers to come and challenge their might. A beautifully created adventure zone that offers travelers and adventure junkies a complete adventure detox for the mind and soul, with unique offerings for both young and old alike. The pleasant weather and picturesque surrounding of Lonavala make it ideal for one to indulge in extreme adventure sports without having to bear the scorching heat of the neighboring cities.","Nicco Park is an amusement park frequently visited for entertainment and recreational purposes. It is also called the 'Disney Land of West Bengal' and attracts visitors in large numbers throughout the year. The park functions efficiently on solar energy that causes no pollution. Every aspect of the rides here is appropriately explained at the beginning for the visitors to learn. So, one will find charts and boards displayed at the entrance of every ride illustrating the principles used to ensure a safe and fun ride. The park has numerous amusement rides and shows which are not just recreational but educational also. It is, therefore, a favourite amongst parent and youngsters who often prefer the attraction as a picnic spot.","This park is promoted by Rajam Hotels (P) Ltd and was established in 2003. Queens land is quite an extensive theme park and is spread over an expansive area of 70 acres. This park is considered to be one of the best amusement parks in the city in terms of global standards of entertainment and service. The park is an entertainment retreat for the people of Chennai especially the kids who like to spend their weekends and vacations enjoying here."];
+        var body_about_2=["The Imagica Snow Park is a one-of-a-kind indoor snow-based theme park. The park is spread across an area of 15,000 sq.ft., making it one of India's largest snow parks. There are slots of 45 mins each. While purchasing tickets you need to select a slot. You can enter snow park in that slot timing only. Once you inside they provide you all the winter necessary items like Jacket, Hand Gloves and Snow Hiking Shoes, free of cost.","The destination consists of two theatres, Nautanki Mahal and the Showshaa Theatre, and a cultural and cuisine area known as Culture Gully.Bollywood actor Shah Rukh Khan was named the global ambassador of Kingdom of Dreams on 19 September 2010. The 2010 Commonwealth Games' official theme song, Jiyo Utho Bado Jeeto by composer A R Rahman was launched in the complex on 28 August 2010, with a performance by Rahman, accompanied by dance performances by Hussain Kuwajerwala, Gauhar Khan and Kashmira Irani, on the theme of Zangoora - The Gypsy Prince.","The park in Bangalore is the best and has over 50 rides. 12 rides are water-based, 13 are especially for small children, and 10 are high-thrill. If you love getting wet, don't miss the Rain Disco -- an indoor dance floor with psychedelic laser lights and a rain system that provides showers of warm water, choreographed to the music.","In the year 2000, Kochouseph Chittilappilly started the flagship amusement water themed park under the name Veegaland in Kochi, Kerala. 75-crore INR was invested in the constructions and development of veegaland. In 2005 due to overwhelming success of the Veegaland project, Kochouseph Chittilappilly decided to build another amusement park on a larger scale at a cost of 105 crore INR in Bengaluru and named it Wonderla.","The Initial Public Offering (IPO) of Wonderla Holidays for about Rs 180 crores received overwhelming response. The IPO proceeds are slated to be used for its upcoming theme park project in HyderabadThe third amusement park, Wonderla Hyderabad was commissioned in April 2016.","The Ramoji Film City in India is located in Hyderabad. Spread over 2000 acres, it is the largest integrated film city in Telangana and has been certified by the Guinness World Records as the largest studio complex in the world. It was built by Telugu film producer Ramoji Rao in 1996. It is also a popular tourism and recreation centre, containing natural and artificial attractions including an amusement park. Around 1.5 million tourists visit the place every year.","essel world is an adventure themed amusement park while water kingdom is a water themed park.both are situated in the same location. The park maintains the rink's temperature at a constant 4 degrees Celsius. The dance floor is an added characteristic of the park that enables visitors to hold parties at the park. It enjoys colored lights, high definition audio, and a glass dance floor. To maintain its international demeanor the dance hall plays a fusion of Bollywood as well as Western music.","With some of the newest adventure activities in India like Vertical Rope Challenge, Ball Fighting, Roller Zorbing, Ground Challenge, Shooting Range, Mountain Cycling and so on - Della Adventure Park is the ultimate destination for your thrilling adventure. Get ready to challenge yourself and your squad into adventure activities.","Nicco Park has been functioning as an amusement park for the past 20 years. It is the first amusement park in India that has obtained recognition from Quality Management System, Safety Management System and Environment Management System. Nicco Park is also the first amusement park in the world to have obtained a 'Social Accountability' certificate.","The park is located by the Chennai-Bangalore Trunk Road between Sriperumpudhur and Poonamalle. There is parking for cars. Buses are available from Guindy and T. Nagar. All buses going to Sriperumpudhur from Chennai stop at Queensland."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["Adlabs Imagica located approx. 90 minutes drive from Mumbai and Pune, and 20 minutes from Lonavala and Khopoli. The nearest airports are Chhatrapati Shivaji Airport in Mumbai, and Airport in Pune. The nearest train stations are Karjat and Khopoli","Bollywood actor Shah Rukh Khan was named the global ambassador of Kingdom of Dreams on 19 September 2010. The 2010 Commonwealth Games' official theme song, Jiyo Utho Bado Jeeto by composer A R Rahman was launched in the complex on 28 August 2010, with a performance by Rahman, accompanied by dance performances by Hussain Kuwajerwala, Gauhar Khan and Kashmira Irani, on the theme of Zangoora - The Gypsy Prince.","KempeGowda International Airport is located in Devanahalli, 40 km (25 mi) from the central business district of Bangalore (MG Road) and 30 km (19 mi) from the Bangalore City Railway Station.","Cochin has regular flights to almost all the cities in Middle East and few destinations in Southeast Asia. India's low cost airline Air India Express, have its primary hub in Kochi which connects to multiple cities in Middle East, Dubai being most prominent. Its equally well connected from most of the cities in India by domestic carriers.","Hyderabad's new Rajiv Gandhi International Airport is located 22 km (14 mi) from the city. Note that the old airport at Begumpet is now closed, except for use by VIPs. The sleek and well-organized airport is one of the best aviation facilities in India. The elevated expressway to the airport is now open and takes 20 minutes. Direct international connectivity from Hyderabad is available for many countries.","Hyderabad Airport is located around 27 KM away from Ramoji Film City so if you travel at the consistent speed of 50 KM per hour you can reach Ramoji Film City in 1 hours.","The distance between Mumbai Airport (BOM) and EsselWorld is 16 km. The road distance is 40.8 km.The best way to get from Mumbai Airport (BOM) to EsselWorld without a car is to towncar.","Lonavla does not have an airport, though the Indian Air Force station Troppo is situated on the way to Aamby Valley City. The city of Aamby Valley has its own private airport. The nearest commercial airports are Pune International Airport at 64 km and Chhatrapati Shivaji International Airport at 104 km.","It takes 19 minutes to travel from Airport Kolkata to Nicco Park Bus Stop. Approximate driving distance between Airport Kolkata and Nicco Park Bus Stop is 16 kms or 9.9 miles or 8.6 nautical miles . Travel time refers to the time taken if the distance is covered by a car.","It takes 33 minutes to travel from Chennai Airport to Queensland Amusement Park. Approximate driving distance between Chennai Airport and Queensland Amusement Park is 28 kms."];
+        var body_how_2=["By Train The closest train station to Imagica is Khopoli. The CST-Khopoli Fast train runs along the Central Railway line, once per day from Mumbai. Imagica, which is just 20 minutes away from the station, also offers shuttle services from Khopoli station, once in the morning and evening on a daily basis, for which no prior booking is required. Guests arriving at other times can avail auto rickshaws from the station at their discretion.","The northeastern part of Gurgaon is served by the Yellow Line of the Delhi Metro, which runs from NH-8's IFFCO Chowk crossing along MG Road over the border towards Qutub Minar, Saket and straight to Connaught Place. Travel time is about 50 minutes, with tickets Rs. 25 one way. Gurgaon also has a small rail station on the Delhi-Jaipur railway line, but it only receives about five trains a day. The Station is near The colony bhim Garh Kheri Part 2","Bangalore has two major railway terminals. The Bangalore City railway station is situated in the heart of the city, opposite the Majestic Bus stand. Most trains, both local and long-distance, arrive and depart from here. The other terminal is Yeshwantpur Junction located on NH-4. A few trains arrive and depart from here.","The Airport railway station is under construction. The nearest railway stations are Aluva (10 Kms south) or Angamally railway station (6 kms north) where almost all major express & passengers trains to all over Kerala halts.","There are three major railway stations serving the twin cities: Secunderabad, Hyderabad , and Kachiguda and a minor station at Begumpet. Most of the trains bound for South India and North India originate from Hyderabad,and leave via Secunderabad. Hyderabad Deccan Station is popularly known as Nampally Station.","The total straight line distance between Hyderabad Railway Station and Ramoji Film City is 24 KM and 400 meters. The miles based distance from Hyderabad Railway Station to Ramoji Film City is 15.2 miles. This is a straight line distance and so most of the time the actual travel distance between Hyderabad Railway Station and Ramoji Film City may be higher or vary due to curvature of the road. The driving distance or the travel distance between Hyderabad Railway Station to Ramoji Film City is 27 KM and 300 meters. The mile based, road distance between these two travel point is 17 miles.","Train is the most cheapest way to reach here. You have to use Western Railways train from railway station of Malad. If you have taken train from Malad (W), from then take BEST Bus no. 272 to reach Marve-Malad. ","Lonavla is well-connected by train. Local trains run from Pune at 2 hour intervals. Those originating from Mumbai along the central line have Khopoli as their last station. Buses are available at regular intervals to complete the remaining 15 km of the journey to Lonavla from Khopoli bus station. It takes 2.5 hours by train from Mumbai and 1 to 1.5 hour from Pune. All trains, travelling between Mumbai and Pune, halt at Lonavla.","It takes 8 minutes to travel from Sealdah Railway Station to Nicco Park. Approximate driving distance between Sealdah Railway Station and Nicco Park is 7 kms, and It takes 10 minutes to travel from Calcutta Railway Station to Nicco Park. Approximate driving distance between Calcutta Railway Station and Nicco Park is 9 kms.","It takes 8 minutes to travel from Chennai Central Railway Station to Queens Land (amusement Park) Sembarabakkam. Approximate driving distance between Chennai Central Railway Station and Queens Land (amusement Park) Sembarabakkam is 7 kms."];
+        var body_how_3=["On Mumbai - Pune Express highway, after Khalapur Toll Naka take the first left at the Khopoli exit. Take the overhead bridge towards Pali Road. Once you cross the bridge, take the left turn towards Pali Road 3 km away on right hand side you will see Adlabs Imagica. On Mumbai - Pune Express highway, just before Khalapur Toll Naka take a U-turn. A few meters ahead take the Khopoli exit on your left. Take the overhead bridge towards Pali Road. Once you cross the bridge, take the left turn towards Pali Road 3 km away on right hand side you will see Adlabs Imagica.","DTC and Haryana Roadways buses runs down National Highway 8 in Delhi. Buses to Gurgaon can be best boarded at Dhaula Kuan (on the Inner Ring Road). Alternatively, there is a small dedicated Gurgaon-bound bus terminal at Karol Bagh near the unmissable 100-foot Hanuman statue, a five-minute walk west of Jhandewala Metro station or a short cycle rickshaw ride (Rs.10) from Karol Bagh metro station. Buses cost Rs. 22 one-way. Also Haryana Roadways, Mewat and Kamal (Private buses) runs from Sarai Kale Khan to Gurgaon Bus Stand whole day. Also there is frequent service of DTC buses between Gurgaon Bus Stand to Badarpur Border via Mehrauli and Khanpur.","If you have difficulty in arranging a plane or railway ticket to your next destination, or you prefer a little more adventure, you can go by bus. There are both government and private buses that run services to major cities like Mumbai, Goa, Chennai, Mangalore, Coimbatore, Madurai, Tirupati, Hyderabad, etc. Buses can be a normal luxury bus, a Volvo A/C bus or a sleeper bus for night travel.","KSRTC operates two classes of bus service from the airport: fast passenger, super fast express operate every 10-20 minutes to most of the nearby towns and places. Both services are basic and no-frills in nature. All the bus services stop only at the bus point located near Central Block. KSRTC also operates premium air-conditioned service which consists of modern Volvo fleet, better known as Orange Buses.","Hyderabad has good local bus connectivity and is run by TSRTC, a state-government owned corporation. Most intercity buses start and end at the Mahatma Gandhi Bus Terminus more commonly known as Imlibun, and there are numerous depots where city service buses start and end. One can use Google maps to plan travel by bus.","Bus timings from Hyderabad Airport to Ramoji Film City is around 1 hours when your bus maintains an average speed of sixty kilometer per hour over the course of your journey. The estimated travel time from Hyderabad Airport to Ramoji Film City by bus may vary or it will take more time than the above mentioned time due to the road condition and different travel route. Travel time has been calculated based on crow fly distance so there may not be any road or bus connectivity also.","You have to use Western Express Highway to reach EsselWorld from Mumbai. On the express highway, turn left to Kashimira and drive down towards to Mira-Bhayander road. EsselWorld has put signages which will guide you to reach there. It takes about 35-45 minutes from Kashimira.","Location of it is Lonavala, between Mumbai and Pune, in Maharashtra. It's just off the Mumbai-Pune Expressway. It's not far from Adlabs Imagica.","East Kolkata comprises Salt Lake, Rajarhat Megacity, and areas along the Eastern Metropolitan Bypass. There are numerous private, CSTC, CTC, White Liners and WBSTC buses which connect Eastern Kolkata with the heart of the city.","Queens Land Amusement Park is located in Chembarambakkam. Head to NH 4/AH 45, past Srinidhi hospital, 9 km ahead of which is an Indian Oil petrol station, near which Queens Land Amusement Park is located."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "By Plane:";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_3[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Amusment Parks</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Amusment Parks:</p>
+        <p id='info1'>An amusement park is a park that features various attractions, such as rides and games, as well as other events for entertainment purposes. A theme park is a type of amusement park that bases its structures and attractions around a central theme, often featuring multiple areas with different themes. Unlike temporary and mobile funfairs and carnivals, amusement parks are stationary and built for long-lasting operation. They are more elaborate than city parks and playgrounds, usually providing attractions that cater to a variety of age groups. While amusement parks often contain themed areas, theme parks place a heavier focus with more intricately-designed themes that revolve around a particular subject or group of subjects. Amusement parks evolved from European fairs, pleasure gardens and large picnic areas, which were created for people's recreation. World's fairs and other types of international expositions also influenced the emergence of the amusement park industry. Lake Compounce opened in 1846 and is considered the oldest continuously-operating amusement park in North America. The first theme parks emerged in the mid-twentieth century with the opening of Santa Claus Land in 1946, Santa's Workshop in 1949, and Disneyland in 1955.</p>
+        <p id="head2">Few Best Amusment Parks:</p>
+        <p id="info2">Adlabs Imagica,Kingdom of Dreams,Wonderla Bangalore,Wonderla, Kochi,Ramoji Film City,Della Adventure Park.</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Adlabs Imagica</h2><p>India's big-budget, hi-tech Adlabs Imagica opened in 2013. Modeled on Universal Studios, it has more than 25 themed rides (including the country's largest roller coaster and 4D stimulation rides) and five themed restaurants.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.282302,18.767933]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kingdom of Dreams</h2><p>Kingdom of Dreams is a huge live entertainment and leisure destination that brings together the carnival that is India. It encompasses both Indian culture and performing arts.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.068885,28.467868]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Wonderla Bangalore</h2><p>Wonderla is a world-class amusement park chain that's expanding across India. The park in Bangalore is the best and has over 50 rides.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.59369,12.97194]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Wonderla, Kochi</h2><p>Lush and tropical Wonderla Kochi is set into the side of a hill, and is popular with families.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.392306,10.026725]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Wonderla, Hyderabad</h2><p>The third and newest Wonderla opened in Hyderabad in April 2016 with 43 rides, including 18 that are water-based and six that are high-thrill.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.528516,17.217319]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Ramoji Film City</h2><p>Near Hyderabad, Ramoji Film City is a huge film studio complex where thousands of Indian movies are filmed every year.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.680769,17.254305]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Essel World and Water Kingdom, Mumbai</h2><p>Essel World, established in 1999, was the first amusement park in India. it is one of the largest in the country and has managed to remain a favorite.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.809484,19.229230]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Della Adventure Park</h2><p>If you're into adventure more than amusement, you'll be able to enjoy an outstanding range of activities at Della Adventure Park.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.389832,18.780911]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpeg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Nicco Park, Kolkata</h2><p>Nicco Park is an amusement park frequently visited for entertainment and recreational purposes. It is also called the 'Disney Land of West Bengal' and attracts visitors in large numbers throughout the year.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [88.420556,22.571260]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Queens land in Sembarambakkam, Chennai</h2><p>This park is promoted by Rajam Hotels (P) Ltd and was established in 2003. QueensLand Chennai location is at Sembarambakkam on the Chennai – Bangalore Trunk Road.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.027613,13.030049]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

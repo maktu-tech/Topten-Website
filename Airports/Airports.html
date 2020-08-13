@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <title>Airports</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Airports";
+          document.getElementById("head1").innerHTML = "Welcome to Airports:";
+          document.getElementById("info1").innerHTML = "An airport is an aerodrome with extended facilities, mostly for commercial air transport. Airports often have facilities to store and maintain aircraft, and a control tower.An international airport has additional facilities for customs and passport control as well as incorporating all of the aforementioned elements. An airport is an aerodrome with extended facilities, mostly for commercial air transport. Airports often have facilities to store and maintain aircraft, and a control tower. An airport consists of a landing area, which comprises an aerially accessible open space including at least one operationally active surface such as a runway for a plane to take off or a helipad, and often includes adjacent utility buildings such as control towers, hangars and terminals. Larger airports may have airport aprons, taxiway bridges, air traffic control centres, passenger facilities such as restaurants and lounges, and emergency services. In some countries, the US in particular, they also typically have one or more fixed-base operators, serving general aviation.Such airports rank among the most complex and largest of all built typologies with 15 of the top 50 buildings by floor area being airport terminals.";
+          document.getElementById("head2").innerHTML = "Few Popular Airports:";
+          document.getElementById("info2").innerHTML = "Indhira Gandhi International Airport, New Delhi.Chhatrapati Shivaji International Airport, Mumbai.Chennai International Airport, Chennai.Cochin International Airport, Kerala.Kempegowda International Airport, Bangalore.Rajiv Gandhi International Airport, Hyderabad.";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          
+          }
+            
+        function myfunction() {
+        var mainhead1=["Indhira Gandhi International Airport, New Delhi","Chhatrapati Shivaji International Airport","Chennai International Airport, Chennai","Cochin International Airport, Kerala","Kempegowda International Airport, Bangalore","Rajiv Gandhi International Airport,Hyderabad","Goa International Airport, Goa","Netaji Subhas Chandra Bose International Airport","Sardar Vallabhbhai Patel International Airport","Pune International Airport, Pune"];
+        var head_about_1=["Welcome to Indhira Gandhi International Airport, New Delhi:","Welcome to Chhatrapati Shivaji International Airport, Mumbai:","Welcome to Chennai International Airport, Chennai:","Welcome to Cochin International Airport, Kerala:","Welcome to Kempegowda International Airport, Bangalore:","Welcome to Rajiv Gandhi International Airport,Hyderabad:","Welcome to Goa International Airport, Goa:","Welcome to Netaji Subhas Chandra Bose International Airport, Kolkata:","Welcome to Sardar Vallabhbhai Patel International Airport, Ahmedabad:","Welcome to Pune International Airport, Pune:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:",]
+        var body_about_1=["Indira Gandhi International Airport serves as the primary civilian aviation hub for the National Capital Region of Delhi, India. The airport, spread over an area of 5,106 acres (2,066 ha), is situated in Palam, 15 km (9.3 mi) south-west of the New Delhi railway station and 16 km (9.9 mi) from New Delhi city centre. Named after former Prime Minister of India Indira Gandhi, it is the busiest airport in India in terms of passenger traffic since 2009. It is also the busiest airport in the country in terms of cargo traffic, overtaking Mumbai during late 2015. In the calendar year 2018, it was the 12th busiest airport in the world and 6th busiest airport in Asia by passenger traffic handling nearly 70 million passengers. It is the world's busiest airport for Airbus A320 aircraft. The planned expansion program will increase the airport's capacity to handle 100 million passengers by 2030.","Chhatrapati Shivaji Maharaj International Airport, Mumbai, formerly known as Sahar International Airport, is the primary international airport serving the Mumbai Metropolitan Area, India. It is the second busiest airport in the country in terms of total and international passenger traffic after Delhi, and was the 14th busiest airport in Asia and 28th busiest airport in the world by passenger traffic in calendar year 2017. Its passenger traffic was about 49.8 million in year 2018. The airport is the second busiest in the country in terms of cargo traffic also. In March 2017, the airport overtook London Gatwick Airport as the world's busiest airport with only one operational runway at a time. The airport has three operating terminals spread over a total land area of 750 hectares (1,850 acres) and handles about 950 aircraft movements per day. It handled a record 1,007 aircraft movements on December 09 2018, higher than its earlier record of 1,003 flight movements in a day in June 2018. It handled a record 51 movements in one hour on 16 September 2014. Along with IGI Delhi, it was adjudged the 'World's Best Airport' at Airport Service Quality Awards 2017 in the highest category of airports handling more than 40 million passengers annually by Airports Council International. It has also won the 'Best Airport in India and Central Asia' award at the Skytrax 2016 World Airport Awards. It is one of the three airports in India to have implemented Airport Collaborative Decision Making (A-CDM) to ensure timely takeoffs and landings.","Chennai International Airport is an international airport serving the city of Chennai, Tamil Nadu, India and its metropolitan area. It is located in Meenambakkam and Tirusulam, 21 km (13 mi) from the city centre. It is the 4th busiest airport in India behind Delhi, Mumbai, and Bengaluru in 2018. The airport handled over 20 million passengers in the fiscal year 2017-18, handling over 400 aircraft movements daily. The airport is served by the airport metro station of the Chennai Metro and the Tirusulam railway station of the Chennai Suburban Railway system. The domestic and the international terminals are named after former chief ministers of Tamil Nadu K. Kamaraj and C. N. Annadurai, respectively. It was the first airport in India to have international and domestic terminals located adjacent to each other. This airport serves as the regional headquarters of the Airports Authority of India for South India comprising the states of Tamil Nadu, Andhra Pradesh, Telangana, Karnataka, and Kerala and the union territories of Puducherry and Lakshadweep.","Cochin International Airport, Cochin is an international airport serving the city of Kochi, in the state of Kerala, India. Located at Nedumbassery, about 25 km (16 mi) northeast of the city, Cochin International Airport is the first airport in India developed under a public-private partnership (PPP) model and was funded by nearly 10,000 non-resident Indians from 30 countries. It is the busiest and largest airport in the state of Kerala. As of 2019, the Cochin International Airport caters to 61.8% of the total air passenger movement in Kerala. It is also the fourth busiest airport in India in terms of international traffic and seventh busiest overall. In fiscal year 2018-19, the airport handled more than 10.2 million passengers with a total of 71,871 aircraft movements. The airport is a primary base for Air India Express operations which is also headquartered in the city.","Kempegowda International Airport is an international airport serving Bengaluru, the capital of the Indian state of Karnataka. Spread over 4,000 acres (1,600 ha), it is located about 40 kilometres (25 mi) north of the city near the village of Devanahalli. It is owned and operated by Bengaluru International Airport Limited (BIAL), a public–private consortium. The airport opened in May 2008 as an alternative to increased congestion at HAL Airport, the original primary commercial airport serving the city. It is named after Kempe Gowda I, the founder of Bengaluru. Kempegowda International Airport became Karnataka's first fully solar powered airport developed by CleanMax Solar. Kempegowda Airport is the third-busiest airport by passenger traffic in the country, behind the airports in Delhi and Mumbai, and is the 29th busiest airport in Asia. It handled over 25.04 million passengers in calendar year 2017 with over 600 aircraft movements a day. The airport also handled about 314,060 tonnes (346,190 short tons) of cargo. The airport consists of a single runway and passenger terminal, which handles both domestic and international operations. A second runway is being constructed and is expected to be operational by September 2019 while a second terminal is in the early stages of construction. In addition, there is a cargo village and three cargo terminals. The airport serves as a hub for AirAsia India, Alliance Air, Jet Airways and IndiGo and a focus city for Air India and SpiceJet.","Rajiv Gandhi International Airport is an international airport that serves Hyderabad, the capital of the Indian state of Telangana. It is located in Shamshabad, about 24 kilometres (15 mi) south of Hyderabad. It was opened on 23 March 2008 to replace Begumpet Airport it is named after Rajiv Gandhi, former Prime Minister of India. The airport has one passenger terminal, a cargo terminal and two runways. There are also aviation training facilities, a fuel farm, a solar power plant and two MRO facilities. As of 2017, RGIA is the sixth busiest airport by passenger traffic in India. The airport served about 18.2 million passengers in fiscal year 2017–18. The airport serves as a hub for Air India Regional, Blue Dart Aviation, SpiceJet, Lufthansa Cargo, Quikjet Cargo, and TruJet, and as a focus city for IndiGo and Air India.","Dabolim Airport or Goa Airport is the sole international airport in Goa. It is located in Dabolim and operates as a civil enclave in a military airbase named INS Hansa. It is 4 km from the nearest city Vasco da Gama, 23 km from Margao, and about 30 km from the state capital Panjim. The airport's integrated terminal was inaugurated in December 2013. In fiscal year 2017–18, the airport handled over 7.6 million passengers. Due to capacity constrains at the terminal and air traffic congestion due to strong military and naval presence, a second airport at Mopa was proposed and is already under early stage of construction with scheduled completion in 2020.","Netaji Subhas Chandra Bose International Airport is an international airport located in Kolkata, West Bengal, India, serving the Kolkata metropolitan area. It is located approximately 17 kilometres (11 mi) from the city centre. The airport was earlier known as Dum Dum Airport before being renamed in 1995 after Netaji Subhas Chandra Bose, a prominent leader of the Indian independence movement. Spread over an area of 2,460 acres, Kolkata airport is the largest hub for air traffic in the eastern part of the country and one of two international airports operating in West Bengal, the other being Bagdogra. The airport handled almost 20 million passengers in financial year 2017-18 making it the fifth-busiest airport in India in terms of passenger traffic after airports at Delhi, Mumbai, Bangalore and Chennai. The airport is a major centre for flights to Northeast India, Bangladesh, Bhutan, China and Southeast Asia. In 2014 and 2015, Kolkata Airport won the title of Best Improved Airport in the Asia-Pacific region awarded by the Airport Council International.","Sardar Vallabhbhai Patel International Airport is an international airport serving the cities of Ahmedabad and Gandhinagar in Gujarat, India. The airport is located in Hansol, 9 km (5.6 mi) north of central Ahmedabad. It is named after Sardar Vallabhbhai Patel, the 1st Deputy Prime Minister of India. In fiscal year 2017-18, it handled about 9.2 million passengers making it the eighth-busiest airport in terms of passenger traffic in India. The airport serves as a focus city for GoAir. In 2015, the government started the procedure for the privatization of the airport. New Dholera International Airport is being developed due to expansion constraints at the current airport. It was awarded as 'Most improved airport' in Asia-Pacific region by the Airports Council International for 2017.Sardar Vallabhbhai Patel International Airport majorly serves the cities of Ahmedabad and Gandhinagar in Gujarat. During the fiscal year 2017-18, the airport managed almost 9.2 million passengers making it the eighth-busiest airport in terms of the passenger traffic, aircraft movements, and cargo handling in India.","Chhatrapati Sambhaji Raje Airport is proposed to serve the city of Pune, India. The greenfield airport will be located near the villages of Ambodi, Sonori, Kumbharvalan, Ekhatpur-Munjawadi, Khanwadi, Pargaon Memane, Rajewadi, Aamble, Tekwadi, Vanpuri, Udachiwadi, Singapur near Saswad and Jejuri in Purandar taluka of Pune District in the Indian state of Maharashtra. The Government of Maharashtra has declared that the first flight from this airport is expected to take off by 2019 and the airport will be named after Maratha King Chatrapati Sambhaji Maharaj who was born at Purandhar fort. The Airports Authority of India conducted surveys on various areas near Pune for a new airport for the city. Initially a site near Chakan was fixed for the airport. But due to opposition from local farmers and the mountainous terrain, the government decided to set the new airport in Purandar taluka as it was a flatter region compared to Chakan. The proposed airport in Purandar will be spread over 2,400 hectares. This airport will also boost trade from Pune and neighboring districts as it will have its own dedicated cargo terminal."];
+        var body_about_2=["The airport was operated by the Indian Air Force before its management was transferred to the Airports Authority of India. In May 2006, the management of the airport was passed over to Delhi International Airport Limited (DIAL), a consortium led by the GMR Group. In September 2008, the airport inaugurated a 4,430 m (14,530 ft) runway. With the commencement of operations at Terminal 3 in 2010, it became India's and South Asia's largest aviation hub. The Terminal 3 building has a capacity to handle 34 million passengers annually and is the world's 8th largest passenger terminal. The airport uses an advanced system called Airport Collaborative Decision Making (A-CDM) to help keep takeoffs and landings timely and predictable.","The airport is operated by Mumbai International Airport Limited (MIAL), a Joint Venture between the Airports Authority of India and the GVK Industries Ltd led consortium which was appointed in February 2006 to carry out the modernisation of the Airport. The new integrated terminal T2 was inaugurated on 10 January 2014 and opened for international operations on 12 February 2014. A dedicated six lane, elevated road connecting the new terminal with the main arterial Western Express Highway was also opened to the public the same day. The airport is named after the 17th-century Maratha warrior king, having been renamed in 1999 from the previous 'Sahar Airport' to 'Chhatrapati Shivaji International Airport' (the title 'Maharaj' was inserted on August 30, 2018). CSIA's IATA airport code – 'BOM' – is derived from Bombay, Mumbai former name. It is situated across the suburbs of Santacruz, Vile Parle and Sahar village in Andheri.","Chennai was one of the first airports in India. The airport was built on land donated by the former governor of Madras Presidency, K Sriramulu Naidu. Although the first aircraft 'de Havilland' landed in Chennai Airport in 1932, the usage was confined only to military operations during World War II. In 1952, the Civil Aviation Department took over its operations followed by the AAI in 1972. Chennai airport in 2017 An air cargo complex was commissioned on 1 February 1978 for processing of import, export, and transshipment cargo, in addition to unaccompanied luggage, which is the second gateway air cargo terminal in the country after the one at Kolkata airport. The first terminal was built at the north-east side of the airport in the suburb of Meenambakkam, thus being referred to as Meenambakkam Airport. Another terminal was built at Tirusulam where passenger operations were shifted.In 2001, Chennai Airport received ISO 9001-2000 certification, the first such international airport in India. During the early days, Madras Airport was one of the largest airports in India handling many international flight connections In 2008, the AAI started major modernisation of the airport","The airport operates three passenger terminals and one cargo terminal. With over 1.6 million sq ft in area, the airport's Terminal 3 is one of the largest terminals in India. On 18 August 2015, Cochin International Airport became the world's first fully solar powered airport with the inauguration of a dedicated solar plant. On 26 July 2018, the airport was selected for the coveted Champion of the Earth award, the highest environmental honour instituted by the United Nations. After Indian Independence, the Indian Navy operated the airport, though it permitted civilian aircraft to use the facility. The Gulf economic boom of the 1980s made it necessary to develop international transportation to Kochi in the interests of expatriates working in the Middle East.","The first flight to the airport, Air India Flight 609 from Mumbai, was allowed to land the previous night as it would be continuing to Singapore shortly after midnight. The aircraft touched down at 10:40 pm on 23 May. The airport became the third greenfield airport under a public–private partnership to open in India, after Rajiv Gandhi International Airport in Hyderabad and Cochin International Airport. Kempegowda Airport has three cargo terminals. BIAL inaugurated a separate cargo village in December 2008. The village is spread over 11 acres (4.5 ha) and includes office space, conference rooms, a cafeteria for staff and parking space for nearly 80 trucks. It did not open for occupation until 2010 and initially suffered low occupancy, which some cargo agents attributed to the opening delay, high rent and limited infrastructure.","The existing commercial airport, Begumpet Airport, was unable to handle rising passenger traffic. The State Government initially considered converting Hakimpet Air Force Station to civilian use however, the Air Force refused. When the State proposed the construction of a new airport for the Air Force, the Ministry of Defence suggested the State consider sites south of Begumpet Airport. By October 1998, the State had narrowed down to three possible locations for the new airport: Bongloor, Nadergul and Shamshabad. Due to its convenient location near two highways (NH 44 and NH 765) and a railway line, Shamshabad was selected in December 1998.","The airport was built, in 1955, by the Government of the Estado da Índia Portuguesa, on 249 acres of land, as the Aeroporto de Dabolim, which was later officially renamed to Aeroporto General Bénard Guedes. Until 1961, the airport served as the main hub of the Portuguese India's airline TAIP, which on a regular schedule served Daman, Diu, Karachi, Mozambique, Portuguese Timor, and other destinations. During the Indian annexation of Goa, in December 1961, the airport was bombarded by the Indian Air Force with parts of the infrastructure being destroyed. Two civilian planes that were in the airport – a Lockheed Constellation from TAP (Portuguese International Airlines) and a Douglas DC-4 from TAIP – managed to escape with refugees, during the night, to Karachi.","Kolkata airport traditionally served as a strategic stopover on the air route from Europe to Indochina and Australia. Many pioneering flights passed through the airport, including Amelia Earhart's in 1937. In 1924, KLM began scheduled stops at Calcutta, as part of their Amsterdam to Batavia (Jakarta) route. The same year, a Royal Air Force aircraft landed in Calcutta as part of the first round-the-world expedition by any air force. Commercial operations were intended to start on 23 January 2013, the 116th birth anniversary of Netaji Subhas Chandra Bose. However, the shift to the new terminal was only completed on 16 March.","The airport currently consists of four terminals: domestic, international, an additional terminal for secondary traffic and a cargo terminal as well. The airport has 45 parking bays and both the international and domestic terminals have four aero-bridges each. The new terminal has been modelled based on Singapore Changi Airport. The new terminal has a half-kilometre-long moving walkway, which connects the two terminals. Airports Authority of India (AAI) will construct a new technical block which will enhance the flight handling capacity and provide better control of flights.","Lohegaon air force station serves as an international airport for the city. Due to restricted traffic, only two to four international flights can operate from the airport. Moreover, it is an Air Force base and has a single civil terminal which operates both international as well as domestic traffic. Almost 65 to 70 flights operate connecting major domestic destinations. This is crowding the existing airport and leading to delay of flights as the airport has only eight parking bays out of which one is used for VIP's and other is used for charter operations and the remaining carry the load of international as well as domestic flights. Hence, this led to the need for a dedicated international airport for the city as the city is one of the fastest growing cities in India and is included in the Smart City program of the Indian government."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["","","","","","","","","",""];
+        var body_how_2=["Trains arrive at one of four main stations: Delhi Junction, also called Old Delhi or Purani Dilli; the second at New Delhi which lies in Central Delhi; Hazrat Nizamuddin a few kilometers to the south; and the upcoming Anand Vihar station to the east (very few trains use Delhi Sarai Rohilla or Delhi Cantt stations). Delhi Junction and New Delhi Railway Station are now conveniently connected by Metro Line 2, just minutes apart, while Anand Vihar is served by Line 3. It will take about 40 min-1 hr to travel from the New Delhi Railway Station to the airport by car, depending on traffic.","Trains arrive in Mumbai from all over India. The Central line serves connectivity to Southern India, Eastern India, and parts of North India. The key stations are Chattrapati Shivaji Terminus, Dadar Terminus, and Kurla Terminus. The Western line connects to the Western states of Gujarat, Rajasthan, and some parts of North India. The main termini are Mumbai Central and Bandra Terminus.","Chennai has two main long-distance train stations, Chennai Central (code MAS) and Chennai Egmore (code MS). Both are connected to the Airport by the Suburban rail and to the Bus Terminus by City buses. Central has daily trains from/to Bangalore, Mumbai, Coimbatore, Delhi, Hyderabad , Kolkata , Ahmedabad and Madurai and virtually all other major Indian cities. Egmore has trains which cover all the places in Tamil Nadu and also a few important places outside it.","The Airport railway station is under construction. The nearest railway stations are Aluva (10 Kms south) or Angamally railway station (6 kms north) where almost all major express & passengers trains to all over Kerala halts.","A Namma Metro link between Bengaluru city and the airport is planned with two stations at the airport. It will be an extension of the Gottigere-Nagawara line. A high-speed rail link was previously considered and went as far as obtaining approval from the Union Government. However, the project was eventually scrapped because of high costs and the lack of stops along the line.","Under the second phase of the Hyderabad Metro Rail project, a 30-kilometre (19 mi) rail link between Raidurg/Gachibowli and RGIA will be constructed. As of late 2015, feasibility studies on the phase are underway. The closest Indian Railways station is Umdanagar.","Indian Railways connects Goa with direct train services from Delhi, Mumbai, Ahmedabad, Mangalore, Kochi, Kolkata, Thiruvanantapuram, Bangalore, Chennai and Hyderabad. The destination station is usually Madgaon in South Goa, one can also choose to get down at Thivim in North Goa. Travelling to Goa by train is a real pleasure as the route passes through greenery and many tunnels. Goa is also connected to Pune via the Belgaum Miraj line.","The airport was connected to the Kolkata Suburban Railway system. The four-kilometre-long elevated track connected the airport's Biman Bandar station with Dum Dum Cantonment railway station, passing Jessore Road. Electric multiple unit rolling stock served the line. However, due to poor patronage and plans to replace it with a metro system, the railway line closed in September 2016 to facilitate construction of the metro lines between Noapara and Barasat via the airport, and New Garia to the airport.","The total straight line distance between Ahmedabad Airport and Ahmedabad Railway Station is 5 KM (kilometers) and 800 meters. The miles based distance from Ahmedabad Airport to Ahmedabad Railway Station is 3.6 miles.","Rajewadi railway station on the Pune–Miraj–Londa line is nearest to the site."];
+        var body_how_3=["Buses arrive from Kathmandu and Chitwan in Nepal (36 hr+) and virtually every city in India. Although not as comfortable as the trains, buses are the only choice for some destinations, mainly those in the mountains.Delhi has a confusing slew of inter-state bus termini (ISBT), which all have two names. The Delhi Transport Corporation is the major operator, but every state also runs its own buses and there are some private operators.","Asiad Bus Service The bus terminal, popularly known as 'Asiad Bus Terminal' on Ambedkar Rd in Dadar east is another hub from where buses travel to Pune at regular frequency of 15 minutes to 1 hour. Private Buses There also exist numerous private bus operators who operate a large number of services from/to Mumbai from most major cities like Udaipur, Ajmer, Ahmedabad, Vadodara, Surat, Indore, Nashik, Aurangabad, Hyderabad, Belgaum, Hubli, Bangalore, Mangalore, Trichur and Goa. For Pune, buses depart every 10 minutes. Crawford Market, Dadar T.T, Sion, Chembur and Borivili are the main starting points. ST Buses The MSRTC commonly known as ST, operates services to Mumbai from various cities in Maharashtra. Mumbai Central is the most important Terminus in the city. All major cities in Maharashtra and nearby states are connected through Mumbai Central Terminus. The other important ST depots are at Parel, Nehru Nagar-Kurla, and Borivali. You can get buses for all over Maharashtra from these depots. But from Mumbai Central you would get buses any time as well as other State Transport buses. Quality varies.","Chennai has one of Asia's largest bus stations, Chennai Mofussil Bus Terminus (CMBT). Seven different state owned corporations drive buses to and from various destinations within South India. Connected to the Airport and the passenger train stations (Chennai Central and Egmore) by direct buses, it offers a cheap and spontaneous mode of travel. There are hourly buses for places like Tirupati, Pondicherry, Coimbatore,Tirunelveli. You will get the option of A/C or Non-A/C coaches for cities like Bangalore, Trivandrum, Hyderabad.","Buses are the primary means to connect the airport with major parts of the city. Services are mainly operated by the Kerala State Road Transport Corporation which operates two classes of bus service. The nearest bus stations are Angamaly bus depot and Aluva Rajiv Gandhi Municipal bus station from where local, long-distance and inter-state buses operate.","Kempegowda Airport is connected to the city of Bengaluru by National Highway 44 (NH 44). In January 2014, a six-lane flyover was completed over NH 44 between Hebbal and the airport, helping to reduce travel time to and from the city. Two alternative routes are under construction and will be completed by March 2017, one through Thanisandra and the other through Hennur. The airport car park is located at ground level and can hold 2,000 vehicles. The airport is served by several taxi and rental car companies. In addition, ride-sharing companies Ola Cabs and Uber have their own pick-up zones outside the terminal. The Bangalore Metropolitan Transport Corporation (BMTC) provides bus transportation to major parts of the city through the Vayu Vajra (Kannada for 'Diamond in the Air') service. It is operated using a fleet of Volvo B7RLE buses. In addition, the Karnataka State Road Transport Corporation (KSRTC) operates a nonstop bus service called 'Flybus' between Kempegowda Airport and Mysore, as well as a route to Manipal via Mangalore.","RGIA is connected to the city of Hyderabad by NH 44, NH 765 and the Outer Ring Road. In October 2009, the PV Narasimha Rao Expressway was completed between Mehdipatnam and Rajendranagar, where it joins NH 44. This long flyover has reduced travel time between the airport and the city to 30–40 minutes. The 'Pushpak – Airport Liner' service of the Telangana State Road Transport Corporation provides bus transportation to different parts of the city. It was launched in December 2012 to replace GMR's Aero Express service.","There are several bus routes from various cities, but most traffic is from mainly Mumbai and Pune. Due to increasing demand from the south, there has been an increase in buses and trains from Mangalore and Bangalore. Overnight buses from Mumbai to Goa are an alternative to trains and flying. Book in advance during the crowded seasons. Kadamba Transport Corporation is the Goa state-run transport service. Its buses have seen better days, and more efficient times. There are also other state-run buses run by the governments of Karnataka, Maharashtra, and Andhra Pradesh. Many private players also offer bus connections to other cities, with varying levels of discounts and efficiency, with the two usually being inversely related.","The airport has a well established facility of prepaid taxis and air-conditioned buses connecting it to the city center. As part of the larger modernisation programme, a flyover at Nagerbazar and an entry ramp on VIP Road have also been constructed. A 2 km flyover from Kestopur to Raghunathpur (near Tegharia) was built to speed up airport-bound traffic. These reduce journey times to the airport. Parking facilities at the new terminal include two underground parking levels accommodating 3000 cars, as well as an outdoor carpark which can handle an additional 2000 cars.","AMTS buses serve the airport through the stops of Airport Circle or Sardarnagar Approach almost 1 km from the airport on the 'Airport Road'."," The proposed airport will be connected with six different routes including national highways 48 and 65. There will also be a special ring-road connecting major industrial establishments with the proposed airport from Hadapsar."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_3[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Airports</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Airports:</p>
+        <p id='info1'>An airport is an aerodrome with extended facilities, mostly for commercial air transport. Airports often have facilities to store and maintain aircraft, and a control tower.An international airport has additional facilities for customs and passport control as well as incorporating all of the aforementioned elements. An airport is an aerodrome with extended facilities, mostly for commercial air transport. Airports often have facilities to store and maintain aircraft, and a control tower. An airport consists of a landing area, which comprises an aerially accessible open space including at least one operationally active surface such as a runway for a plane to take off or a helipad, and often includes adjacent utility buildings such as control towers, hangars and terminals. Larger airports may have airport aprons, taxiway bridges, air traffic control centres, passenger facilities such as restaurants and lounges, and emergency services. In some countries, the US in particular, they also typically have one or more fixed-base operators, serving general aviation.Such airports rank among the most complex and largest of all built typologies with 15 of the top 50 buildings by floor area being airport terminals</p>
+        <p id="head2">Few popular Airports:</p>
+        <p id="info2">Indhira Gandhi International Airport, New Delhi.Chhatrapati Shivaji International Airport, Mumbai.Chennai International Airport, Chennai.Cochin International Airport, Kerala.Kempegowda International Airport, Bangalore.Rajiv Gandhi International Airport, Hyderabad.</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Indhira Gandhi International Airport, New Delhi</h2><p>The Delhi airport has an annual passenger capacity of over 40 million. It has the sixth largest terminal in the world and scores high for on-time performance, an aspect that is crucial to travellers’ satisfaction.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.098601,28.556946]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Chhatrapati Shivaji International Airport, Mumbai</h2><p>One of the best-in-class International airports in India, this airport has 5 operating terminals, caters to 42 million passengers and has a record high of 969 take offs and landings in a single day.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.874615,19.097625]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpeg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Chennai International Airport, Chennai</h2><p>It is the fourth busiest airport in India in terms of the passenger traffic, aircraft and cargo movements in India. <hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.170806,12.994187]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Cochin International Airport, Kerala</h2><p>Cochin Airport is the first airport in the world to run completely on solar energy.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [76.392947,10.151854]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kempegowda International Airport, Bangalore</h2><p>Kempegowda International Airport is one of India’s busiest – handling 22 million passengers a year. The airport also has a new terminal called Code F aerobridge to accommodate an Airbus 1380 aircraft.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.705750,13.199173]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Rajiv Gandhi International Airport, Hyderabad</h2><p>The Rajiv Gandhi International Airport (RGIA) serves the city of Hyderabad, the capital of Telangana. Located at Shamshabad, approximately 22 km from the city-center, RGIA is operated by a public-private partnership, GMR Hyderabad International Airport Ltd. <hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.431080,17.235038]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Goa International Airport, Goa</h2><p>This government run airport is situated on a military air base and serves the entire state of Goa.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.834905,15.380607]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Netaji Subhas Chandra Bose International Airport, Kolkata</h2><p>Netaji Subhas Chandra Bose International Airport, located in Kolkata comes fifth in the list of the busiest airports in India in terms of passenger traffic during the financial year 2017-18.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [88.438418,22.641640]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Sardar Vallabhbhai Patel International Airport, Ahmedabad</h2><p>Sardar Vallabhbhai Patel International Airport majorly serves the cities of Ahmedabad and Gandhinagar in Gujarat.<hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.623719,23.074916]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Pune International Airport, Pune</h2><p>A part of Pune airport comes under the Indian Air Force. It has two runways but only one is used for the purpose of flights, the other is utilized for the movements of military aircraft.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.909088,18.579323]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>

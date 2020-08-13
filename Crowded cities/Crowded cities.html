@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <link rel="shortcut icon" type="image/png" href="logo.png"/>
+    <title>Crowded City</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:65%; }
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  margin-top: -50px;
+}
+#ul1 {
+  list-style-type: none;
+  margin-top: 0px;
+  padding-left: 25px;
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.788);
+  width: 100%;
+  top: 0;
+}
+.li1 {
+  float: left;
+}
+
+.li1 button {
+  display: block;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color:rgba(242, 242, 242, 0);
+     border:none; 
+    font: inherit;
+    cursor: pointer;
+}
+
+.li1 button:hover {
+  background-color: #dddddd;
+}
+.li1 button:active {
+  background-color: #287CBC;
+  color:white;
+}
+#b1 { background:none!important;
+     color:blue;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     text-decoration: underline;
+}
+#head1, #head2, #head3 {font-size:30px;  }
+#info1,#info2, #info3{margin-top:-15px;}
+#head1 ,#info1,#info2,#head2,#head3,#info3 {padding-left: 35px; padding-right: 20px;font-family:Verdana, Geneva, Tahoma, sans-serif;color:#666666
+}
+</style>
+<script>
+    function myfunction3(y)
+    {x=y;
+    myfunction();}
+    function myfunction1() {
+       
+          document.getElementById("mhead").innerHTML = "Crowded City";
+          document.getElementById("head1").innerHTML = "Welcome to Crowded City:";
+          document.getElementById("info1").innerHTML = "India has the second highest population among the countries of the world, with more than 1.2 billion inhabitants. As of 2011, the country had 27 cities with populations exceeding one million. These cities comprise about 43% of the country’s urban population. This list describes the ten most populated cities in India.Jaipur is the largest city in the state of Rajasthan and its capital city as well. It is built on 187.12 sq mi of land, and it is home to 3.1 million people. It is the tenth most populated city in the countrySurat is India’s third cleanest city. Globally, it is ranked the fourth fastest growing city. The city sits on 126.068 square miles of land, and is home to around 4.5 million residents. 65% of the city’s population is connected to the internet. An estimated 50% of the total population of international students in India study in Pune. Research, automobiles and manufacturing industries dominate the city’s economy. The sport of badminton originated in the city. It is a fast-thriving city, and in 2010, Forbes named it as the third fastest growing city of the decade. Old Ahmadabad or the Historic City of Ahmadabad became the first UNESCO World Heritage City in India in July 2017.Hyderabad is the economic powerhouse of Telangana. The service sector employs 90% of the labor force in the city. Historically, the city played a crucial role in pearl trade. It was the sole trading center for Golconda Diamonds globally until the 18th century.Mumbai is the capital of the State of Maharashtra in India. Its official name was Bombay until 1995. Mumbai comprises two regions, the city district which covers an area of 233 square miles and the more extensive Mumbai metropolitan area with a total area of 1681.5 square miles. The city has a population of about 18.4 million inhabitants, and it is the most populated city in India.";
+          document.getElementById("head2").innerHTML = "Few Mostly Crowded City:";
+          document.getElementById("info2").innerHTML = "Mumbai, New Delhi, Kolkata, Chennai, Bangalore, Hyderabad, Ahmedabad, Pune, Surat, Jaipur";
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          
+          }
+            
+        function myfunction() {
+        var mainhead1=["Mumbai","New Delhi","Kolkata","Chennai","Bangalore","Hyderabad","Ahmedabad","Pune","Surat","Jaipur"];
+        var head_about_1=["Welcome to Mumbai:","Welcome to New Delhi:","Welcome to Kolkata:","Welcome to Chennai:","Welcome to Bangalore:","Welcome to Hyderabad:","Welcome to Ahmedabad:","Welcome to Pune:","Welcome to Surat:","Welcome to Jaipur:"];
+        var head_about_2=["Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:","Highlights:"]
+        var body_about_1=["Mumbai is the capital city of the Indian state of Maharashtra. As of 2011 it is the most populous city in India with an estimated city proper population of 12.4 million. The larger Mumbai Metropolitan Region is the second most populous metropolitan area in India, with a population of 21.3 million as of 2016. Mumbai lies on the Konkan coast on the west coast of India and has a deep natural harbour. In 2008, Mumbai was named an alpha world city. It is also the wealthiest city in India,and has the highest number of millionaires and billionaires among all cities in India. Mumbai is home to three UNESCO World Heritage Sites: the Elephanta Caves, Chhatrapati Shivaji Maharaj Terminus, and the city's distinctive ensemble of Victorian and Art Deco buildings.","New Delhi is an urban district of Delhi which serves as the capital of India and seat of all three branches of the Government of India.The foundation stone of the city was laid by Emperor George V during the Delhi Durbar of 1911.It was designed by British architects, Sir Edwin Lutyens and Sir Herbert Baker. The new capital was inaugurated on 13 February 1931, by Viceroy and Governor-General of India Lord Irwin.Although colloquially Delhi and New Delhi are used interchangeably to refer to the National Capital Territory of Delhi (NCT), these are two distinct entities, with New Delhi forming a small part of Delhi. The National Capital Region is a much larger entity comprising the entire NCT along with adjoining districts in neighboring states. With a total area of 42.7 km2, New Delhi forms a small part of the Delhi metropolitan area. Since the city is located on the Indo-Gangetic Plain, there is little difference in elevation across the city. New Delhi and surrounding areas were once a part of the Aravali Range, all that is left of those mountains is the Delhi Ridge, which is also called the Lungs of Delhi. While New Delhi lies on the floodplains of the Yamuna River, it is essentially a landlocked city. East of the river is the urban area of Shahdara. New Delhi falls under the seismic zone-IV, making it vulnerable to earthquakes.","Kolkata also known as Calcutta, the official name until 2001 is the capital of the Indian state of West Bengal. Located on the east bank of the Hooghly River approximately 75 kilometres west of the border with Bangladesh, it is the principal commercial, cultural, and educational centre of East India, while the Port of Kolkata is India's oldest operating port and its sole major riverine port. The city is widely regarded as the 'cultural capital' of India, and is also nicknamed the 'City of Joy'. According to the 2011 Indian census, it is the seventh most populous city, the city had a population of 4.5 million, while the suburb population brought the total to 14.1 million, making it the third-most populous metropolitan area in India. Recent estimates of Kolkata Metropolitan Area's economy have ranged from $60 to $150 billion making it third most-productive metropolitan area in India, after Mumbai and Delhi.","Chennai also known as Madras the official name until 1996 is the capital of the Indian state of Tamil Nadu. Located on the Coromandel Coast off the Bay of Bengal, it is the biggest cultural, economic and educational centre of south India. According to the 2011 Indian census, it is the sixth most populous city and fourth-most populous urban agglomeration in India. The city together with the adjoining regions constitute the Chennai Metropolitan Area, which is the 36th-largest urban area by population in the world. Chennai is among the most visited Indian cities by foreign tourists. It was ranked the 43rd most visited city in the world for the year 2015. The Quality of Living Survey rated Chennai as the safest city in India. Chennai attracts 45 percent of health tourists visiting India, and 30 to 40 percent of domestic health tourists.","Bangalore, officially known as Bengaluru is the capital city of the Indian state of Karnataka. It has a population of over ten million, making it a megacity and the third most populous city and fifth most populous urban agglomeration in India. It is located in southern India on the Deccan Plateau at an elevation of over 900 m above sea level, which is the highest among India's major cities. It reflects its multireligious and cosmopolitan character by its more than 1000 temples, 400 mosques, 100 churches, 40 Jain derasars, three Sikh gurdwaras, two Buddhist viharas and one Parsi fire temple located in an area of 741 km² of the metropolis.Bengaluru is sometimes referred to as the 'Silicon Valley of India' (or 'IT capital of India') because of its role as the nation's leading information technology (IT) exporter. Indian technological organisations ISRO, Infosys, Wipro and HAL are headquartered in the city. A demographically diverse city, Bangalore is the second fastest-growing major metropolis in India. Bengaluru has one of the most highly educated workforces in the world.","Hyderabad is the capital of the Indian state of Telangana and de jure capital of Andhra Pradesh. Occupying 650 square kilometres along the banks of the Musi River, Hyderabad City has a population of about 6.9 million and about 9.7 million in Hyderabad Metropolitan Region, making it the fourth most populous city and sixth most populous urban agglomeration in India. At an average altitude of 542 metres, much of Hyderabad is situated on hilly terrain around artificial lakes, including Hussain Sagar predating the city's founding north of the city centre.Hyderabad was historically known as a pearl and diamond trading centre, and it continues to be known as the 'City of Pearls'. Many of the city's traditional bazaars remain open, including Laad Bazaar, Begum Bazaar and Sultan Bazaar. Industrialisation throughout the 20th century attracted major Indian research, manufacturing and financial institutions, including Defence Research and Development Organization, Bharat Heavy Electricals Limited, Indian Institute of Chemical Technology, the National Geophysical Research Institute and the Centre for Cellular and Molecular Biology. Special economic zones dedicated to information technology have encouraged companies from India and around the world to set up operations in Hyderabad.","Ahmedabad is the largest city and former capital of the Indian state of Gujarat. It is the administrative headquarter of the Ahmadabad district and the seat of the Gujarat High Court. Ahmedabad's population of 5,633,927 makes it the fifth most populous city in India,and the encompassing urban agglomeration population estimated at 6,357,693 is the seventh most populous in India. Ahmadabad is located on the banks of the Sabarmati River, 30 km from the state capital Gandhinagar, which is its twin city.Ahmedabad has emerged as an important economic and industrial hub in India. It is the second largest producer of cotton in India, and its stock exchange is the country's second oldest. Cricket is a popular sport in Ahmedabad, which houses the 54,000-seat Sardar Patel Stadium. The effects of liberalisation of the Indian economy have energised the city's economy towards tertiary sector activities such as commerce, communication and construction. Ahmedabad's increasing population has resulted in an increase in the construction and housing industries resulting in recent development of skyscrapers.","Pune is the second largest city in the Indian state of Maharashtra, after Mumbai. It is the ninth most populous city in the country with an estimated population of 3.13 million. Along with its Industrial Estate Pimpri Chinchwad and the three cantonment towns of Pune, Khadki and Dehu Road, Pune forms the urban core of the eponymous Pune Metropolitan Region (PMR). According to the 2011 census, the urban area has a combined population of 5.05 million while the population of the metropolitan region is estimated at 7.27 million. Situated 560 metres above sea level on the Deccan plateau on the right bank of the Mutha river, Pune is also the administrative headquarters of its namesake district. In the 18th century, the city was the seat of the Peshwas, the prime ministers of the Maratha Empire and so was one of the most important political centres on the Indian subcontinent. Pune is ranked the number one city in India in the ease of living ranking index.","Surat is a city in the Indian state of Gujarat. It used to be a large seaport and is now a center for diamond cutting and polishing. It is the eighth largest city and ninth largest urban agglomeration in India. It is the administrative capital of the Surat district. The city is located 284 kilometres south of the state capital, Gandhinagar, 265 kilometres south of Ahmedabad, and 289 kilometres north of Mumbai. The city centre is located on the Tapti River, close to Arabian Sea.Surat was the world's 4th-fastest growing city in 2016 according to a study conducted by the City Mayors Foundation. The city registered an annualised GDP growth rate of 11.5% over the seven fiscal years between 2001 and 2008. Surat was awarded 'best city' by the Annual Survey of India's City-Systems (ASICS) in 2013. Surat is selected as the first smart IT city in India which is being constituted by the Microsoft CityNext Initiative tied up with IT services majors Tata Consultancy Services and Wipro. The city has 2.97 million internet users, about 65% of total population. Surat was selected in 2015 for an IBM Smarter Cities Challenge grant. Surat has been selected as one of twenty Indian cities to be developed as a smart city under PM Narendra Modi's flagship Smart Cities Mission. In 2017, Surat was the fourth cleanest city of India according to the Indian Ministry of Urban Development.","Jaipur is the capital and the largest city of the Indian state of Rajasthan. It was founded on 18 November 1727 by Jai Singh II,the ruler of Amer, and after whom the city is named. As of 2011, the city had a population of 3.1 million, making it the tenth most populous city in the country. Jaipur is also known as the Pink City, due to the dominant color scheme of its buildings. It is located 268 km from the national capital New Delhi. Jaipur is a popular tourist destination in India and forms a part of the west Golden Triangle tourist circuit along with Delhi and Agra (240 km, 149 mi). It also serves as a gateway to other tourist destinations in Rajasthan such as Jodhpur (348 km, 216 mi), Jaisalmer (571 km, 355 mi) Udaipur (421 km, 262 mi), Kota (252 km, 156 mi) and Mount Abu (520 km, 323 mi). Jaipur is located 616 km from Shimla."];
+        var body_about_2=["Mumbai is the capital of the State of Maharashtra in India. Its official name was Bombay until 1995. Mumbai comprises two regions, the city district which covers an area of 233 square miles and the more extensive Mumbai metropolitan area with a total area of 1681.5 square miles. The city has a population of about 18.4 million inhabitants, and it is the most populated city in India. Its wealth also surpasses that of any other Indian city as it is home to the highest number of Indian millionaires and billionaires.","New Delhi is a union territory or administrative division in India, meaning that is governed by the country’s Central Government. The official name of the city is the National Capital Territory of Delhi. It has the second highest population after Mumbai, with about 16.3 million inhabitants. New Delhi’s wealth as a city ranks second in the country after Mumbai. In 2016, it was among the two most productive metro areas in India. Delhi has an area of 573.0 sq mi. The city has 11 districts, amongst them New Delhi, the capital of India.","Until 2001, the official name of the city was Calcutta. It is the administrative capital of West Bengal. Kolkata had a population of 14,035,831 people as of 2011. It is the third most productive as well as third most populous city in the country. Kolkata plays a very critical role in the economic and military activities in the eastern region of India since it is the only city with an international airport in the area. It is also a cultural hub in the country with deep roots in art, drama, theatre, film, and literature.","Chennai city is the capital of Tamil Nadu. In 2015, it was voted India’s safest city. The larger Chennai Metropolitan area covers 459.07 mi2 in area and it is home to about 8,653,521 people. The city receives more health tourists than any other city in India, earning it the title of 'India’s Health Capital'. More than 33% of India’s automobile industry is based in Chennai. It also has a large expatriate population, estimated to surpass 100,000 as of 2016. The city had the third highest per capita GDP in India in 2015.","Bangalore lies on the extensive Deccan Plateau in the southern region of India. It is the administrative seat of the state of Karnataka. The official name of the city is Bengaluru. Its area is 274 mi2 while its population as of 2011 was 8,520,435. The city has the second fastest growing economies in India with an average economic growth of 10.3%. There are more IT firms in Bangalore than in any other Indian City. Between 2006 and 2007, these companies constituted 33% to the country’s IT exports. It is also a biotechnology hub of the country.","Hyderabad is the official capital of the state of Telangana. It also functions as the de jure administrative seat of the Indian state of Andhra Pradesh since it was the capital of the state until it was moved to the newly formed Telangana state in June 2014. The city is about 250 square miles in area. Its population is approximately 7.75 million people. Hyderabad is the economic powerhouse of Telangana. The service sector employs 90% of the labor force in the city. Historically, the city played a crucial role in pearl trade. It was the sole trading center for Golconda Diamonds globally until the 18th century.","Ahmedabad was the former capital city of Gujarat state. Currently, it functions as the governing headquarters of Ahmedabad district. It is the largest city in Gujarat. Around 6.3 million people live in the city. It has the country’s second oldest stock exchange market and the second largest cotton industry as well. It is a fast-thriving city, and in 2010, Forbes named it as the third fastest growing city of the decade. Old Ahmadabad or the Historic City of Ahmadabad became the first UNESCO World Heritage City in India in July 2017.","Pune is the capital of Pune District in the state of Maharashtra, India. It is the second largest city in the state after Mumbai. Pune covers 281 square miles of area, and its population was 5,057,709 in 2011. The city boasts some of the most renowned and best performing educational institutions in the eastern part of India. An estimated 50% of the total population of international students in India study in Pune. Research, automobiles and manufacturing industries dominate the city’s economy. The sport of badminton originated in the city.","Surat is a port city in India and the capital of Surat district. It is located in the state of Gujarat, and it dominates the economy of the state. The city’s income comes mainly from the food, diamonds and textile industries. More than 90% of the rough diamonds in the world are polished in this city. Surat is India’s third cleanest city. Globally, it is ranked the fourth fastest growing city. The city sits on 126.068 square miles of land, and is home to around 4.5 million residents. 65% of the city’s population is connected to the internet. Surat is set to become India’s first smart IT city.","Jaipur is the largest city in the state of Rajasthan and its capital city as well. It is built on 187.12 sq mi of land, and it is home to 3.1 million people. It is the tenth most populated city in the country. Jaipur is a popular destination for tourists not only in India but Asia as a whole. It is part of India’s Golden Triangle along with Delhi and Agra. The city is also called ‘the Pink City'."];
+          document.getElementById("mhead").innerHTML = mainhead1[x-1];
+          document.getElementById("mhead").style.fontSize="34px";
+          document.getElementById("head1").innerHTML = head_about_1[x-1];
+          document.getElementById("info1").innerHTML = body_about_1[x-1];
+          document.getElementById("head2").innerHTML = head_about_2[x-1];
+          document.getElementById("info2").innerHTML = body_about_2[x-1];
+          document.getElementById("head3").innerHTML = "";
+          document.getElementById("info3").innerHTML = "";
+          }
+
+          function myfunction2() {
+        var body_how_1=["Chhatrapati Shivaji Maharaj International Airport, Mumbai, formerly known as Sahar International Airport, is the primary international airport serving the Mumbai Metropolitan Area, India.","Indira Gandhi International Airport serves as the primary civilian aviation hub for the National Capital Region of Delhi, India. The airport, spread over an area of 5,106 acres, is situated in Palam, 15 km south-west of the New Delhi railway station and 16 km from New Delhi city centre.","Netaji Subhas Chandra Bose International Airport is an international airport located in Kolkata, West Bengal, India, serving the Kolkata metropolitan area. It is located approximately 17 kilometres from the city centre.","Chennai International Airport is an international airport serving the city of Chennai, Tamil Nadu, India and its metropolitan area. It is located in Meenambakkam and Tirusulam, 21 km from the city centre. It is the 4th busiest airport in India behind Delhi, Mumbai, and Bengaluru in 2018.","Kempegowda International Airport is an international airport serving Bengaluru, the capital of the Indian state of Karnataka. Spread over 4,000 acres, it is located about 40 kilometres north of the city near the village of Devanahalli.","Rajiv Gandhi International Airport is an international airport that serves Hyderabad, the capital of the Indian state of Telangana. It is located in Shamshabad, about 24 kilometres south of Hyderabad.","Sardar Vallabhbhai Patel International Airport is an international airport serving the cities of Ahmedabad and Gandhinagar in Gujarat, India. The airport is located in Hansol, 9 km north of central Ahmedabad. It is named after Sardar Vallabhbhai Patel, the 1st Deputy Prime Minister of India.","Pune Airport is located approximately 10 km northeast of Pune in the state of Maharashtra, India. The airport is a civil enclave operated by the Airports Authority of India at the eastern side of Lohegaon Air Force Station of the Indian Air Force.","Surat International Airport is an International airport located in Magdalla, Surat in the western Indian state of Gujarat with a total area of 770 acres.","Jaipur International Airport is the primary airport serving Jaipur, the capital of the Indian state of Rajasthan. Jaipur International Airport has been declared as the World's Best Airport in the category of 2 to 5 million passengers per annum for 2015 & 2016 according to Airports Council International."];
+        var body_how_2=["Mumbai Central is a major railway station on the Western line, situated in Mumbai, Maharashtra in an area known by the same name. Designed by British architect Claude Batley, it serves as a major stop for both local and inter-city/express trains with separate platforms for them . It is also a terminal for several long distance trains including the Mumbai Rajdhani Express.","The New Delhi Railway Station, situated between Ajmeri Gate and Paharganj is the main railway station in Delhi. It is the one of the busiest railway stations in the country in terms of train frequency and passenger movement.","Kolkata railway station formerly known as Chitpur Station, is the newest of the five intercity railway stations serving Howrah and Kolkata, India; the others are Sealdah Station, in Kolkata, Shalimar Station in Howrah and Howrah Station in Howrah, Santragachi Junction railway station in Howrah.","Chennai, the capital city of the state of Tamil Nadu, India, and the headquarters of the Southern Railway Zone, is a major rail transport hub in the country.","Bangalore City railway station, officially known as Krantivira Sangolli Rayanna railway station,is the main railway station serving the city of Bengaluru, Karnataka, India. It is the fourth busiest railway station in South India after Chennai Central,Chennai Egmore and Tambaram Railway Station.","The Hyderabad Deccan railway station, popularly known as Nampally railway station, is located at Nampally, a locality in Hyderabad.It falls under the Secunderabad Division of South Central Railway while Kacheguda comes under Hyderabad Division of SCR. The station serves the city of Hyderabad by rail to and from many important towns and cities in the country.","Ahmedabad Junction railway station is the main railway station of Ahmedabad, Gujarat, India. It is also the biggest railway station within Gujarat. It is the second-highest income generating division in Western Railways after the Mumbai Division.","Pune Junction railway station is the main railway station of Pune. It is a railway junction on the Mumbai–Chennai line. The Pune–Bengaluru line starts from here.","Surat Railway Station is a major railway station serving Surat, beside Gothangam, Kosad, Utran, Udhna Junction, Bhestan, Niol and Sachin. It is under the administrative control of Western Railway zone of the Indian Railways. Surat is A1 - category railway station of Western Railway Zone of Indian Railways.","Jaipur Junction railway station is a railway station in Jaipur. Jaipur also serves as the headquarters of the North Western Railway zone of the Indian Railways since 2002. The Jaipur Railway Division of the North Western Railway is also headquartered at Jaipur."];
+        var body_how_3=["Public transport in Mumbai involves the transport of millions of its citizens by train, road, and water. Over 88% of the commuters in Mumbai use public transport.[1] Mumbai has the largest organized bus transport network among major Indian cities.","The Maharana Pratap Inter-state bus terminus popularly known as Kashmere Gate ISBT or ISBT, located in Delhi is the oldest and one of the biggest Inter State Bus Terminals in India.","Kolkata has an extensive network of government run and privately run buses. The ticketing system is not centralized one and one has to purchase separate tickets for buses, metros, trams and trains.","The Puratchi Thalaivar Dr MGR Bus Terminus is a modern bus terminus located in Chennai, India, providing outstation transport services. Spread over an area of 37 acres in Koyambedu, the terminus is accredited with the ISO 9001:2000 quality certification for its quality management and excellence. It is the largest bus terminus in Asia. Chennai Metro Rail operates a coach depot behind the bus terminus since 2015.","Kempegowda Bus Station, more commonly known as Majestic Bus Station, is a large bus station in central Bangalore, India. It is located opposite the Bangalore City Railway Station. It is bordered by Seshadri Road to the north, Danavanthri Road to the east, Tank Bund Road to the south and Gubbi Thotadappa Road to the west.","Central Bus Station, Hyderabad, popularly known as CBS, located near Gowliguda. It was constructed during Nizam-VII Mir Osman Ali Khan era in 1930 for the maintenance of Mississippi Aircraft.","Gujarat State Road Transport Corporation is a state owned corporation for passenger transport providing bus services both within state of Gujarat, India and neighbouring states. It has a fleet of 7467 buses. It has a workforce of 40,000.","Pune Station Bus Stand is one of the three major bus stands in city of Pune. This stand is next to Pune Railway Station and so it is called Pune Station Bus Stand. This stand connects Pune to Mumbai  by AC buses. This also connects Pune to Shirdi, Ahmednagar, Barshi, Thane, Mumbai, Solapur, Kolhapur, Satara, Mahabaleshwar, Panvel etc. in Maharashtra. Buses traveling from Pune to outside states operate from this bus stand.","Gujarat State Road Transport Corporation is a state owned corporation for passenger transport providing bus services both within state of Gujarat, India and neighbouring states. It has a fleet of 7467 buses. It has a workforce of 40,000.","Sindhi Camp is the inter-state bus terminal of Jaipur city in India. It is located along Station Road in Jaipur. It is Central Bus stand for Rajasthan State Road Transport Corporation. Buses are available for Rajasthan, Delhi, Haryana, Uttar Pradesh, Uttarakhand, Gujarat and various other locations."];
+          
+          document.getElementById("info1").innerHTML = body_how_1[x-1];
+          document.getElementById("head1").innerHTML = "By Plane:";
+          document.getElementById("head2").innerHTML = "By Railways:";
+          document.getElementById("info2").innerHTML = body_how_2[x-1];
+          document.getElementById("head3").innerHTML = "By Bus:";
+          document.getElementById("info3").innerHTML = body_how_3[x-1];
+          
+          }
+        
+        
+</script>
+</head>
+<body>
+
+<style>
+    .mapboxgl-popup {
+        width: 300px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+</style>
+<div id='map'></div>
+<div class="sidenav">
+        <div style="height:32%; background-color:#287CBC;color:white;font-family:'verdana'"><p style= "padding:12% 0% 0% 7%; font-size: 44px; font-weight: 500 ", id='mhead' >Crowded City</p>
+            
+            <ul id="ul1">
+                    <li class="li1"><button onclick="myfunction1()">Home</button></li>
+                    <li class="li1"><button onclick="myfunction()">About</button></li>
+                    <li class="li1"><button onclick="myfunction2()">How To Reach</button></li>
+            </ul>
+    </div>
+    <div style="height:68%; width: 100%;overflow:scroll">
+        <p id="head1">Welcome to Crowded City:</p>
+        <p id='info1'>India has the second highest population among the countries of the world, with more than 1.2 billion inhabitants. As of 2011, the country had 27 cities with populations exceeding one million. These cities comprise about 43% of the country’s urban population. This list describes the ten most populated cities in India.Jaipur is the largest city in the state of Rajasthan and its capital city as well. It is built on 187.12 sq mi of land, and it is home to 3.1 million people. It is the tenth most populated city in the countrySurat is India’s third cleanest city. Globally, it is ranked the fourth fastest growing city. The city sits on 126.068 square miles of land, and is home to around 4.5 million residents. 65% of the city’s population is connected to the internet. An estimated 50% of the total population of international students in India study in Pune. Research, automobiles and manufacturing industries dominate the city’s economy. The sport of badminton originated in the city. It is a fast-thriving city, and in 2010, Forbes named it as the third fastest growing city of the decade. Old Ahmadabad or the Historic City of Ahmadabad became the first UNESCO World Heritage City in India in July 2017.Hyderabad is the economic powerhouse of Telangana. The service sector employs 90% of the labor force in the city. Historically, the city played a crucial role in pearl trade. It was the sole trading center for Golconda Diamonds globally until the 18th century.Mumbai is the capital of the State of Maharashtra in India. Its official name was Bombay until 1995. Mumbai comprises two regions, the city district which covers an area of 233 square miles and the more extensive Mumbai metropolitan area with a total area of 1681.5 square miles. The city has a population of about 18.4 million inhabitants, and it is the most populated city in India.</p>
+        <p id="head2">Few Mostly Crowded City:</p>
+        <p id="info2">Mumbai, New Delhi, Kolkata, Chennai, Bangalore, Hyderabad, Ahmedabad, Pune, Surat, Jaipur</p>
+        <p id="head3"></p>
+        <p id="info3"></p>
+    </div>
+      </div>
+      
+<script>mapboxgl.accessToken = 'pk.eyJ1IjoidG9wMTBpbmRpYSIsImEiOiJjanR4NDZpd2gwdXRwM3lwZ3d6NGp5YmRoIn0.YvDjDHiT2s0zjmB-yPnxyA';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/top10india/cju5945no0jgi1fo3j16vbr0j',
+        center: [83.351360, 22.160276],
+        zoom: 3.8
+    });
+
+map.on('load', function () {
+    // Add a layer showing the places.
+    map.addLayer({
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='1.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Mumbai</h2><p>Mumbai (formerly called Bombay) is a densely populated city on India’s west coast. A financial center, it's India's largest city. On the Mumbai Harbour waterfront stands the iconic Gateway of India stone arch, built by the British Raj in 1924.<hr> <button id='b1' onclick='myfunction3(1)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.877060,19.072124]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='2.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>New Delhi</h2><p>New Delhi is an urban district of Delhi which serves as the capital of India and seat of all three branches of the Government of India. The foundation stone of the city was laid by Emperor George V during the Delhi Durbar of 1911.<hr> <button id='b1' onclick='myfunction3(2)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.207602,28.616466]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='3.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Kolkata</h2><p>Kolkata (formerly Calcutta) is the capital of India's West Bengal state. Founded as an East India Company trading post, it was India's capital under the British Raj from 1773–1911.<hr> <button id='b1' onclick='myfunction3(3)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [88.360198,22.574498]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='4.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Chennai</h2><p>Chennai, on the Bay of Bengal in eastern India, is the capital of the state of Tamil Nadu.<hr> <button id='b1' onclick='myfunction3(4)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [80.271639,13.085677]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='5.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Bangalore</h2><p>Bengaluru (also called Bangalore) is the capital of India's southern Karnataka state. The center of India's high-tech industry, the city is also known for its parks and nightlife.<hr> <button id='b1' onclick='myfunction3(5)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [77.593947,12.972116]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='6.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Hyderabad</h2><p>Hyderabad is the capital of southern India's Telangana state. A major center for the technology industry, it's home to many upscale restaurants and shops. Its historic sites include Golconda Fort, a former diamond-trading center that was once the Qutb Shahi dynastic capital.<hr> <button id='b1' onclick='myfunction3(6)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [78.487203,17.384915]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='7.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Ahmedabad</h2><p>Ahmedabad, in western India, is the largest city in the state of Gujarat. The Sabarmati River runs through its center. On the western bank is the Gandhi Ashram at Sabarmati, which displays the spiritual leader’s living quarters and artifacts.<hr> <button id='b1' onclick='myfunction3(7)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.571344,23.022289]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='8.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Pune</h2><p>Pune is a sprawling city in the western Indian state of Maharashtra. It was once the base of the Peshwas (prime ministers) of the Maratha Empire, which lasted from 1674 to 1818.<hr> <button id='b1' onclick='myfunction3(8)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [73.856336,18.520887]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='9.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Surat</h2><p>Surat is a large city beside the Tapi River in the west Indian state of Gujarat. Once known for silk weaving, Surat remains a commercial center for textiles, and the New Textile Market area is lined with fabric shops. <hr> <button id='b1' onclick='myfunction3(9)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [72.826749,21.172709]
+                    }
+                },{
+                    "type": "Feature",
+                    "properties": {
+                        "description": "<p><img src='10.jpg' width=100% align='center' class='w3-opacity'></p><h2><img src='https://i.imgur.com/MK4NUzI.png'style='height:20px'>Jaipur</h2><p>Jaipur is the capital of India’s Rajasthan state. It evokes the royal family that once ruled the region and that, in 1727, founded what is now called the Old City, or “Pink City” for its trademark building color.<hr> <button id='b1' onclick='myfunction3(10)'> Know More</button></p>",
+                        "icon": "star"
+                    },
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [75.787388,26.912123]
+                    }
+                },
+                ]
+            }
+        },
+        "layout": {
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
+        }
+    });
+    var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
+    // When a click event occurs on a feature in the places layer, open a popup at the
+    // location of the feature, with description HTML from its properties.
+    map.on('click', 'places', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'places', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'places', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});</script>
+
+</body>
+</html>
